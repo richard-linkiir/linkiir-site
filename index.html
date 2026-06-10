@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Linkiir — Integration engine, AI-native from day one</title>
+<meta name="description" content="Linkiir is a clean-sheet, AI-native integration engine for healthcare and enterprise B2B. HL7 v2, FHIR, X12, NCPDP. Single static binary. Sub-millisecond parse." />
+<meta property="og:title" content="Linkiir — Integration engine, AI-native from day one" />
+<meta property="og:description" content="A clean-sheet integration engine. HL7, FHIR, X12, NCPDP. Single binary, sub-ms parse, AI-native." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='12' cy='16' r='7' fill='none' stroke='%23111' stroke-width='2'/><circle cx='20' cy='16' r='7' fill='none' stroke='%23111' stroke-width='2'/></svg>" />
+<script>(function(){try{var s=window.localStorage;var t=s&&s.getItem('linkiir-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+
+<!-- ───────────── NAV ───────────── -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="brand" aria-label="Linkiir home">
+      <svg class="brand__mark" viewBox="0 0 32 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="20" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span class="brand__word">linkiir</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#approach">Approach</a>
+      <a href="#engine">Engine</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <a href="#contact" class="btn btn--pill">Talk to us</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ───────────── HERO ───────────── -->
+<section class="hero">
+  <div class="container">
+    <p class="overline">Integration engine · est. 2026</p>
+    <h1 class="hero__title">
+      A clean-sheet integration engine,<br/>
+      <span class="text-faint">AI-native from</span> day one.
+    </h1>
+    <p class="hero__lede">
+      Linkiir is rebuilding the interface layer for healthcare and enterprise B2B. One static binary,
+      sub-millisecond parsing across HL7 v2, FHIR, X12 and NCPDP, with an AI runtime that learns the
+      messy reality of production interfaces.
+    </p>
+
+    <div class="hero__ctas">
+      <a href="#contact" class="btn btn--pill">Talk to us</a>
+      <a href="#approach" class="btn btn--ghost">See the approach →</a>
+    </div>
+
+    <!-- Live engine animation -->
+    <div class="hero__visual engine-card" aria-label="Animation of Linkiir parsing and routing HL7, FHIR, and X12 messages">
+      <div class="engine-anim">
+        <div class="engine-anim__legend">
+          <span class="lane-tag lane-tag--hl7"><i></i>HL7 v2</span>
+          <span class="lane-tag lane-tag--fhir"><i></i>FHIR R4</span>
+          <span class="lane-tag lane-tag--x12"><i></i>X12 837</span>
+          <span class="throughput"><span data-counter>0</span> msg/s</span>
+        </div>
+
+        <svg class="engine-svg" viewBox="0 0 720 360" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="core-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="var(--teal)"/>
+              <stop offset="100%" stop-color="var(--rust)"/>
+            </linearGradient>
+            <radialGradient id="core-glow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0%"  stop-color="var(--rust)" stop-opacity="0.55"/>
+              <stop offset="60%" stop-color="var(--teal)" stop-opacity="0.15"/>
+              <stop offset="100%" stop-color="var(--teal)" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <g class="engine-svg__labels">
+            <text x="60"  y="22" text-anchor="middle">SOURCES</text>
+            <text x="260" y="22" text-anchor="middle">PARSE</text>
+            <text x="460" y="22" text-anchor="middle">TRANSFORM</text>
+            <text x="660" y="22" text-anchor="middle">DESTINATIONS</text>
+          </g>
+
+          <g class="rails">
+            <line x1="110" y1="90"  x2="610" y2="90"/>
+            <line x1="110" y1="180" x2="610" y2="180"/>
+            <line x1="110" y1="270" x2="610" y2="270"/>
+          </g>
+
+          <g class="endpoints endpoints--src">
+            <g transform="translate(20,72)">
+              <rect width="90" height="36" rx="6"/>
+              <text x="45" y="15" class="ep-kind">SOURCE</text>
+              <text x="45" y="28" class="ep-name">EHR</text>
+            </g>
+            <g transform="translate(20,162)">
+              <rect width="90" height="36" rx="6"/>
+              <text x="45" y="15" class="ep-kind">SOURCE</text>
+              <text x="45" y="28" class="ep-name">Lab LIS</text>
+            </g>
+            <g transform="translate(20,252)">
+              <rect width="90" height="36" rx="6"/>
+              <text x="45" y="15" class="ep-kind">SOURCE</text>
+              <text x="45" y="28" class="ep-name">Payer</text>
+            </g>
+          </g>
+
+          <g class="stage stage--parse" transform="translate(220,40)">
+            <rect width="80" height="280" rx="10"/>
+            <text x="40" y="148" text-anchor="middle" class="stage-label" transform="rotate(-90 40 148)">PARSE</text>
+          </g>
+
+          <g class="stage stage--core" transform="translate(420,40)">
+            <circle cx="40" cy="140" r="110" fill="url(#core-glow)" class="core-glow"/>
+            <rect width="80" height="280" rx="10" fill="url(#core-grad)"/>
+            <text x="40" y="148" text-anchor="middle" class="stage-label stage-label--core" transform="rotate(-90 40 148)">LINKIIR CORE</text>
+            <g class="core-bars" transform="translate(0,40)">
+              <rect x="18" y="110" width="4" height="40" rx="2"/>
+              <rect x="30" y="100" width="4" height="60" rx="2"/>
+              <rect x="42" y="90"  width="4" height="80" rx="2"/>
+              <rect x="54" y="100" width="4" height="60" rx="2"/>
+              <rect x="66" y="110" width="4" height="40" rx="2"/>
+            </g>
+          </g>
+
+          <g class="endpoints endpoints--dst">
+            <g transform="translate(610,72)">
+              <rect width="90" height="36" rx="6"/>
+              <text x="45" y="15" class="ep-kind">DEST</text>
+              <text x="45" y="28" class="ep-name">FHIR API</text>
+            </g>
+            <g transform="translate(610,162)">
+              <rect width="90" height="36" rx="6"/>
+              <text x="45" y="15" class="ep-kind">DEST</text>
+              <text x="45" y="28" class="ep-name">Data Lake</text>
+            </g>
+            <g transform="translate(610,252)">
+              <rect width="90" height="36" rx="6"/>
+              <text x="45" y="15" class="ep-kind">DEST</text>
+              <text x="45" y="28" class="ep-name">Billing</text>
+            </g>
+          </g>
+
+          <g class="packets" id="engine-packets"></g>
+        </svg>
+
+        <div class="engine-console" aria-live="polite" aria-label="Live message log">
+          <div class="console-row console-row--head">
+            <span>TIME</span><span>CHANNEL</span><span>MESSAGE</span><span>LATENCY</span>
+          </div>
+          <div class="console-rows" id="engine-log"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── APPROACH (50/50) ───────────── -->
+<section class="approach section" id="approach">
+  <div class="container grid-2">
+    <div class="approach__copy">
+      <p class="overline">Approach</p>
+      <h2 class="h-display">
+        Built once, in one language, for the next decade of interfaces.
+      </h2>
+      <p class="lede">
+        The integration market is dominated by 20-year-old engines: script-glued, runtime-heavy, and
+        fragile under real-world traffic. Linkiir is a clean-sheet build — a single statically
+        compiled binary with no third-party runtime dependencies, sub-millisecond parse latency, and
+        AI built into the core, not bolted on.
+      </p>
+
+      <ul class="bullets">
+        <li><span>01</span> Single static binary. Drop-in deploy, on-prem or cloud.</li>
+        <li><span>02</span> Sub-millisecond parse across HL7, FHIR, X12, NCPDP.</li>
+        <li><span>03</span> AI-native channel design, mapping, and triage.</li>
+        <li><span>04</span> Engineered for the protocols and scale modern integration teams actually face.</li>
+      </ul>
+    </div>
+
+    <!-- Product mockup -->
+    <div class="approach__visual">
+      <div class="mock">
+        <div class="mock__bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="mock__path">linkiir / channels / adt-inbound</span>
+        </div>
+        <div class="mock__body">
+          <div class="mock__row mock__row--head">
+            <span>Channel</span><span>Protocol</span><span>Throughput</span><span>p99</span><span>Status</span>
+          </div>
+          <div class="mock__row">
+            <span>adt-inbound</span><span>HL7 v2.5</span><span>4.2k/s</span><span>0.7 ms</span><span class="pill pill--ok">healthy</span>
+          </div>
+          <div class="mock__row">
+            <span>oru-results</span><span>HL7 v2.5</span><span>1.8k/s</span><span>0.9 ms</span><span class="pill pill--ok">healthy</span>
+          </div>
+          <div class="mock__row">
+            <span>claims-837</span><span>X12</span><span>620/s</span><span>1.1 ms</span><span class="pill pill--ok">healthy</span>
+          </div>
+          <div class="mock__row">
+            <span>fhir-bulk</span><span>FHIR R4</span><span>3.0k/s</span><span>0.8 ms</span><span class="pill pill--warn">replaying</span>
+          </div>
+          <div class="mock__row">
+            <span>pharmacy-rx</span><span>NCPDP</span><span>410/s</span><span>1.4 ms</span><span class="pill pill--ok">healthy</span>
+          </div>
+        </div>
+        <div class="mock__foot">
+          <span>Static binary · v0.9.2-rc</span>
+          <span>uptime 99.997%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── ENGINE FEATURES (50/50 inverted) ───────────── -->
+<section class="engine section" id="engine">
+  <div class="container grid-2 grid-2--reverse">
+    <div class="engine__copy">
+      <p class="overline">The Engine</p>
+      <h2 class="h-display">One runtime. Every protocol. No surprises.</h2>
+      <p class="lede">
+        Linkiir parses, transforms and routes the formats that move the largest regulated industries —
+        without a JVM, without scripting glue, without per-channel runtime overhead.
+      </p>
+    </div>
+
+    <div class="engine__grid">
+      <div class="card">
+        <p class="card__kicker">HL7 v2</p>
+        <p class="card__body">Lossless v2.x parser. Pipe delimiters, escape rules, Z-segments — all handled natively.</p>
+      </div>
+      <div class="card">
+        <p class="card__kicker">FHIR R4 / R5</p>
+        <p class="card__body">Native FHIR datatypes, bulk export, search params. No translation hop.</p>
+      </div>
+      <div class="card">
+        <p class="card__kicker">X12</p>
+        <p class="card__body">837, 835, 270/271 and friends. Companion-guide aware mapping.</p>
+      </div>
+      <div class="card">
+        <p class="card__kicker">NCPDP</p>
+        <p class="card__body">Telecom &amp; SCRIPT. Pharmacy networks treated as first-class.</p>
+      </div>
+      <div class="card">
+        <p class="card__kicker">AI mapping</p>
+        <p class="card__body">Channel templates and field mappings drafted by model, reviewed by engineer.</p>
+      </div>
+      <div class="card">
+        <p class="card__kicker">Static deploy</p>
+        <p class="card__body">One binary. No JRE. No package manager. Auditable from byte zero.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── TEAM (FULL-BLEED GRADIENT) ───────────── -->
+<section class="team" id="team">
+  <div class="container">
+    <p class="overline overline--dark">The founders</p>
+    <h2 class="h-display team__title">Four operators building<br/>the next integration engine.</h2>
+    <p class="team__lede">
+      Linkiir is led by a tight founding team across business, finance, engine architecture and
+      production. We've spent careers in interface systems and are building Linkiir as a clean-sheet
+      company for the next decade of healthcare and enterprise integration.
+    </p>
+
+    <div class="team__grid">
+      <article class="founder founder--a">
+        <p class="founder__role">Chief Executive</p>
+        <h3 class="founder__name">Business &amp; GTM</h3>
+        <p class="founder__bio">Two decades commercializing integration software. Owns customer, capital and category.</p>
+      </article>
+      <article class="founder founder--b">
+        <p class="founder__role">Chief Financial Officer</p>
+        <h3 class="founder__name">Capital &amp; ops</h3>
+        <p class="founder__bio">Builds the financial and operational chassis. Bootstrap-first, seed-ready.</p>
+      </article>
+      <article class="founder founder--c">
+        <p class="founder__role">Chief Technology Officer</p>
+        <h3 class="founder__name">Engine architecture</h3>
+        <p class="founder__bio">Designs the parse, map and route core. Owner of the static-binary thesis.</p>
+      </article>
+      <article class="founder founder--d">
+        <p class="founder__role">Chief Information Officer</p>
+        <h3 class="founder__name">Production &amp; support</h3>
+        <p class="founder__bio">Runs the production fabric. Lived the pager for the world's largest installs.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── CONTACT ───────────── -->
+<section class="contact section" id="contact">
+  <div class="container contact__inner">
+    <p class="overline">Contact</p>
+    <h2 class="h-display contact__title">Tell us about your interfaces.</h2>
+    <p class="lede contact__lede">
+      Whether you're evaluating a replacement, sizing an on-prem deploy, or considering an
+      investment — we'll respond personally within one business day.
+    </p>
+
+    <form class="form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you — we will be in touch.';this.querySelector('button').disabled=true;">
+      <div class="form__row">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required autocomplete="name" />
+        </label>
+        <label>
+          <span>Work email</span>
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+      </div>
+      <label class="form__full">
+        <span>Organization</span>
+        <input type="text" name="org" autocomplete="organization" />
+      </label>
+      <label class="form__full">
+        <span>What are you trying to solve?</span>
+        <textarea name="msg" rows="4"></textarea>
+      </label>
+      <button type="submit" class="btn btn--pill btn--lg">Send →</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ───────────── FOOTER ───────────── -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <svg class="brand__mark" viewBox="0 0 32 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="20" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span class="brand__word">linkiir</span>
+      <p class="footer__tag">Integration engine. AI-native from day one.</p>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__head">Legal</p>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Security</a>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__head">Connect</p>
+      <a href="#contact">Contact</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </div>
+  <div class="container footer__rule">
+    <span>© 2026 Linkiir, Inc.</span>
+    <span>Brampton · Toronto · Remote</span>
+  </div>
+</footer>
+
+<script>
+  // Subtle scrolled-state on nav
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('nav--scrolled', window.scrollY > 24);
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Theme toggle — default light; persists in storage when available
+  const root = document.documentElement;
+  function readTheme(){
+    try { return (window.localStorage && window.localStorage.getItem('linkiir-theme')) || null; }
+    catch(e){ return null; }
+  }
+  function writeTheme(v){
+    try { window.localStorage && window.localStorage.setItem('linkiir-theme', v); }
+    catch(e){}
+  }
+  const stored = readTheme();
+  root.setAttribute('data-theme', stored === 'dark' ? 'dark' : 'light');
+
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    writeTheme(next);
+  });
+
+  // ─── Engine animation: streaming packets through Parse → Core → Destination ───
+// Engine animation — streaming packets through Parse -> Core -> Destination
+  (function () {
+    const svg = document.querySelector('.engine-svg');
+    const layer = document.getElementById('engine-packets');
+    const log = document.getElementById('engine-log');
+    const counter = document.querySelector('[data-counter]');
+    if (!svg || !layer) return;
+
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+    const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const LANES = [
+      {
+        kind: 'hl7',  channel: 'EHR -> FHIR API',
+        srcX: 110, dstX: 610, srcY: 90,  dstY: 90,
+        samples: [
+          'MSH|^~\\&|EHR|HOSP|FHIR|API|...',
+          'PID|1||MRN12345^^^HOSP^MR||DOE^JOHN^A',
+          'OBX|1|NM|GLU^Glucose|1|112|mg/dL|...',
+          'PV1|1|I|2000^2012^01||...|ATTEND123',
+          'ORC|NW|ORD-9981^HOSP|||SC',
+        ],
+      },
+      {
+        kind: 'fhir', channel: 'Lab LIS -> Data Lake',
+        srcX: 110, dstX: 610, srcY: 180, dstY: 180,
+        samples: [
+          '{"resourceType":"Observation","id":"obs-42"...}',
+          '{"resourceType":"Patient","id":"pt-9981"...}',
+          '{"resourceType":"DiagnosticReport"...}',
+          '{"resourceType":"Encounter","status":"finished"...}',
+          '{"resourceType":"ServiceRequest"...}',
+        ],
+      },
+      {
+        kind: 'x12',  channel: 'Payer -> Billing',
+        srcX: 110, dstX: 610, srcY: 270, dstY: 270,
+        samples: [
+          'ISA*00*          *00*   ...*837*0001*P*:',
+          'CLM*CLM00118*1850.50***11:B:1*Y*A*Y*Y',
+          'NM1*IL*1*DOE*JOHN****MI*ABC123456789',
+          'SBR*P*18*GR2294*GROUP A*CI',
+          'SV1*HC:99213*125.00*UN*1***1',
+        ],
+      },
+    ];
+
+    const PARSE_X     = 220;
+    const PARSE_X_END = 300;
+    const CORE_X      = 420;
+    const CORE_X_END  = 500;
+
+    function makePacket(lane, label) {
+      const g = document.createElementNS(SVG_NS, 'g');
+      g.setAttribute('class', 'packet packet--' + lane.kind);
+      g.setAttribute('transform', 'translate(' + (lane.srcX - 30) + ', ' + (lane.srcY - 8) + ')');
+      const w = 60, h = 16;
+      const r = document.createElementNS(SVG_NS, 'rect');
+      r.setAttribute('class', 'packet-body');
+      r.setAttribute('width', w);
+      r.setAttribute('height', h);
+      r.setAttribute('rx', 4);
+      g.appendChild(r);
+      const t = document.createElementNS(SVG_NS, 'text');
+      t.setAttribute('x', w / 2);
+      t.setAttribute('y', h / 2 + 0.5);
+      t.textContent = label;
+      g.appendChild(t);
+      return { g, r, t, w, h, lane };
+    }
+
+    function animateXY(el, x1, y1, x2, y2, duration) {
+      return el.animate(
+        [
+          { transform: 'translate(' + x1 + 'px, ' + y1 + 'px)' },
+          { transform: 'translate(' + x2 + 'px, ' + y2 + 'px)' },
+        ],
+        { duration, easing: 'cubic-bezier(0.65, 0, 0.35, 1)', fill: 'forwards' }
+      );
+    }
+
+    function makeParseSegments(lane) {
+      const segs = [];
+      const baseX = PARSE_X + 14;
+      const ys = [lane.srcY - 18, lane.srcY - 6, lane.srcY + 6];
+      ys.forEach((y, i) => {
+        const g = document.createElementNS(SVG_NS, 'g');
+        g.setAttribute('class', 'packet packet--' + lane.kind);
+        g.setAttribute('transform', 'translate(' + baseX + ', ' + y + ')');
+        const rect = document.createElementNS(SVG_NS, 'rect');
+        rect.setAttribute('class', 'packet-body');
+        rect.setAttribute('width', 50);
+        rect.setAttribute('height', 6);
+        rect.setAttribute('rx', 2);
+        rect.setAttribute('opacity', 0);
+        g.appendChild(rect);
+        layer.appendChild(g);
+        rect.animate(
+          [
+            { opacity: 0,    transform: 'translateX(-6px)' },
+            { opacity: 0.95, transform: 'translateX(0)'    },
+            { opacity: 0.4,  transform: 'translateX(6px)'  },
+          ],
+          { duration: 460, delay: i * 60, easing: 'ease-out', fill: 'forwards' }
+        );
+        segs.push({ g });
+      });
+      return segs;
+    }
+
+    function flyPacket(pkt, onParsed) {
+      const { g, lane, w } = pkt;
+      layer.appendChild(g);
+
+      // Source -> parse
+      const enterParseX = PARSE_X - w / 2 + 16;
+      animateXY(g, lane.srcX - 30, lane.srcY - 8, enterParseX, lane.srcY - 8, 520);
+
+      setTimeout(() => {
+        const segs = makeParseSegments(lane);
+        g.remove();
+
+        setTimeout(() => {
+          segs.forEach((s) => s.g.remove());
+          const corePkt = makePacket(lane, lane.kind.toUpperCase());
+          layer.appendChild(corePkt.g);
+          corePkt.g.setAttribute('transform', 'translate(' + (PARSE_X_END + 8) + ', ' + (lane.srcY - 8) + ')');
+
+          animateXY(corePkt.g, PARSE_X_END + 8, lane.srcY - 8, CORE_X + 8, lane.srcY - 8, 360);
+
+          setTimeout(() => {
+            corePkt.r.animate(
+              [{ filter: 'brightness(1)' }, { filter: 'brightness(1.6)' }, { filter: 'brightness(1)' }],
+              { duration: 280, easing: 'ease-in-out' }
+            );
+            const outY = lane.dstY - 8;
+            animateXY(corePkt.g, CORE_X + 8, lane.srcY - 8, CORE_X_END + 8, outY, 280);
+            if (onParsed) onParsed();
+            setTimeout(() => {
+              animateXY(corePkt.g, CORE_X_END + 8, outY, lane.dstX - 30, outY, 520);
+              setTimeout(() => {
+                corePkt.g.animate(
+                  [{ opacity: 1 }, { opacity: 0 }],
+                  { duration: 220, fill: 'forwards' }
+                );
+                setTimeout(() => corePkt.g.remove(), 240);
+              }, 540);
+            }, 300);
+          }, 380);
+        }, 480);
+      }, 540);
+    }
+
+    const MAX_LOG_ROWS = 5;
+    let recent = [];
+    let throughput = 0;
+    function pushLog(lane, sample) {
+      const now = new Date();
+      const hh = String(now.getHours()).padStart(2, '0');
+      const mm = String(now.getMinutes()).padStart(2, '0');
+      const ss = String(now.getSeconds()).padStart(2, '0');
+      const ms = String(now.getMilliseconds()).padStart(3, '0').slice(0, 2);
+      const latency = (2 + Math.random() * 3).toFixed(1) + ' ms';
+      const row = document.createElement('div');
+      row.className = 'console-row';
+      row.innerHTML =
+        '<span>' + hh + ':' + mm + ':' + ss + '.' + ms + '</span>' +
+        '<span class="log-channel--' + lane.kind + '">' + lane.kind.toUpperCase() + '</span>' +
+        '<span>' + escapeHtml(sample) + '</span>' +
+        '<span>' + latency + '</span>';
+      log.prepend(row);
+      while (log.children.length > MAX_LOG_ROWS) log.lastElementChild.remove();
+
+      recent.push(performance.now());
+      recent = recent.filter((t) => performance.now() - t < 1000);
+      throughput = recent.length;
+    }
+
+    function escapeHtml(s) {
+      return s.replace(/[&<>"']/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[c]);
+    }
+
+    let displayed = 0;
+    setInterval(() => {
+      displayed += (throughput - displayed) * 0.25;
+      if (counter) counter.textContent = Math.round(displayed);
+    }, 100);
+
+    function startLane(lane, baseInterval) {
+      let i = 0;
+      function tick() {
+        const sample = lane.samples[i % lane.samples.length];
+        i++;
+        const pkt = makePacket(lane, lane.kind.toUpperCase());
+        flyPacket(pkt, () => pushLog(lane, sample));
+        const next = baseInterval + (Math.random() * 600 - 300);
+        setTimeout(tick, Math.max(700, next));
+      }
+      setTimeout(tick, Math.random() * baseInterval);
+    }
+
+    let running = false;
+    function start() {
+      if (running) return;
+      running = true;
+      if (prefersReduced) {
+        LANES.forEach((l) => pushLog(l, l.samples[0]));
+        return;
+      }
+      startLane(LANES[0], 1800);
+      startLane(LANES[1], 2100);
+      startLane(LANES[2], 2400);
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) start(); }),
+      { threshold: 0.15 }
+    );
+    io.observe(svg);
+  })();
+</script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
