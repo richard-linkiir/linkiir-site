@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Linkiir — Integration engine, AI-native from day one</title>
-<meta name="description" content="Linkiir is a clean-sheet, AI-native integration engine for healthcare and enterprise B2B. HL7 v2, FHIR, X12, NCPDP. Single static binary. Sub-millisecond parse." />
-<meta property="og:title" content="Linkiir — Integration engine, AI-native from day one" />
-<meta property="og:description" content="A clean-sheet integration engine. HL7, FHIR, X12, NCPDP. Single binary, sub-ms parse, AI-native." />
+<title>Linkiir — Integration solutions & services for healthcare and B2B</title>
+<meta name="description" content="Linkiir provides managed support, implementation, migration and advisory for HL7, FHIR, X12 and XML integration engines. HIPAA, PIPEDA and PHIPA-aligned. We also build the Linkiir Engine." />
+<meta property="og:title" content="Linkiir — Integration solutions & services for healthcare and B2B" />
+<meta property="og:description" content="Linkiir provides managed support, implementation, migration and advisory for HL7, FHIR, X12 and XML integration engines. HIPAA, PIPEDA and PHIPA-aligned. We also build the Linkiir Engine." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900,400&display=swap" rel="stylesheet" />
@@ -15,11 +15,10 @@
 <script>(function(){try{var s=window.localStorage;var t=s&&s.getItem('linkiir-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
-
 <!-- ───────────── NAV ───────────── -->
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a href="#top" class="brand" aria-label="Linkiir home">
+    <a href="index.html" class="brand" aria-label="Linkiir home">
       <svg class="brand__mark" viewBox="0 0 32 24" fill="none" aria-hidden="true">
         <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
         <circle cx="20" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
@@ -28,10 +27,12 @@
     </a>
 
     <nav class="nav__links" aria-label="Primary">
-      <a href="#approach">Approach</a>
-      <a href="#engine">Engine</a>
-      <a href="#team">Team</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html#solutions" class="is-current">Solutions</a>
+      <a href="support.html">Support</a>
+      <a href="index.html#engine">Engine</a>
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
 
     <div class="nav__actions">
@@ -44,30 +45,78 @@
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
       </button>
-      <a href="#contact" class="btn btn--pill">Talk to us</a>
+      <a href="index.html#contact" class="btn btn--pill">Talk to us</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- ───────────── HERO ───────────── -->
-<section class="hero">
+<!-- ───────────── HERO (SERVICES-FIRST) ───────────── -->
+<section class="hero hero--services">
   <div class="container">
-    <p class="overline">Integration engine · est. 2026</p>
+    <p class="overline">Integration solutions &amp; services · healthcare &amp; enterprise B2B</p>
     <h1 class="hero__title">
-      A clean-sheet integration engine,<br/>
-      <span class="text-faint">AI-native from</span> day one.
+      Your integration engines,<br/>
+      <span class="text-faint">managed.</span>
     </h1>
     <p class="hero__lede">
-      Linkiir is rebuilding the interface layer for healthcare and enterprise B2B. One static binary,
-      sub-millisecond parsing across HL7 v2, FHIR, X12 and NCPDP, with an AI runtime that learns the
-      messy reality of production interfaces.
+      Linkiir delivers managed support, operations and consulting for the interface layer of healthcare
+      and regulated B2B. We run HL7 v2, FHIR, X12 and XML channels in production for hospitals,
+      labs, payers and healthtech vendors — on whichever integration engine you use today, and on
+      ours when you're ready to modernize.
     </p>
 
     <div class="hero__ctas">
       <a href="#contact" class="btn btn--pill">Talk to us</a>
-      <a href="#approach" class="btn btn--ghost">See the approach →</a>
+      <a href="#solutions" class="btn btn--ghost">See solutions →</a>
+    </div>
+
+    <ul class="hero__stats hero__stats--two">
+      <li><strong>30 years</strong><span>Combined integration experience on our support team</span></li>
+      <li><strong>&lt; 30 min</strong><span>P1 response target</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────────── ENGAGEMENT MODEL ───────────── -->
+<section class="models section" id="solutions">
+  <div class="container">
+    <p class="overline">How we engage</p>
+    <h2 class="h-display">One price. Full coverage.</h2>
+
+    <div class="models__grid models__grid--single">
+      <div class="model model--feature">
+        <p class="model__kicker">Flat fee model</p>
+        <p class="model__price">One price for full coverage</p>
+        <p class="model__body">
+          Predictable, all-in pricing for the interface layer &mdash; managed operations,
+          defined SLAs, named engineers, monthly reporting and incident response, all under a
+          single monthly fee. No surprise invoices, no per-ticket meters, no scope haggling on
+          every change.
+        </p>
+        <ul class="model__bullets">
+          <li>Tiered by channel count and traffic</li>
+          <li>BAA + DPA included</li>
+          <li>Quarterly business review</li>
+          <li>Optional projects rolled into the same rate card</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── ENGINE (30% — Linkiir's own product) ───────────── -->
+<section class="engine-block section" id="engine">
+  <div class="container">
+    <div class="engine-block__head">
+      <p class="overline">Our product</p>
+      <h2 class="h-display">We also build the Linkiir Engine.</h2>
+      <p class="lede">
+        Most of our work is on the engines you already own. But when an organization is ready for a
+        clean-sheet stack, we have one &mdash; a modern runtime that parses HL7, FHIR, X12 and XML
+        sub-millisecond, with AI-native mapping built in. It's optional, never a precondition.
+      </p>
     </div>
 
     <!-- Live engine animation -->
@@ -171,142 +220,24 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ───────────── APPROACH (50/50) ───────────── -->
-<section class="approach section" id="approach">
-  <div class="container grid-2">
-    <div class="approach__copy">
-      <p class="overline">Approach</p>
-      <h2 class="h-display">
-        Built once, in one language, for the next decade of interfaces.
-      </h2>
-      <p class="lede">
-        The integration market is dominated by 20-year-old engines: script-glued, runtime-heavy, and
-        fragile under real-world traffic. Linkiir is a clean-sheet build — a single statically
-        compiled binary with no third-party runtime dependencies, sub-millisecond parse latency, and
-        AI built into the core, not bolted on.
-      </p>
 
-      <ul class="bullets">
-        <li><span>01</span> Single static binary. Drop-in deploy, on-prem or cloud.</li>
-        <li><span>02</span> Sub-millisecond parse across HL7, FHIR, X12, NCPDP.</li>
-        <li><span>03</span> AI-native channel design, mapping, and triage.</li>
-        <li><span>04</span> Engineered for the protocols and scale modern integration teams actually face.</li>
-      </ul>
-    </div>
-
-    <!-- Product mockup -->
-    <div class="approach__visual">
-      <div class="mock">
-        <div class="mock__bar">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          <span class="mock__path">linkiir / channels / adt-inbound</span>
-        </div>
-        <div class="mock__body">
-          <div class="mock__row mock__row--head">
-            <span>Channel</span><span>Protocol</span><span>Throughput</span><span>p99</span><span>Status</span>
-          </div>
-          <div class="mock__row">
-            <span>adt-inbound</span><span>HL7 v2.5</span><span>4.2k/s</span><span>0.7 ms</span><span class="pill pill--ok">healthy</span>
-          </div>
-          <div class="mock__row">
-            <span>oru-results</span><span>HL7 v2.5</span><span>1.8k/s</span><span>0.9 ms</span><span class="pill pill--ok">healthy</span>
-          </div>
-          <div class="mock__row">
-            <span>claims-837</span><span>X12</span><span>620/s</span><span>1.1 ms</span><span class="pill pill--ok">healthy</span>
-          </div>
-          <div class="mock__row">
-            <span>fhir-bulk</span><span>FHIR R4</span><span>3.0k/s</span><span>0.8 ms</span><span class="pill pill--warn">replaying</span>
-          </div>
-          <div class="mock__row">
-            <span>pharmacy-rx</span><span>NCPDP</span><span>410/s</span><span>1.4 ms</span><span class="pill pill--ok">healthy</span>
-          </div>
-        </div>
-        <div class="mock__foot">
-          <span>Static binary · v0.9.2-rc</span>
-          <span>uptime 99.997%</span>
-        </div>
+    <div class="engine-block__notes">
+      <div>
+        <p class="card__kicker">Built for reliability</p>
+        <p class="card__body">High-availability topology, automatic failover and message-level durability so a bad node never becomes a bad day.</p>
+      </div>
+      <div>
+        <p class="card__kicker">Sub-millisecond parse</p>
+        <p class="card__body">HL7 v2, FHIR R4/R5, X12 and XML &mdash; all first-class, all native.</p>
+      </div>
+      <div>
+        <p class="card__kicker">AI-native mapping</p>
+        <p class="card__body">Field-level mapping drafts proposed by model, approved by engineer.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ───────────── ENGINE FEATURES (50/50 inverted) ───────────── -->
-<section class="engine section" id="engine">
-  <div class="container grid-2 grid-2--reverse">
-    <div class="engine__copy">
-      <p class="overline">The Engine</p>
-      <h2 class="h-display">One runtime. Every protocol. No surprises.</h2>
-      <p class="lede">
-        Linkiir parses, transforms and routes the formats that move the largest regulated industries —
-        without a JVM, without scripting glue, without per-channel runtime overhead.
-      </p>
-    </div>
-
-    <div class="engine__grid">
-      <div class="card">
-        <p class="card__kicker">HL7 v2</p>
-        <p class="card__body">Lossless v2.x parser. Pipe delimiters, escape rules, Z-segments — all handled natively.</p>
-      </div>
-      <div class="card">
-        <p class="card__kicker">FHIR R4 / R5</p>
-        <p class="card__body">Native FHIR datatypes, bulk export, search params. No translation hop.</p>
-      </div>
-      <div class="card">
-        <p class="card__kicker">X12</p>
-        <p class="card__body">837, 835, 270/271 and friends. Companion-guide aware mapping.</p>
-      </div>
-      <div class="card">
-        <p class="card__kicker">NCPDP</p>
-        <p class="card__body">Telecom &amp; SCRIPT. Pharmacy networks treated as first-class.</p>
-      </div>
-      <div class="card">
-        <p class="card__kicker">AI mapping</p>
-        <p class="card__body">Channel templates and field mappings drafted by model, reviewed by engineer.</p>
-      </div>
-      <div class="card">
-        <p class="card__kicker">Static deploy</p>
-        <p class="card__body">One binary. No JRE. No package manager. Auditable from byte zero.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ───────────── TEAM (FULL-BLEED GRADIENT) ───────────── -->
-<section class="team" id="team">
-  <div class="container">
-    <p class="overline overline--dark">The founders</p>
-    <h2 class="h-display team__title">Four operators building<br/>the next integration engine.</h2>
-    <p class="team__lede">
-      Linkiir is led by a tight founding team across business, finance, engine architecture and
-      production. We've spent careers in interface systems and are building Linkiir as a clean-sheet
-      company for the next decade of healthcare and enterprise integration.
-    </p>
-
-    <div class="team__grid">
-      <article class="founder founder--a">
-        <p class="founder__role">Chief Executive</p>
-        <h3 class="founder__name">Business &amp; GTM</h3>
-        <p class="founder__bio">Two decades commercializing integration software. Owns customer, capital and category.</p>
-      </article>
-      <article class="founder founder--b">
-        <p class="founder__role">Chief Financial Officer</p>
-        <h3 class="founder__name">Capital &amp; ops</h3>
-        <p class="founder__bio">Builds the financial and operational chassis. Bootstrap-first, seed-ready.</p>
-      </article>
-      <article class="founder founder--c">
-        <p class="founder__role">Chief Technology Officer</p>
-        <h3 class="founder__name">Engine architecture</h3>
-        <p class="founder__bio">Designs the parse, map and route core. Owner of the static-binary thesis.</p>
-      </article>
-      <article class="founder founder--d">
-        <p class="founder__role">Chief Information Officer</p>
-        <h3 class="founder__name">Production &amp; support</h3>
-        <p class="founder__bio">Runs the production fabric. Lived the pager for the world's largest installs.</p>
-      </article>
-    </div>
+    <a href="#contact" class="btn btn--ghost btn--inline engine-block__cta">Get a demo of the engine →</a>
   </div>
 </section>
 
@@ -316,8 +247,8 @@
     <p class="overline">Contact</p>
     <h2 class="h-display contact__title">Tell us about your interfaces.</h2>
     <p class="lede contact__lede">
-      Whether you're evaluating a replacement, sizing an on-prem deploy, or considering an
-      investment — we'll respond personally within one business day.
+      Whether you need managed coverage, a migration partner, an interface health check, or a demo of
+      the Linkiir Engine &mdash; we'll respond personally within one business day.
     </p>
 
     <form class="form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you — we will be in touch.';this.querySelector('button').disabled=true;">
@@ -337,13 +268,12 @@
       </label>
       <label class="form__full">
         <span>What are you trying to solve?</span>
-        <textarea name="msg" rows="4"></textarea>
+        <textarea name="msg" rows="4" placeholder="e.g. managed HL7 coverage, migrate off legacy engine, interface health check…"></textarea>
       </label>
       <button type="submit" class="btn btn--pill btn--lg">Send →</button>
     </form>
   </div>
 </section>
-
 </main>
 
 <!-- ───────────── FOOTER ───────────── -->
@@ -355,26 +285,31 @@
         <circle cx="20" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
       </svg>
       <span class="brand__word">linkiir</span>
-      <p class="footer__tag">Integration engine. AI-native from day one.</p>
+      <p class="footer__tag">Integration support &amp; services for healthcare and enterprise B2B.</p>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__head">Solutions</p>
+      <a href="index.html#solutions">How we engage</a>
+      <a href="support.html">Support</a>
+      <a href="index.html#engine">Linkiir Engine</a>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__head">Company</p>
+      <a href="about.html">About &amp; founders</a>
+      <a href="index.html#contact">Contact</a>
     </div>
 
     <div class="footer__col">
       <p class="footer__head">Legal</p>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Security</a>
-    </div>
-
-    <div class="footer__col">
-      <p class="footer__head">Connect</p>
-      <a href="#contact">Contact</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="terms.html#privacy">Privacy</a>
+      <a href="terms.html#security">Security</a>
     </div>
   </div>
   <div class="container footer__rule">
-    <span>© 2026 Linkiir, Inc.</span>
-    <span>Brampton · Toronto · Remote</span>
+    <span>© Linkiir, Inc.</span>
   </div>
 </footer>
 
@@ -404,6 +339,7 @@
     writeTheme(next);
   });
 
+  // ─── Engine animation: streaming packets through Parse → Core → Destination ───
   // ─── Engine animation: streaming packets through Parse → Core → Destination ───
 // Engine animation — streaming packets through Parse -> Core -> Destination
   (function () {
