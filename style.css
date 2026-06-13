@@ -938,16 +938,6 @@ h1,h2,h3 { color: var(--text-hi); font-weight: 700; letter-spacing: -0.02em; mar
   .hero__stats--two { grid-template-columns: 1fr; }
 }
 
-/* Single-card model grid: fill the container width as a wide dynamic block */
-.models__grid--single {
-  grid-template-columns: 1fr;
-  max-width: none;
-  margin: 0;
-}
-.models__grid--single .model--feature {
-  width: 100%;
-}
-
 /* Legal-banner (Terms hero) */
 .legal-banner {
   margin-top: 28px;
@@ -1060,6 +1050,14 @@ h1,h2,h3 { color: var(--text-hi); font-weight: 700; letter-spacing: -0.02em; mar
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin: 56px 0 80px;
+}
+.models__grid.models__grid--single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: none;
+  margin: 56px 0 80px;
+}
+.models__grid--single .model--feature {
+  width: 100%;
 }
 .model {
   border: 1px solid var(--border);
