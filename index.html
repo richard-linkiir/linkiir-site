@@ -251,24 +251,29 @@
       the Linkiir Engine &mdash; we'll respond personally within one business day.
     </p>
 
-    <form class="form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you — we will be in touch.';this.querySelector('button').disabled=true;">
+    <form class="form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="77637dea-cc8e-4bb4-a7b2-0ccde576c40f">
+      <input type="hidden" name="subject" value="New Linkiir website inquiry">
+      <input type="hidden" name="from_name" value="Linkiir website">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
       <div class="form__row">
         <label>
           <span>Name</span>
-          <input type="text" name="name" required autocomplete="name" />
+          <input id="name" type="text" name="name" required autocomplete="name" />
         </label>
         <label>
           <span>Work email</span>
-          <input type="email" name="email" required autocomplete="email" />
+          <input id="email" type="email" name="email" required autocomplete="email" />
         </label>
       </div>
       <label class="form__full">
         <span>Organization</span>
-        <input type="text" name="org" autocomplete="organization" />
+        <input id="organization" type="text" name="organization" autocomplete="organization" />
       </label>
       <label class="form__full">
-        <span>What are you trying to solve?</span>
-        <textarea name="msg" rows="4" placeholder="e.g. managed HL7 coverage, migrate off legacy engine, interface health check…"></textarea>
+        <span>What's the project?</span>
+        <textarea id="message" name="message" rows="4" required placeholder="e.g. managed HL7 coverage, migrate off legacy engine, interface health check…"></textarea>
       </label>
       <button type="submit" class="btn btn--pill btn--lg">Send →</button>
     </form>
