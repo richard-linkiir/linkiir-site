@@ -937,6 +937,20 @@ h1,h2,h3 { color: var(--text-hi); font-weight: 700; letter-spacing: -0.02em; mar
 @media (max-width: 640px) {
   .hero__stats--two { grid-template-columns: 1fr; }
 }
+.hero__stats--single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+  text-align: center;
+}
+.hero__stats--single li {
+  align-items: center;
+  max-width: 320px;
+}
+.hero__stats--single strong { font-size: clamp(28px, 3vw, 40px); }
+.hero__stats--single span { text-align: center; }
 
 /* Legal-banner (Terms hero) */
 .legal-banner {
