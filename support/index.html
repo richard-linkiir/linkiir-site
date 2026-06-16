@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Support — Linkiir managed integration support</title>
+<meta name="description" content="Managed support for healthcare and enterprise integration channels. P1 response in 30 minutes. HL7, FHIR, X12 and XML. HIPAA, PIPEDA and PHIPA aligned." />
+<meta property="og:title" content="Support — Linkiir managed integration support" />
+<meta property="og:description" content="Managed support for healthcare and enterprise integration channels. P1 response in 30 minutes. HL7, FHIR, X12 and XML. HIPAA, PIPEDA and PHIPA aligned." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='12' cy='16' r='7' fill='none' stroke='%23111' stroke-width='2'/><circle cx='20' cy='16' r='7' fill='none' stroke='%23111' stroke-width='2'/></svg>" />
+<script>(function(){try{var s=window.localStorage;var t=s&&s.getItem('linkiir-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+
+<!-- ───────────── NAV ───────────── -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Linkiir home">
+      <svg class="brand__mark" viewBox="0 0 32 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="20" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span class="brand__word">linkiir</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/#solutions">Solutions</a>
+      <a href="/support" class="is-current">Support</a>
+      <a href="/#engine">Engine</a>
+      <a href="/about">About</a>
+      <a href="/terms">Terms</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <a href="/#contact" class="btn btn--pill">Talk to us</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ───────────── HERO ───────────── -->
+<section class="hero hero--services">
+  <div class="container">
+    <p class="overline">Support · managed integration operations</p>
+    <h1 class="hero__title">
+      Real engineers,<br/>
+      <span class="text-faint">on the channel.</span>
+    </h1>
+    <p class="hero__lede">
+      Linkiir Support is a managed service for the integration layer. Senior integration engineers
+      watch channel health, respond to incidents and close out root cause &mdash; on your engine, in
+      your environment, against documented SLAs.
+    </p>
+
+    <div class="hero__cta">
+      <a href="#raise" class="btn btn--pill">Get support now</a>
+      <a href="#sla" class="btn btn--ghost">See SLAs &rarr;</a>
+    </div>
+
+    <ul class="hero__stats hero__stats--two">
+      <li><strong>30 years</strong><span>Combined integration experience on our support team</span></li>
+      <li><strong>&lt; 30 min</strong><span>P1 response target</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────────── SUPPORT MODEL ───────────── -->
+<section class="section section--services" id="model">
+  <div class="container">
+    <div class="services__head">
+      <p class="overline">How support works</p>
+      <h2 class="h-display">Real engineers on the channel. Not a ticket queue.</h2>
+      <p class="lede services__lede">
+        Every Linkiir support engagement starts with onboarding: we inventory your channels,
+        document your engine, plug into your monitoring and write the runbook with you. After
+        cutover, your interfaces sit inside a service we actively operate &mdash; not a help desk
+        that triages emails.
+      </p>
+    </div>
+
+    <div class="services__grid">
+      <article class="service">
+        <p class="service__num">01</p>
+        <h3 class="service__title">Monitoring</h3>
+        <p class="service__body">
+          Channel-level health, queue depth, throughput, error rate and downstream acks &mdash;
+          watched continuously with alerts tied to your SLOs, not generic platform noise.
+        </p>
+        <ul class="service__list">
+          <li><strong>Channel health</strong> &mdash; up/down, throughput, latency, ack lag</li>
+          <li><strong>Queue depth</strong> &mdash; backlog detection with rate-of-change alerts</li>
+          <li><strong>Dead-letter watch</strong> &mdash; bad-message capture and replay</li>
+          <li><strong>Synthetic checks</strong> &mdash; round-trip probes on critical flows</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <p class="service__num">02</p>
+        <h3 class="service__title">Incident response</h3>
+        <p class="service__body">
+          When an alert fires, a named engineer picks up the ticket, opens a war room, drives the
+          fix and stays on the line until the channel is healthy &mdash; with you, not at you.
+        </p>
+        <ul class="service__list">
+          <li><strong>Named engineer</strong> &mdash; not a rotating outsourced contact center</li>
+          <li><strong>War-room bridge</strong> &mdash; Teams, Slack, Zoom, or phone</li>
+          <li><strong>Live status updates</strong> &mdash; every 30 min during P1</li>
+          <li><strong>Containment first</strong> &mdash; restore traffic, then explain why</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <p class="service__num">03</p>
+        <h3 class="service__title">Root cause &amp; prevention</h3>
+        <p class="service__body">
+          Every P1 / P2 gets a written post-mortem within 5 business days, with a remediation list
+          we own and report against. Repeat incidents are not acceptable.
+        </p>
+        <ul class="service__list">
+          <li><strong>Blameless RCA</strong> &mdash; timeline, contributing factors, fix</li>
+          <li><strong>Remediation tracker</strong> &mdash; owned items, dates, status</li>
+          <li><strong>Pattern detection</strong> &mdash; cross-incident trend reviews</li>
+          <li><strong>Runbook updates</strong> &mdash; lessons fold back into ops docs</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <p class="service__num">04</p>
+        <h3 class="service__title">Change &amp; release</h3>
+        <p class="service__body">
+          Channel changes, code deploys, partner spec updates and engine upgrades &mdash; all
+          handled through a Git-backed change process so a Tuesday afternoon doesn&rsquo;t become a
+          Tuesday night.
+        </p>
+        <ul class="service__list">
+          <li><strong>Change windows</strong> &mdash; planned, communicated, reversible</li>
+          <li><strong>Git-backed channels</strong> &mdash; every change is reviewable</li>
+          <li><strong>Pre-prod validation</strong> &mdash; full message replay where feasible</li>
+          <li><strong>Rollback plan</strong> &mdash; documented before deploy, not after</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <p class="service__num">05</p>
+        <h3 class="service__title">Reporting &amp; reviews</h3>
+        <p class="service__body">
+          Monthly service reports your CIO can actually read, and a quarterly business review with
+          your account lead &mdash; channel health, incident trends, capacity, roadmap items.
+        </p>
+        <ul class="service__list">
+          <li><strong>Monthly ops report</strong> &mdash; uptime, incidents, throughput</li>
+          <li><strong>SLA scorecard</strong> &mdash; targets vs actual, with credits if missed</li>
+          <li><strong>QBR</strong> &mdash; trends, risks, planned work, capacity outlook</li>
+          <li><strong>Audit packs</strong> &mdash; on request, for HIPAA / SOC 2 reviewers</li>
+        </ul>
+      </article>
+
+      <article class="service service--cta">
+        <p class="service__num">+</p>
+        <h3 class="service__title">Already on-call yourself?</h3>
+        <p class="service__body">
+          We also do shared coverage &mdash; your team owns business hours, we own peak windows and
+          escalations. Two-week pilot available.
+        </p>
+        <a href="/#contact" class="btn btn--ghost btn--inline">Pilot shared coverage &rarr;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── SLA TABLE ───────────── -->
+<section class="section sla" id="sla">
+  <div class="container">
+    <p class="overline">Service levels</p>
+    <h2 class="h-display">Documented response and resolution targets.</h2>
+    <p class="lede sla__lede">
+      Targets shown apply to the standard Linkiir Support plan. Custom SLAs available on enterprise
+      plans and are codified in the signed Master Services Agreement and Order Form. See
+      <a href="/terms#s4">Terms &sect; 4</a> for the full clause.
+    </p>
+
+    <div class="sla__table-wrap">
+      <table class="sla__table">
+        <thead>
+          <tr>
+            <th>Severity</th>
+            <th>Definition</th>
+            <th>Response</th>
+            <th>Status updates</th>
+            <th>Restore / workaround target</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="sla__sev sla__sev--p1">P1</span></td>
+            <td>Degraded performance, intermittent errors, or one of multiple redundant channels down.</td>
+            <td><strong>30 minutes</strong></td>
+            <td>Every 2 hours</td>
+            <td>1 business day</td>
+          </tr>
+          <tr>
+            <td><span class="sla__sev sla__sev--p2">P2</span></td>
+            <td>Single non-production issue, minor defect with workaround, configuration question.</td>
+            <td><strong>1 business day</strong></td>
+            <td>Daily</td>
+            <td>5 business days</td>
+          </tr>
+          <tr>
+            <td><span class="sla__sev sla__sev--p3">P3</span></td>
+            <td>Enhancement request, documentation update, scheduled change.</td>
+            <td><strong>2 business days</strong></td>
+            <td>Weekly</td>
+            <td>Scheduled by mutual agreement</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="sla__note">
+      <strong>Business hours.</strong> 08:00&ndash;18:00 Eastern, Monday&ndash;Friday, excluding U.S. and
+      Canadian statutory holidays. Custom coverage windows available on enterprise plans.
+    </p>
+  </div>
+</section>
+
+<!-- ───────────── TIERS ───────────── -->
+<section class="section section--models" id="plans">
+  <div class="container">
+    <p class="overline">Support plans</p>
+    <h2 class="h-display">Two ways to buy support.</h2>
+
+    <div class="models__grid models__grid--two">
+      <article class="model">
+        <p class="model__tag">Standard</p>
+        <h3 class="model__title">Standard</h3>
+        <p class="model__body">
+          Coverage 08:00&ndash;18:00 Eastern, Monday&ndash;Friday. P1 response within 30 minutes,
+          documented SLAs, change support and monthly reporting. Suitable for most healthcare and
+          B2B integration workloads.
+        </p>
+        <ul class="model__list">
+          <li>P1 response &lt; 30 minutes</li>
+          <li>Monthly service report</li>
+          <li>Engine-agnostic</li>
+          <li>RCA within 5 business days</li>
+        </ul>
+      </article>
+
+      <article class="model model--feature">
+        <p class="model__tag">Enterprise</p>
+        <h3 class="model__title">Enterprise</h3>
+        <p class="model__body">
+          Custom response targets, dedicated engineering capacity, single-tenant infrastructure
+          options, named technical account manager and audit-grade reporting.
+        </p>
+        <ul class="model__list">
+          <li>Custom SLA &amp; service credits</li>
+          <li>Dedicated TAM</li>
+          <li>BAA, audit pack, SOC 2 collateral</li>
+          <li>Quarterly business review</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── INCIDENT LIFECYCLE ───────────── -->
+<section class="section section--process" id="lifecycle">
+  <div class="container">
+    <p class="overline">Incident lifecycle</p>
+    <h2 class="h-display">What actually happens when something breaks.</h2>
+
+    <ol class="process">
+      <li>
+        <span class="process__step">01</span>
+        <p class="process__title">Detect</p>
+        <p class="process__body">Monitoring fires, or you raise a ticket by email. Severity is set in the first minutes based on documented criteria.</p>
+      </li>
+      <li>
+        <span class="process__step">02</span>
+        <p class="process__title">Respond</p>
+        <p class="process__body">The on-duty engineer acknowledges within the SLA window, opens a bridge for P1 and starts investigation against the runbook. You get a real human, fast.</p>
+      </li>
+      <li>
+        <span class="process__step">03</span>
+        <p class="process__title">Restore</p>
+        <p class="process__body">Containment and restoration first &mdash; reroute, replay, failover or rollback. We write the truth on the status update, even when the truth is awkward.</p>
+      </li>
+      <li>
+        <span class="process__step">04</span>
+        <p class="process__title">Root cause</p>
+        <p class="process__body">Written post-mortem within 5 business days for P1, with remediation items we own, dates we commit to, and follow-up in the next monthly report.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ───────────── SCOPE ───────────── -->
+<section class="section scope" id="scope">
+  <div class="container">
+    <p class="overline">In scope &amp; out of scope</p>
+    <h2 class="h-display">What Linkiir Support covers &mdash; and what it doesn&rsquo;t.</h2>
+
+    <div class="scope__grid">
+      <article class="scope__card scope__card--in">
+        <p class="scope__head">In scope</p>
+        <ul class="scope__list">
+          <li>HL7 v2, FHIR, X12, XML and custom channel support</li>
+          <li>Integration engine operations (Rhapsody, Mirth, Cloverleaf, Iguana, Corepoint, Linkiir Engine)</li>
+          <li>Channel monitoring, alerting and incident response</li>
+          <li>Trading partner and downstream system coordination</li>
+          <li>Code &amp; config changes to in-scope channels</li>
+          <li>Engine upgrades, patching, version uplifts</li>
+          <li>Performance tuning and capacity planning</li>
+          <li>HIPAA / PIPEDA / PHIPA audit support and evidence packs</li>
+        </ul>
+      </article>
+
+      <article class="scope__card scope__card--out">
+        <p class="scope__head">Out of scope (by default)</p>
+        <ul class="scope__list">
+          <li>End-user help desk for clinicians, schedulers or front-office staff</li>
+          <li>EHR application support outside the interface layer</li>
+          <li>Network, firewall and infrastructure operations beyond integration hosts</li>
+          <li>Custom application development unrelated to integration</li>
+          <li>Database administration outside engine-owned databases</li>
+          <li>Hardware procurement and on-site break-fix</li>
+        </ul>
+        <p class="scope__foot">
+          Most out-of-scope items can be added to a plan via Order Form or handled as a
+          time-and-materials engagement. Ask us.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── GET SUPPORT NOW ───────────── -->
+<section class="section ticket" id="raise">
+  <div class="container ticket__simple">
+    <p class="overline">Get support now</p>
+    <h2 class="h-display">Email our support team.</h2>
+    <p class="lede ticket__lede">
+      Already a Linkiir customer? Send your request to the address below. Subject line drives
+      routing &mdash; use the format documented in your runbook. Severity is set in the first
+      minutes based on documented criteria.
+    </p>
+    <a href="mailto:support@interfaceware.com" class="btn btn--pill btn--lg ticket__email">support@interfaceware.com</a>
+    <p class="ticket__sub">Not yet a customer? <a href="/#contact">Talk to us &rarr;</a></p>
+  </div>
+</section>
+
+</main>
+
+<!-- ───────────── FOOTER ───────────── -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <svg class="brand__mark" viewBox="0 0 32 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="20" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span class="brand__word">linkiir</span>
+      <p class="footer__tag">Integration support &amp; services for healthcare and enterprise B2B.</p>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__head">Solutions</p>
+      <a href="/#solutions">How we engage</a>
+      <a href="/support">Support</a>
+      <a href="/#engine">Linkiir Engine</a>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__head">Company</p>
+      <a href="/about">About &amp; founders</a>
+      <a href="/#contact">Contact</a>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__head">Legal</p>
+      <a href="/terms">Terms &amp; Conditions</a>
+      <a href="/terms#privacy">Privacy</a>
+      <a href="/terms#security">Security</a>
+    </div>
+  </div>
+  <div class="container footer__rule">
+    <span>© Linkiir, Inc.</span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('nav--scrolled', window.scrollY > 24);
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  const root = document.documentElement;
+  function readTheme(){
+    try { return (window.localStorage && window.localStorage.getItem('linkiir-theme')) || null; }
+    catch(e){ return null; }
+  }
+  function writeTheme(v){
+    try { window.localStorage && window.localStorage.setItem('linkiir-theme', v); }
+    catch(e){}
+  }
+  const stored = readTheme();
+  root.setAttribute('data-theme', stored === 'dark' ? 'dark' : 'light');
+
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    writeTheme(next);
+  });
+</script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
