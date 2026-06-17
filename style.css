@@ -1083,15 +1083,15 @@ h1,h2,h3 { color: var(--text-hi); font-weight: 700; letter-spacing: -0.02em; mar
   gap: 12px;
 }
 .model--feature {
-  background: var(--text-hi);
-  color: var(--bg);
-  border-color: var(--text-hi);
+  background: #0A0A0A;
+  color: #FAFAF8;
+  border-color: #0A0A0A;
 }
 .model--feature .model__kicker,
 .model--feature .model__title,
-.model--feature .model__price { color: var(--bg); }
+.model--feature .model__price { color: #FAFAF8; }
 .model--feature .model__body,
-.model--feature .model__bullets li { color: color-mix(in oklab, var(--bg) 75%, var(--text-faint)); }
+.model--feature .model__bullets li { color: rgba(250,250,248,.74); }
 .model__kicker {
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   font-size: 12px;
@@ -1578,6 +1578,7 @@ html { scroll-behavior: smooth; }
   margin: 0 0 14px;
 }
 .model--feature .model__tag { color: var(--cream); }
+.model--feature .model__list li { color: rgba(250,250,248,.78); }
 .model__list {
   list-style: none;
   padding: 0;
