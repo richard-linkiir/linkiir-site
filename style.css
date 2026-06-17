@@ -1092,10 +1092,14 @@ h1,h2,h3 { color: var(--text-hi); font-weight: 700; letter-spacing: -0.02em; mar
 .model--feature .model__price { color: #FAFAF8; }
 .model--feature .model__body,
 .model--feature .model__bullets li { color: rgba(250,250,248,.74); }
-.model--feature .btn--ghost {
+.model--feature .model__cta {
   align-self: flex-start;
-  color: #FAFAF8;
-  margin-top: 6px;
+  background: #FAFAF8;
+  color: #0A0A0A;
+  margin-top: 10px;
+}
+.model--feature .model__cta:hover {
+  opacity: .9;
 }
 .model__kicker {
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
