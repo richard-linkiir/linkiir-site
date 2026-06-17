@@ -1088,6 +1088,7 @@ h1,h2,h3 { color: var(--text-hi); font-weight: 700; letter-spacing: -0.02em; mar
   border-color: var(--text-hi);
 }
 .model--feature .model__kicker,
+.model--feature .model__title,
 .model--feature .model__price { color: var(--bg); }
 .model--feature .model__body,
 .model--feature .model__bullets li { color: color-mix(in oklab, var(--bg) 75%, var(--text-faint)); }
