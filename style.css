@@ -952,19 +952,6 @@ h1,h2,h3 { color: var(--text-hi); font-weight: 700; letter-spacing: -0.02em; mar
 .hero__stats--single strong { font-size: clamp(28px, 3vw, 40px); }
 .hero__stats--single span { text-align: center; }
 
-/* Legal-banner (Terms hero) */
-.legal-banner {
-  margin-top: 28px;
-  padding: 16px 20px;
-  background: color-mix(in oklab, var(--rust) 8%, var(--bg));
-  border: 1px solid color-mix(in oklab, var(--rust) 25%, var(--border));
-  border-radius: 12px;
-  color: var(--text-body);
-  font-size: 14px;
-  line-height: 1.6;
-}
-.legal-banner strong { color: var(--text-hi); }
-
 /* ───────────── SERVICES GRID ───────────── */
 .services__head {
   max-width: 880px;
