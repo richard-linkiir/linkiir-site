@@ -1,430 +1,294 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Support — Linkiir second-line integration support</title>
-<meta name="description" content="Annual second-line support plans for existing integrations, new builds, documentation, migration guidance and high-availability architecture." />
-<meta property="og:title" content="Support — Linkiir second-line integration support" />
-<meta property="og:description" content="Annual second-line support plans for existing integrations, new builds, documentation, migration guidance and high-availability architecture." />
-<meta property="og:type" content="website" />
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900,400&display=swap" rel="stylesheet" />
+<title>Support — Linkiir</title>
+<meta name="description" content="Managed integration support for healthcare. Documented SLAs, named engineers, real war-room bridges on P1." />
+<link rel="preconnect" href="https://rsms.me/" />
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='12' cy='16' r='7' fill='none' stroke='%23111' stroke-width='2'/><circle cx='20' cy='16' r='7' fill='none' stroke='%23111' stroke-width='2'/></svg>" />
-<script>(function(){try{var s=window.localStorage;var t=s&&s.getItem('linkiir-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='12' cy='16' r='7' fill='none' stroke='white' stroke-width='2'/><circle cx='20' cy='16' r='7' fill='none' stroke='white' stroke-width='2'/></svg>" />
 </head>
 <body>
 
-<!-- ───────────── NAV ───────────── -->
 <header class="nav" id="nav">
-  <div class="nav__inner">
-    <a href="/" class="brand" aria-label="Linkiir home">
-      <svg class="brand__mark" viewBox="0 0 32 24" fill="none" aria-hidden="true">
-        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="20" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
-      </svg>
-      <span class="brand__word">linkiir</span>
-    </a>
-
-    <nav class="nav__links" aria-label="Primary">
-      <a href="/#solutions">Solutions</a>
-      <a href="/support" class="is-current">Support</a>
-      <a href="/#engine">Engine</a>
-      <a href="/about">About</a>
-      <a href="/#contact">Contact</a>
-    </nav>
-
-    <div class="nav__actions">
-      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
-        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-        </svg>
-        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-      </button>
-      <a href="/#contact" class="btn btn--pill">Talk to us</a>
-    </div>
-  </div>
+  <a href="index.html" class="nav__brand" aria-label="Linkiir home">
+    <svg viewBox="0 0 32 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="20" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+    </svg><span>linkiir</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="support.html" class="is-current">Support</a>
+    <a href="about.html">About</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <a href="contact.html" class="nav__cta">Talk to us</a>
+  <button class="nav__burger" id="burger" aria-label="Open menu">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
 </header>
 
-<main id="top">
+<div class="menu" id="menu" role="dialog" aria-modal="true">
+  <button class="menu__close" id="menuClose" aria-label="Close menu">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <div class="menu__inner">
+    <a href="index.html">Home</a><a href="solutions.html">Solutions</a><a href="support.html">Support</a><a href="about.html">About</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a>
+  </div>
+</div>
 
-<!-- ───────────── HERO ───────────── -->
-<section class="hero hero--services">
-  <div class="container">
-    <p class="overline">Integration support · annual plans</p>
-    <h1 class="hero__title">
-      Your integration estate,<br/>
-      <span class="text-faint">backed by ours.</span>
-    </h1>
-    <p class="hero__lede">
-      Linkiir provides second-line support for healthcare and B2B integration teams. We backstop
-      your team on incidents and break-fix, help design and test new interfaces, keep integration
-      documentation current and guide migrations off legacy engines.
-    </p>
+<main>
 
-    <div class="hero__cta">
-      <a href="#raise" class="btn btn--pill">Get support now</a>
-      <a href="#plans" class="btn btn--ghost">Compare plans &rarr;</a>
+<section class="page-hero">
+  <div class="page-hero__dots" aria-hidden="true"></div>
+  <div class="page-hero__inner">
+    <p class="overline">( ✦ ) Support</p>
+    <h1 class="h1">Real engineers, <span class="dim-tail">on the channel.</span></h1>
+    <p class="lede">A managed service for the integration layer — senior engineers watching channel health, responding to incidents and closing out root cause against documented SLAs.</p>
+    <div class="hero__ctas" style="margin-top:2rem">
+      <a href="#plans" class="btn btn--primary btn--shimmer">See plans <span class="arr">→</span></a>
+      <a href="#sla" class="btn btn--ghost">View SLAs <span class="arr">→</span></a>
     </div>
+  </div>
+</section>
 
-    <ul class="hero__stats hero__stats--two">
-      <li><strong>9x5</strong><span>Monday-Friday Eastern coverage</span></li>
-      <li><strong>3 tiers</strong><span>Standard, Professional and Enterprise</span></li>
+<!-- Stats -->
+<section class="section--dark" style="padding-top:0">
+  <div class="container">
+    <ul class="stats reveal" style="list-style:none;padding:0;margin:0">
+      <li class="stat"><span class="stat__num">30+ yrs</span><span class="stat__lbl">( Combined integration ops experience )</span></li>
+      <li class="stat"><span class="stat__num">&lt; 30 min</span><span class="stat__lbl">( P1 response target on Enterprise )</span></li>
+      <li class="stat"><span class="stat__num">5 days</span><span class="stat__lbl">( Post-mortem within 5 business days )</span></li>
     </ul>
   </div>
 </section>
 
-<!-- ───────────── SUPPORT MODEL ───────────── -->
-<section class="section section--services" id="model">
+<!-- SLA Table -->
+<section class="section section--dark" id="sla">
   <div class="container">
-    <div class="services__head">
-      <p class="overline">What is included</p>
-      <h2 class="h-display">Second-line support for the work your integration team already owns.</h2>
-      <p class="lede services__lede">
-        Every plan gives your team a direct line to integration engineers for HL7, X12, XML, REST
-        and custom flows. Higher tiers add faster response targets and broader scope for new builds,
-        full-estate support, migration work and high-availability architecture.
-      </p>
+    <div class="solutions__head reveal">
+      <h2 class="h2">Service <span class="dim-tail">levels.</span></h2>
+      <p class="lede">Documented response and resolution targets. Codified in your signed Master Services Agreement and Order Form. See <a href="terms.html#sla">Terms § 4</a> for the full clause.</p>
     </div>
-
-    <div class="services__grid">
-      <article class="service">
-        <p class="service__num">01</p>
-        <h3 class="service__title">Second-line support</h3>
-        <p class="service__body">
-          Backstop your team on incidents and break-fix for your existing integration engine and
-          production interface estate.
-        </p>
-        <ul class="service__list">
-          <li>HL7, X12, XML, REST and custom integration flows</li>
-          <li>Incident triage and break-fix assistance</li>
-          <li>Existing engine and channel support</li>
-        </ul>
-      </article>
-
-      <article class="service">
-        <p class="service__num">02</p>
-        <h3 class="service__title">New integration builds</h3>
-        <p class="service__body">
-          Assistance designing, building and testing new interfaces alongside your team, sized to
-          the selected support tier.
-        </p>
-        <ul class="service__list">
-          <li>Interface design and implementation support</li>
-          <li>Testing help before partner cutover</li>
-          <li>Practical delivery support for active projects</li>
-        </ul>
-      </article>
-
-      <article class="service">
-        <p class="service__num">03</p>
-        <h3 class="service__title">Documentation</h3>
-        <p class="service__body">
-          Channel inventory, message flows, runbooks and handover documentation kept current as
-          your estate evolves.
-        </p>
-        <ul class="service__list">
-          <li>Channel inventory and ownership notes</li>
-          <li>Message flow and dependency mapping</li>
-          <li>Operational runbooks and handover material</li>
-        </ul>
-      </article>
-
-      <article class="service">
-        <p class="service__num">04</p>
-        <h3 class="service__title">Migration guidance</h3>
-        <p class="service__body">
-          Architecture review and migration playbooks for teams moving off legacy engines or
-          rationalizing older interface estates.
-        </p>
-        <ul class="service__list">
-          <li>Iguana, Rhapsody, Mirth, Cloverleaf and BizTalk experience</li>
-          <li>Migration sequencing and risk review</li>
-          <li>Cutover planning for legacy integrations</li>
-        </ul>
-      </article>
-
-      <article class="service">
-        <p class="service__num">05</p>
-        <h3 class="service__title">Email + phone support</h3>
-        <p class="service__body">
-          Direct access to integration engineers during business hours. No tier-1 gatekeepers and
-          no generic help desk handoff.
-        </p>
-        <ul class="service__list">
-          <li>9x5 Monday-Friday Eastern coverage</li>
-          <li>Response targets matched to your plan</li>
-          <li>Engineer-led support conversations</li>
-        </ul>
-      </article>
-
-      <article class="service">
-        <p class="service__num">06</p>
-        <h3 class="service__title">High-availability architecture</h3>
-        <p class="service__body">
-          Professional and Enterprise plans include design review and operational support for
-          resilient engine deployments.
-        </p>
-        <ul class="service__list">
-          <li>Active-active and clustered deployment review</li>
-          <li>Failover testing and redundancy planning</li>
-          <li>Multi-site setup guidance</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ───────────── SLA TABLE ───────────── -->
-<section class="section sla" id="sla">
-  <div class="container">
-    <p class="overline">Plan comparison</p>
-    <h2 class="h-display">Choose the response target and estate scope that fits your team.</h2>
-    <p class="lede sla__lede">
-      All plans are annual contracts with 9x5 Monday-Friday Eastern coverage, email and phone
-      access to integration engineers, and no tier-1 gatekeepers.
-    </p>
-
-    <div class="sla__table-wrap">
-      <table class="sla__table">
+    <div class="reveal" style="overflow-x:auto">
+      <table class="sla-table">
         <thead>
-          <tr>
-            <th>Plan</th>
-            <th>Response</th>
-            <th>Coverage</th>
-            <th>Scope</th>
-            <th>Best fit</th>
-          </tr>
+          <tr><th>Severity</th><th>Definition</th><th>Response</th><th>Status updates</th><th>Restore target</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td><span class="sla__sev sla__sev--p3">Standard</span></td>
-            <td><strong>Same business day</strong></td>
-            <td>9x5, Mon-Fri (ET)</td>
-            <td>Existing integrations</td>
-            <td>A stable interface estate that needs an expert on call.</td>
+            <td><span class="sla-sev sla-sev--p1">P1</span></td>
+            <td>Production channel down, or one of multiple redundant channels failing.</td>
+            <td><strong>30 minutes</strong></td>
+            <td>Every 2 hours</td>
+            <td>1 business day</td>
           </tr>
           <tr>
-            <td><span class="sla__sev sla__sev--p2">Professional</span></td>
-            <td><strong>Within 4 business hours</strong></td>
-            <td>9x5, Mon-Fri (ET)</td>
-            <td>Existing + new builds</td>
-            <td>Teams shipping new integrations while running current ones.</td>
+            <td><span class="sla-sev sla-sev--p2">P2</span></td>
+            <td>Single non-production issue, minor defect with workaround, configuration question.</td>
+            <td><strong>1 business day</strong></td>
+            <td>Daily</td>
+            <td>5 business days</td>
           </tr>
           <tr>
-            <td><span class="sla__sev sla__sev--p1">Enterprise</span></td>
-            <td><strong>Within 2 business hours</strong></td>
-            <td>9x5, Mon-Fri (ET)</td>
-            <td>Full estate + migration</td>
-            <td>Complex estates and active migrations off legacy engines.</td>
+            <td><span class="sla-sev sla-sev--p3">P3</span></td>
+            <td>Enhancement request, documentation update, scheduled change.</td>
+            <td><strong>2 business days</strong></td>
+            <td>Weekly</td>
+            <td>By mutual agreement</td>
           </tr>
         </tbody>
       </table>
     </div>
-
-    <p class="sla__note">
-      <strong>Annual plan.</strong> Exact terms, included build capacity and response commitments are
-      confirmed in your Order Form.
-    </p>
+    <p class="body" style="margin-top:1.5rem;max-width:46rem"><strong style="color:#fff">Business hours.</strong> 08:00–18:00 Eastern, Monday–Friday, excluding U.S. and Canadian statutory holidays. Custom coverage windows available on Enterprise plans.</p>
   </div>
 </section>
 
-<!-- ───────────── TIERS ───────────── -->
-<section class="section section--models" id="plans">
+<!-- Plans -->
+<section class="section section--dark" id="plans">
   <div class="container">
-    <p class="overline">Support plans</p>
-    <h2 class="h-display">Three annual support plans.</h2>
-
-    <div class="models__grid">
-      <article class="model">
-        <p class="model__tag">Standard</p>
-        <h3 class="model__title">Standard</h3>
-        <p class="model__body">
-          Second-line backup for a stable interface estate that needs an expert on call.
-        </p>
-        <ul class="model__list">
-          <li>Same business day response</li>
-          <li>9x5 Monday-Friday Eastern coverage</li>
-          <li>Existing integration scope</li>
-          <li>All five core support capabilities</li>
+    <div class="solutions__head reveal">
+      <h2 class="h2">Two ways to <span class="dim-tail">buy support.</span></h2>
+      <p class="lede">Flat-fee pricing. Predictable coverage. No per-ticket meters, no scope haggling on every change.</p>
+    </div>
+    <div class="pricing">
+      <article class="plan plan--accent reveal reveal--lag-1">
+        <p class="plan__tag">( Standard ) Support</p>
+        <p class="plan__price">$15,000<small>/year</small></p>
+        <hr class="plan__rule" />
+        <ul class="plan__features">
+          <li>Second-line support on your current integration estate</li>
+          <li>Assistance building new interfaces</li>
+          <li>Email &amp; phone support · 9×5 Mon–Fri Eastern</li>
+          <li>Channel documentation maintained by us</li>
+          <li>Same-business-day response target</li>
+          <li>Monthly service report</li>
+          <li>RCA within 5 business days</li>
         </ul>
+        <a href="contact.html" class="btn btn--ghost plan__cta">Get started <span class="arr">→</span></a>
       </article>
 
-      <article class="model model--feature">
-        <p class="model__tag">Professional</p>
-        <h3 class="model__title">Professional</h3>
-        <p class="model__body">
-          For teams shipping new integrations alongside running their current ones.
-        </p>
-        <ul class="model__list">
-          <li>Within 4 business hours response</li>
-          <li>9x5 Monday-Friday Eastern coverage</li>
-          <li>Existing integrations + new builds</li>
-          <li>Includes high-availability architecture support</li>
+      <article class="plan plan--accent reveal reveal--lag-2">
+        <p class="plan__tag">( Enterprise ) Support</p>
+        <p class="plan__price">$35,000<small>/year</small></p>
+        <hr class="plan__rule" />
+        <ul class="plan__features">
+          <li>Everything in Standard, plus</li>
+          <li>Response target within 2 business hours</li>
+          <li>High-availability architecture support</li>
+          <li>Migration guidance — engine to engine</li>
+          <li>Dedicated technical account manager</li>
+          <li>Quarterly business review &amp; audit pack</li>
+          <li>BAA, DPA and SOC 2 collateral included</li>
         </ul>
-      </article>
-
-      <article class="model">
-        <p class="model__tag">Enterprise</p>
-        <h3 class="model__title">Enterprise</h3>
-        <p class="model__body">
-          Hands-on partner for complex estates and active migrations off legacy engines.
-        </p>
-        <ul class="model__list">
-          <li>Within 2 business hours response</li>
-          <li>9x5 Monday-Friday Eastern coverage</li>
-          <li>Full estate + migration scope</li>
-          <li>Includes high-availability architecture support</li>
-        </ul>
+        <a href="contact.html" class="btn btn--primary plan__cta">Talk to sales <span class="arr">→</span></a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ───────────── INCIDENT LIFECYCLE ───────────── -->
-<section class="section section--process" id="lifecycle">
+<!-- Incident Lifecycle -->
+<section class="section section--dark">
   <div class="container">
-    <p class="overline">How the engagement works</p>
-    <h2 class="h-display">Practical support without a tier-1 detour.</h2>
-
-    <ol class="process">
-      <li>
-        <span class="process__step">01</span>
-        <p class="process__title">Connect</p>
-        <p class="process__body">Your team gets email and phone access to Linkiir integration engineers during the plan coverage window.</p>
-      </li>
-      <li>
-        <span class="process__step">02</span>
-        <p class="process__title">Backstop</p>
-        <p class="process__body">We help triage incidents, investigate break-fix work and support the integration engine and channels in scope.</p>
-      </li>
-      <li>
-        <span class="process__step">03</span>
-        <p class="process__title">Build</p>
-        <p class="process__body">When included in your tier, we assist with design, build and testing for new interfaces alongside your team.</p>
-      </li>
-      <li>
-        <span class="process__step">04</span>
-        <p class="process__title">Evolve</p>
-        <p class="process__body">Documentation, migration guidance and HA architecture support keep the estate easier to operate as it changes.</p>
-      </li>
-    </ol>
+    <div class="solutions__head reveal">
+      <h2 class="h2">What happens when <span class="dim-tail">something breaks.</span></h2>
+      <p class="lede">Same flow every time. The first hour matters more than the next ten — so we wrote it down.</p>
+    </div>
+    <div class="process">
+      <article class="pcard reveal reveal--lag-1">
+        <p class="pcard__num">( 01 ) Detect</p>
+        <h3 class="pcard__title">Alert or ticket</h3>
+        <hr class="pcard__rule" />
+        <p class="pcard__body">Monitoring fires, or you raise a ticket by email. Severity is set in the first minutes against documented criteria.</p>
+        <span class="pcard__star">✦</span>
+      </article>
+      <article class="pcard reveal reveal--lag-2">
+        <p class="pcard__num">( 02 ) Respond</p>
+        <h3 class="pcard__title">Engineer on bridge</h3>
+        <hr class="pcard__rule" />
+        <p class="pcard__body">On-duty engineer acknowledges within the SLA window, opens a bridge for P1, starts investigation against the runbook.</p>
+        <span class="pcard__star">✦</span>
+      </article>
+      <article class="pcard reveal reveal--lag-3">
+        <p class="pcard__num">( 03 ) Restore</p>
+        <h3 class="pcard__title">Containment first</h3>
+        <hr class="pcard__rule" />
+        <p class="pcard__body">Reroute, replay, failover or rollback. We write the truth on the status update, even when the truth is awkward.</p>
+        <span class="pcard__star">✦</span>
+      </article>
+      <article class="pcard reveal reveal--lag-4">
+        <p class="pcard__num">( 04 ) Root cause</p>
+        <h3 class="pcard__title">Post-mortem &amp; fix</h3>
+        <hr class="pcard__rule" />
+        <p class="pcard__body">Written within 5 business days for P1. Owned remediation. Follow-up in next monthly report. No repeat incidents.</p>
+        <span class="pcard__star">✦</span>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- ───────────── SCOPE ───────────── -->
-<section class="section scope" id="scope">
+<!-- Scope -->
+<section class="section section--dark" id="scope">
   <div class="container">
-    <p class="overline">In scope &amp; out of scope</p>
-    <h2 class="h-display">Support for the integration layer.</h2>
-
-    <div class="scope__grid">
-      <article class="scope__card scope__card--in">
-        <p class="scope__head">In scope</p>
+    <div class="solutions__head reveal">
+      <h2 class="h2">In scope. <span class="dim-tail">Out of scope.</span></h2>
+      <p class="lede">A flat-fee subscription works because the boundary is clear. Anything outside is happily added as a change to the Order Form.</p>
+    </div>
+    <div class="scope">
+      <article class="scope__card reveal reveal--lag-1">
+        <p class="scope__head">( ✦ ) In scope</p>
         <ul class="scope__list">
-          <li>Second-line incidents and break-fix for existing integrations</li>
-          <li>HL7, X12, XML, REST and custom integration flows</li>
-          <li>New integration design, build and test assistance where included by tier</li>
-          <li>Channel inventory, message flows, runbooks and handover documentation</li>
-          <li>Migration guidance for Iguana, Rhapsody, Mirth, Cloverleaf and BizTalk estates</li>
-          <li>High-availability architecture support for Professional and Enterprise plans</li>
+          <li>HL7 v2, FHIR, X12, XML and custom channel support</li>
+          <li>Engine ops on Rhapsody, Mirth, Cloverleaf, Iguana, Corepoint, Linkiir</li>
+          <li>Channel monitoring, alerting and incident response</li>
+          <li>Trading partner and downstream system coordination</li>
+          <li>Code &amp; config changes to in-scope channels</li>
+          <li>Engine upgrades, patching, version uplifts</li>
+          <li>Performance tuning and capacity planning</li>
+          <li>HIPAA / PIPEDA / PHIPA audit support and evidence packs</li>
         </ul>
       </article>
-
-      <article class="scope__card scope__card--out">
-        <p class="scope__head">Out of scope (by default)</p>
+      <article class="scope__card scope__card--out reveal reveal--lag-2">
+        <p class="scope__head">( ✦ ) Out of scope (by default)</p>
         <ul class="scope__list">
-          <li>End-user help desk for clinicians, schedulers or front-office staff</li>
+          <li>End-user help desk for clinicians or front-office staff</li>
           <li>EHR application support outside the interface layer</li>
-          <li>Network, firewall and infrastructure operations outside integration responsibilities</li>
+          <li>Network, firewall and infrastructure ops beyond integration hosts</li>
           <li>Custom application development unrelated to integration</li>
-          <li>Database administration unrelated to supported integration engines</li>
+          <li>Database administration outside engine-owned databases</li>
           <li>Hardware procurement and on-site break-fix</li>
         </ul>
-        <p class="scope__foot">
-          Additional scope can be added in an Order Form or handled as a separate engagement.
-        </p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ───────────── GET SUPPORT NOW ───────────── -->
-<section class="section ticket" id="raise">
-  <div class="container ticket__simple">
-    <p class="overline">Get support now</p>
-    <h2 class="h-display">Talk to Linkiir about a support plan.</h2>
-    <p class="lede ticket__lede">
-      Ready to choose Standard, Professional or Enterprise? Share a few details through our contact
-      form and we will confirm the right annual plan, response target and support scope for your
-      integration estate.
-    </p>
-    <a href="/#contact" class="btn btn--pill btn--lg ticket__email">Open contact form</a>
-    <p class="ticket__sub">Already a customer? Use the support contact documented in your plan.</p>
+<!-- Get support now -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="cta-block reveal">
+      <p class="overline">( ✦ ) Get support now</p>
+      <h2 class="h2">Email our <span class="dim-tail">support team.</span></h2>
+      <p class="lede" style="margin-left:auto;margin-right:auto">Already a Linkiir customer? Send your request to the address below. Severity is set in the first minutes from the subject line.</p>
+      <div class="hero__ctas" style="margin-top:2rem">
+        <a href="mailto:support@linkiir.com" class="btn btn--primary btn--lg btn--shimmer">support@linkiir.com</a>
+        <a href="contact.html" class="btn btn--ghost btn--lg">Not yet a customer? Talk to us <span class="arr">→</span></a>
+      </div>
+    </div>
   </div>
 </section>
 
 </main>
 
-<!-- ───────────── FOOTER ───────────── -->
 <footer class="footer">
-  <div class="container footer__inner">
-    <div class="footer__brand">
-      <svg class="brand__mark" viewBox="0 0 32 24" fill="none" aria-hidden="true">
-        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="20" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
-      </svg>
-      <span class="brand__word">linkiir</span>
-      <p class="footer__tag">Integration support &amp; services for healthcare and enterprise B2B.</p>
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__brand" aria-label="Linkiir home" style="font-size:1.4rem">
+          <svg viewBox="0 0 32 24" fill="none" aria-hidden="true" style="width:2rem;height:1.5rem">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="20" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+          </svg><span>linkiir®</span>
+        </a>
+        <p class="footer__tag">Managed support, migration and modern runtime for the integration layer of healthcare and regulated B2B.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col__head">Solutions</p>
+        <a href="solutions.html#managed">Managed support</a>
+        <a href="solutions.html#implementation">Implementation</a>
+        <a href="solutions.html#migration">Migrations</a>
+        <a href="solutions.html#engine">Linkiir Engine</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col__head">Company</p>
+        <a href="about.html">About &amp; founders</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col__head">Legal</p>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="terms.html#personal-info">Privacy</a>
+        <a href="terms.html#security">Security</a>
+      </div>
     </div>
-
-    <div class="footer__col">
-      <p class="footer__head">Solutions</p>
-      <a href="/#solutions">How we engage</a>
-      <a href="/support">Support</a>
-      <a href="/#engine">Linkiir Engine</a>
+    <div class="footer__bottom">
+      <span>© Linkiir, Inc. — Registered in Ontario, Canada</span>
+      <div class="footer__socials" aria-label="Social">
+        <a href="#" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.06c.53-1 1.83-2 3.77-2 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.5c0-1.3-.02-3-1.85-3-1.86 0-2.14 1.45-2.14 2.9V21h-4z"/></svg></a>
+        <a href="#" aria-label="X"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26L23 22.5h-6.66l-5.214-6.817L5.16 22.5H1.85l7.73-8.835L1 2.25h6.83l4.713 6.231L18.244 2.25zm-2.336 18.18h1.833L7.084 4.126H5.117L15.908 20.43z"/></svg></a>
+        <a href="mailto:sales@linkiir.com" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg></a>
+      </div>
     </div>
-
-    <div class="footer__col">
-      <p class="footer__head">Company</p>
-      <a href="/about">About &amp; founders</a>
-      <a href="/#contact">Contact</a>
-    </div>
-
   </div>
-  <div class="container footer__rule">
-    <span>© Linkiir, Inc.</span>
   </div>
 </footer>
-
-<script>
-  const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('nav--scrolled', window.scrollY > 24);
-  document.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-
-  const root = document.documentElement;
-  function readTheme(){
-    try { return (window.localStorage && window.localStorage.getItem('linkiir-theme')) || null; }
-    catch(e){ return null; }
-  }
-  function writeTheme(v){
-    try { window.localStorage && window.localStorage.setItem('linkiir-theme', v); }
-    catch(e){}
-  }
-  const stored = readTheme();
-  root.setAttribute('data-theme', stored === 'dark' ? 'dark' : 'light');
-
-  document.getElementById('themeToggle').addEventListener('click', () => {
-    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    writeTheme(next);
-  });
-</script>
+<script src="app.js"></script>
 <script data-pplx-inline-edit>
 (function () {
   if (window === window.top) return;

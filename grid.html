@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Linkiir — Integration solutions & services for healthcare and B2B</title>
-<meta name="description" content="Linkiir provides managed support, implementation, migration and advisory for HL7, FHIR, X12 and XML integration engines. HIPAA, PIPEDA and PHIPA-aligned. We also build the Linkiir Engine." />
-<meta property="og:title" content="Linkiir — Integration solutions & services for healthcare and B2B" />
-<meta property="og:description" content="Managed support, operations and consulting for the interface layer of healthcare and regulated B2B." />
+<title>Linkiir Grid — Modern Integration Engine</title>
+<meta name="description" content="A drop-in modern integration engine. Deploy alongside — or in place of — Mirth, Iguana, Rhapsody, and Cloverleaf." />
+<meta property="og:title" content="Linkiir Grid — The Modern Integration Engine" />
+<meta property="og:description" content="Parse, map and route HL7, FHIR, X12 and XML. Drop in for Mirth, Iguana, Rhapsody, Cloverleaf." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://rsms.me/" />
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -16,18 +16,16 @@
 </head>
 <body>
 
-<!-- ───────── NAV ───────── -->
 <header class="nav" id="nav">
   <a href="index.html" class="nav__brand" aria-label="Linkiir home">
     <svg viewBox="0 0 32 24" fill="none" aria-hidden="true">
       <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
       <circle cx="20" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
-    </svg>
-    <span>linkiir</span>
+    </svg><span>linkiir</span>
   </a>
   <nav class="nav__links" aria-label="Primary">
-    <a href="index.html" class="is-current">Home</a>
-    <a href="solutions.html">Solutions</a>
+    <a href="index.html">Home</a>
+    <a href="solutions.html" class="is-current">Solutions</a>
     <a href="about.html">About</a>
     <a href="terms.html">Terms</a>
   </nav>
@@ -37,130 +35,224 @@
   </button>
 </header>
 
-<!-- Mobile menu -->
 <div class="menu" id="menu" role="dialog" aria-modal="true">
   <button class="menu__close" id="menuClose" aria-label="Close menu">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
   <div class="menu__inner">
-    <a href="index.html">Home</a>
-    <a href="solutions.html">Solutions</a>
-    <a href="grid.html">Linkiir Grid</a>
-    <a href="agent.html">Linkiir Agent</a>
-    <a href="human.html">Linkiir Human</a>
-    <a href="about.html">About</a>
-    <a href="terms.html">Terms</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a><a href="solutions.html">Solutions</a><a href="grid.html">Linkiir Grid</a><a href="agent.html">Linkiir Agent</a><a href="human.html">Linkiir Human</a><a href="about.html">About</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a>
   </div>
 </div>
+
+<nav class="subnav" aria-label="Solutions">
+  <a href="solutions.html">Overview</a>
+  <a href="grid.html" class="is-current">Linkiir Grid</a>
+  <a href="agent.html">Linkiir Agent</a>
+  <a href="human.html">Linkiir Human</a>
+</nav>
 
 <main>
 
 <!-- ───────── HERO ───────── -->
-<section class="hero">
-  <div class="hero__dots" aria-hidden="true"></div>
+<section class="phero">
+  <div class="phero__inner">
 
-  <div class="orbit" aria-hidden="true">
-    <div class="orbit__ring" id="ring"></div>
-  </div>
+    <!-- Isometric stacked-slab platform with node mesh on top -->
+    <svg class="platform" viewBox="0 0 560 400" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="glow" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0" stop-color="#fff" stop-opacity=".08"/>
+          <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
 
-  <div class="hero__inner">
-    <p class="hero__r">( Integration solutions &amp; services · healthcare &amp; enterprise B2B )</p>
-    <h1 class="hero__wordmark">linkiir</h1>
-    <p class="hero__title" style="font-size:clamp(2rem,4vw,3rem);font-weight:500;letter-spacing:-.02em;line-height:1.1;margin:1rem auto 0;max-width:38rem">
-      Your integration engines, managed.
-    </p>
-    <div class="hero__ctas" style="margin-top:2rem">
-      <a href="contact.html" class="btn btn--primary btn--shimmer">Talk to us <span class="arr">→</span></a>
-      <a href="solutions.html" class="btn btn--ghost">See solutions <span class="arr">→</span></a>
-    </div>
+      <!-- Radial ground glow -->
+      <ellipse cx="280" cy="340" rx="230" ry="30" fill="url(#glow)"/>
 
-    <ul class="stats reveal" style="list-style:none;padding:0;margin:3rem 0 0;grid-template-columns:1fr;max-width:22rem;margin-left:auto;margin-right:auto">
-      <li class="stat"><span class="stat__num">30 years</span><span class="stat__lbl">Combined integration experience on our support team</span></li>
-    </ul>
-  </div>
+      <!-- 4 stacked isometric slabs, bottom widest to top narrowest -->
+      <!-- Slab 4 (bottom, widest) -->
+      <g stroke="#fff" stroke-opacity=".28" stroke-width="1">
+        <path d="M80 300 L280 380 L480 300 L280 220 Z" fill="#0a0a0a"/>
+        <path d="M80 300 L80 316 L280 396 L280 380 Z" fill="#050505"/>
+        <path d="M280 396 L280 380 L480 300 L480 316 Z" fill="#0f0f0f"/>
+      </g>
+      <!-- Slab 3 -->
+      <g stroke="#fff" stroke-opacity=".32" stroke-width="1">
+        <path d="M110 270 L280 338 L450 270 L280 202 Z" fill="#111"/>
+        <path d="M110 270 L110 284 L280 352 L280 338 Z" fill="#080808"/>
+        <path d="M280 352 L280 338 L450 270 L450 284 Z" fill="#181818"/>
+      </g>
+      <!-- Slab 2 -->
+      <g stroke="#fff" stroke-opacity=".36" stroke-width="1">
+        <path d="M140 240 L280 296 L420 240 L280 184 Z" fill="#151515"/>
+        <path d="M140 240 L140 254 L280 310 L280 296 Z" fill="#0a0a0a"/>
+        <path d="M280 310 L280 296 L420 240 L420 254 Z" fill="#1c1c1c"/>
+      </g>
+      <!-- Slab 1 (top, narrowest — the surface where the node mesh lives) -->
+      <g stroke="#fff" stroke-opacity=".5" stroke-width="1">
+        <path d="M170 210 L280 254 L390 210 L280 166 Z" fill="#1e1e1e"/>
+        <path d="M170 210 L170 224 L280 268 L280 254 Z" fill="#0f0f0f"/>
+        <path d="M280 268 L280 254 L390 210 L390 224 Z" fill="#252525"/>
+      </g>
 
-  <div class="scroll-hint" aria-hidden="true">
-    <span class="scroll-hint__line"></span> Scroll
+      <!-- Node mesh on top face -->
+      <g class="mesh">
+        <!-- Connectors (Delaunay-like triangulation between 7 nodes) -->
+        <g stroke="#fff" stroke-opacity=".85" stroke-width="1" fill="none">
+          <path d="M240 188 L308 178 L358 208 L336 240 L268 244 L224 218 Z"/>
+          <path d="M240 188 L358 208"/>
+          <path d="M308 178 L268 244"/>
+          <path d="M336 240 L224 218"/>
+          <path d="M240 188 L336 240"/>
+          <path d="M290 210 L240 188"/>
+          <path d="M290 210 L308 178"/>
+          <path d="M290 210 L358 208"/>
+          <path d="M290 210 L336 240"/>
+          <path d="M290 210 L268 244"/>
+          <path d="M290 210 L224 218"/>
+        </g>
+        <!-- Node circles -->
+        <g fill="#fff">
+          <circle cx="240" cy="188" r="3.2"/>
+          <circle cx="308" cy="178" r="3.2"/>
+          <circle cx="358" cy="208" r="3.2"/>
+          <circle cx="336" cy="240" r="3.2"/>
+          <circle cx="268" cy="244" r="3.2"/>
+          <circle cx="224" cy="218" r="3.2"/>
+          <circle cx="290" cy="210" r="4" class="mesh__pulse"/>
+        </g>
+      </g>
+    </svg>
+
+    <p class="eyebrow" style="margin-top:1.5rem">Linkiir Grid</p>
+    <span class="cs-pill">Coming soon</span>
+    <h1 class="phero__title">Grid.</h1>
+    <p class="phero__sub">The central engine for orchestrating the messages your business runs on.</p>
+
+    <!-- Pixel-art scroll chevron -->
+    <svg class="pixchev" viewBox="0 0 22 14" fill="#fff" aria-hidden="true">
+      <rect x="0"  y="2" width="3" height="3"/>
+      <rect x="3"  y="4" width="3" height="3"/>
+      <rect x="6"  y="6" width="3" height="3"/>
+      <rect x="9"  y="8" width="3" height="3"/>
+      <rect x="12" y="6" width="3" height="3"/>
+      <rect x="15" y="4" width="3" height="3"/>
+      <rect x="18" y="2" width="3" height="3"/>
+    </svg>
   </div>
 </section>
 
-<!-- ───────── OUR SUPPORT ───────── -->
+<!-- ───────── DROP-IN REPLACEMENT ───────── -->
 <section class="section section--dark">
   <div class="container">
-    <p class="eyebrow" style="justify-content:center;display:flex">Our support</p>
-    <h2 class="headline-2tone">Second-line support,<br/><span class="accent">without the tier-1 detour.</span></h2>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;max-width:60rem;margin:3rem auto 0;text-align:left">
-      <article style="border:1px solid var(--border);padding:2rem;background:#0a0a0a">
-        <p class="feats__mark">( ✦ ) Annual support plans</p>
-        <p style="color:var(--muted);margin-top:1rem;font-size:.95rem;line-height:1.6">Flat-fee annual plans with 9×5 Monday–Friday Eastern coverage.</p>
-      </article>
-      <article style="border:1px solid var(--border);padding:2rem;background:#0a0a0a">
-        <p class="feats__mark">( ✦ ) Direct access to integration engineers</p>
-        <p style="color:var(--muted);margin-top:1rem;font-size:.95rem;line-height:1.6">No gatekeepers. Email and phone straight to the engineer working your issue.</p>
-      </article>
+    <div class="cs-banner">
+      <span class="cs-banner__l">Linkiir Grid · Coming soon</span>
+      <span class="cs-banner__r">In the meantime, our engineers run your existing engine. <a href="human.html">See Linkiir Human →</a></span>
     </div>
-
-    <p class="lede" style="max-width:44rem;margin:3rem auto 0;text-align:center">
-      We backstop the integration work your team already owns: production incidents, break-fix, new interface builds, documentation, migration guidance and resilient architecture for HL7, X12, XML, REST and custom flows.
+    <p class="eyebrow" style="justify-content:center;display:flex;margin-top:3rem">Drop-in replacement</p>
+    <h2 class="headline-2tone">The engine you already use.<br/><span class="accent">Only newer.</span></h2>
+    <p class="lede" style="max-width:36rem;margin:1.2rem auto 0;text-align:center">
+      Grid speaks the same protocols and message formats. Point your senders at it, keep your listeners, keep your channel logic. It slots in.
     </p>
 
-    <ul style="list-style:none;padding:0;max-width:44rem;margin:2rem auto 0;color:var(--muted);font-size:.98rem;line-height:1.9">
-      <li>· Engineer-led email and phone support</li>
-      <li>· Existing engine, channel and interface support</li>
-      <li>· New build, testing and cutover help when included</li>
-      <li>· Documentation, migration and HA architecture guidance</li>
-    </ul>
-
-    <div style="text-align:center;margin-top:2.5rem">
-      <a href="human.html" class="btn btn--ghost">See support plans <span class="arr">→</span></a>
+    <div class="replace">
+      <div class="replace__cell">
+        <p class="replace__lbl">Drops in for</p>
+        <p class="replace__name">Mirth Connect</p>
+      </div>
+      <div class="replace__cell">
+        <p class="replace__lbl">Drops in for</p>
+        <p class="replace__name">Iguana</p>
+      </div>
+      <div class="replace__cell">
+        <p class="replace__lbl">Drops in for</p>
+        <p class="replace__name">Rhapsody</p>
+      </div>
+      <div class="replace__cell">
+        <p class="replace__lbl">Drops in for</p>
+        <p class="replace__name">Cloverleaf</p>
+      </div>
+      <div class="replace__cell">
+        <p class="replace__lbl">Drops in for</p>
+        <p class="replace__name">Corepoint</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ───────── OUR PRODUCT ───────── -->
-<section class="section section--dark">
+<!-- ───────── LANGUAGE / CAPABILITY CARDS ───────── -->
+<section class="section section--dark" style="padding-top:0">
   <div class="container">
-    <p class="eyebrow" style="justify-content:center;display:flex">Our product</p>
-    <h2 class="headline-2tone">We also build<br/><span class="accent">the Linkiir Engine.</span></h2>
-    <p class="lede" style="max-width:44rem;margin:1.5rem auto 0;text-align:center">
-      Most of our work is on the engines you already own. But when an organization is ready for a clean-sheet stack, we have one — a modern runtime that parses HL7, FHIR, X12 and XML sub-millisecond, with AI-native mapping built in. It's optional, never a precondition.
-    </p>
+    <p class="eyebrow" style="justify-content:center;display:flex">Grid Language</p>
+    <h2 class="headline-2tone">Model the shape of<br/><span class="accent">your message estate.</span></h2>
   </div>
 
-  <div class="feats" style="margin-top:3rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-    <div class="feats__c">
-      <p class="feats__mark">01 · Built for reliability</p>
-      <p class="feats__p" style="margin-top:1rem">High-availability topology, automatic failover and message-level durability so a bad node never becomes a bad day.</p>
+  <div class="cards" style="border-bottom:1px solid var(--border);margin-top:3rem">
+    <div class="card">
+      <p class="card__tag">Objects</p>
+      <h3 class="card__h">Every message,<br/>a first-class object.</h3>
+      <p class="card__p">HL7 v2, FHIR R4/R5, X12, NCPDP and XML are parsed into typed objects your team can inspect, map and validate without leaving the console.</p>
+      <a href="contact.html" class="card__more">Read more →</a>
     </div>
-    <div class="feats__c">
-      <p class="feats__mark">02 · Sub-millisecond parse</p>
-      <p class="feats__p" style="margin-top:1rem">HL7 v2, FHIR R4/R5, X12 and XML — all first-class, all native.</p>
+    <div class="card">
+      <p class="card__tag">Logic</p>
+      <h3 class="card__h">Channel logic,<br/>written in one language.</h3>
+      <p class="card__p">Lua and TypeScript live side-by-side. Reuse the transforms you already wrote for Iguana or Mirth. New channels build in minutes, not days.</p>
+      <a href="contact.html" class="card__more">Read more →</a>
     </div>
-    <div class="feats__c">
-      <p class="feats__mark">03 · AI-native mapping</p>
-      <p class="feats__p" style="margin-top:1rem">Field-level mapping drafts proposed by model, approved by engineer.</p>
+    <div class="card">
+      <p class="card__tag">Runtime</p>
+      <h3 class="card__h">Containerized.<br/>Observable. Replayable.</h3>
+      <p class="card__p">Deploy on Kubernetes or a single VM. Every message is queued, logged and replayable — no more "did that message go through" mysteries.</p>
+      <a href="contact.html" class="card__more">Read more →</a>
     </div>
-  </div>
-
-  <div class="container" style="text-align:center;margin-top:2.5rem">
-    <a href="grid.html" class="btn btn--ghost">Explore the engine <span class="arr">→</span></a>
+    <div class="card">
+      <p class="card__tag">Governance</p>
+      <h3 class="card__h">HIPAA, PIPEDA,<br/>PHIPA aligned.</h3>
+      <p class="card__p">Role-based access, audit logs, encryption in transit and at rest, and BAA-ready. The compliance layer isn't an add-on — it's the substrate.</p>
+      <a href="contact.html" class="card__more">Read more →</a>
+    </div>
   </div>
 </section>
 
-<!-- ───────── CONTACT CTA ───────── -->
+<!-- ───────── PROTOCOL COVERAGE ───────── -->
+<section class="section section--dark" style="padding-top:2rem">
+  <div class="container">
+    <p class="eyebrow" style="justify-content:center;display:flex">Grid Engine</p>
+    <h2 class="headline-2tone">Speaks every protocol<br/><span class="accent">your integrations already speak.</span></h2>
+  </div>
+
+  <div class="feats" style="margin-top:3rem;border-bottom:1px solid var(--border)">
+    <div class="feats__c">
+      <p class="feats__mark">01 · Transports</p>
+      <p class="feats__t">MLLP · TCP · HTTPS · SFTP</p>
+      <p class="feats__p">File watchers, database polling, message queues, webhook receivers. Every adapter your existing engine ships — Grid ships too.</p>
+    </div>
+    <div class="feats__c">
+      <p class="feats__mark">02 · Formats</p>
+      <p class="feats__t">HL7 v2 · FHIR · X12 · NCPDP · XML</p>
+      <p class="feats__p">Parse, validate, transform. Round-trip HL7 v2 to FHIR without hand-writing a mapper. Full X12 5010 support.</p>
+    </div>
+    <div class="feats__c">
+      <p class="feats__mark">03 · Endpoints</p>
+      <p class="feats__t">EHRs · Clearinghouses · Payers</p>
+      <p class="feats__p">Trading-partner ready. Pre-tested with Epic, Cerner, Meditech, Athena, Availity and every major clearinghouse.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CTA ───────── -->
 <section class="section section--dark">
   <div class="container">
     <div class="cta-block reveal">
-      <p class="eyebrow" style="justify-content:center;display:flex">Contact</p>
-      <h2 class="h2">Tell us about <span class="dim-tail">your interfaces.</span></h2>
+      <p class="overline">( See it drop in )</p>
+      <h2 class="h2">Bring us your <span class="dim-tail">worst channel.</span></h2>
       <p class="lede" style="margin-left:auto;margin-right:auto">
-        Whether you need managed coverage, a migration partner, an interface health check, or a demo of the Linkiir Engine — we'll respond personally within one business day.
+        Send us the interface spec. We'll build it in Grid, stand up a parallel environment beside your existing engine, and prove parity — inside two weeks.
       </p>
       <div class="hero__ctas" style="margin-top:2rem">
-        <a href="contact.html" class="btn btn--primary btn--lg btn--shimmer">Talk to us <span class="arr">→</span></a>
-        <a href="solutions.html" class="btn btn--ghost btn--lg">See solutions <span class="arr">→</span></a>
+        <a href="contact.html" class="btn btn--primary btn--lg btn--shimmer">Book a Grid demo <span class="arr">→</span></a>
+        <a href="agent.html" class="btn btn--ghost btn--lg">Explore Linkiir Agent <span class="arr">→</span></a>
       </div>
     </div>
   </div>
@@ -168,7 +260,6 @@
 
 </main>
 
-<!-- ───────── FOOTER ───────── -->
 <footer class="footer">
   <div class="container">
     <div class="footer__top">
@@ -180,7 +271,7 @@
           </svg>
           <span>linkiir®</span>
         </a>
-        <p class="footer__tag">Integration support &amp; services for healthcare and enterprise B2B.</p>
+        <p class="footer__tag">A modern engine, an agentic layer, and a human team for the integration layer of healthcare and regulated B2B.</p>
       </div>
 
       <div class="footer__col">
