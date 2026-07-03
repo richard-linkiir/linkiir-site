@@ -166,14 +166,15 @@ body{font-family:var(--ff-display);font-feature-settings:"ss01","cv11","ss03";}
 .nav__burger{display:none}
 
 @media (max-width:920px){
-  .nav{padding:.5rem .6rem .5rem .9rem;gap:.6rem;width:min(94vw,28rem)}
+  .nav{padding:.5rem .6rem .5rem .9rem;gap:.6rem;width:min(94vw,28rem);justify-content:space-between}
   .nav__links{display:none}
+  .nav__cta{display:none}
   .nav__burger{
     display:inline-flex;align-items:center;justify-content:center;
     width:2.3rem;height:2.3rem;border-radius:var(--r-pill);
     background:rgba(255,255,255,.07);color:#fff;
+    margin-left:auto;
   }
-  .nav__cta{padding:.5rem .85rem;font-size:.82rem}
 }
 
 /* Mobile menu */
