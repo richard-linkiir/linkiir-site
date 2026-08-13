@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platform services, access to real engineers | Linkiir</title>
+<meta name="description" content="You get the product and access to real engineers: incident support, break-fix, new interface builds and documentation, on Grid or on the engine you already have.">
+<meta property="og:title" content="Platform services, access to real engineers | Linkiir">
+<meta property="og:description" content="You get the product and access to real engineers: incident support, break-fix, new interface builds and documentation, on Grid or on the engine you already have.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://linkiir.com/platform-services">
+<meta property="og:site_name" content="Linkiir">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/gridui.css">
+<link rel="canonical" href="https://linkiir.com/platform-services">
+</head>
+<body>
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../" aria-label="linkiir, home">
+      <svg width="33" height="23" viewBox="0 0 33 23" fill="none" aria-hidden="true" style="color:var(--ink)">
+        <circle cx="11.5" cy="11.5" r="8.6" stroke="currentColor" stroke-width="2.2"/>
+        <circle cx="21.5" cy="11.5" r="8.6" stroke="currentColor" stroke-width="2.2"/>
+      </svg>
+      <span class="brand-word">linkiir</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item has-dd">
+        <button class="nav-link" aria-expanded="false" aria-current="page">Platform
+          <svg class="chev" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a class="dd-item" href="../platform-overview/" role="menuitem">
+            <span class="dd-ico"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.6L14.4 5 8 8.4 1.6 5 8 1.6z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M1.6 8.4L8 11.8l6.4-3.4M1.6 11.4L8 14.8l6.4-3.4" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+          <span><span class="dd-t">Platform overview</span><span class="dd-d">Grid: the engine, the runtime, the console.</span></span>
+          </a>
+          <a class="dd-item" href="../platform-security/" role="menuitem">
+            <span class="dd-ico i-green"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.5l5 1.9v4.2c0 3.3-2.1 5.6-5 6.9-2.9-1.3-5-3.6-5-6.9V3.4L8 1.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M5.8 8l1.6 1.6L10.4 6.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span><span class="dd-t">Platform security</span><span class="dd-d">Controls, encryption, audit, SOC&nbsp;2 status.</span></span>
+          </a>
+          <a class="dd-item" href="../platform-services/" role="menuitem">
+            <span class="dd-ico i-amber"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.3" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.4V8l2.6 1.7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+            <span><span class="dd-t">Platform services</span><span class="dd-d">Access to real engineers on your estate.</span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-item has-dd">
+        <button class="nav-link" aria-expanded="false">Developers
+          <svg class="chev" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a class="dd-item" href="../developers/" role="menuitem">
+            <span class="dd-ico i-coral"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.8v12.4M1.8 8h12.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <span><span class="dd-t">Get Started</span><span class="dd-d">Package to live endpoint in four steps.</span></span>
+          </a>
+          <a class="dd-item" href="https://help.linkiir.com" target="_blank" rel="noopener" role="menuitem">
+            <span class="dd-ico i-purple"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M2.4 3.2h4.2c.8 0 1.4.6 1.4 1.4v9c0-.8-.6-1.4-1.4-1.4H2.4V3.2zM13.6 3.2H9.4c-.8 0-1.4.6-1.4 1.4v9c0-.8.6-1.4 1.4-1.4h4.2V3.2z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+            <span><span class="dd-t">Docs <svg width="10" height="10" viewBox="0 0 12 12" fill="none" style="opacity:.5"><path d="M3.5 8.5l5-5M4.6 3.5h3.9v3.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dd-d">Guides, node reference, Lua API, deployment.</span></span>
+          </a>
+          <a class="dd-item" href="http://help.linkiir.com/docs/api/" target="_blank" rel="noopener" role="menuitem">
+            <span class="dd-ico"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M5.8 3.6L2.2 8l3.6 4.4M10.2 3.6L13.8 8l-3.6 4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span><span class="dd-t">API reference <svg width="10" height="10" viewBox="0 0 12 12" fill="none" style="opacity:.5"><path d="M3.5 8.5l5-5M4.6 3.5h3.9v3.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dd-d">Every endpoint on the Grid control plane.</span></span>
+          </a>
+          <span class="dd-sep"></span>
+          <a class="dd-item" href="../downloads/" role="menuitem">
+            <span class="dd-ico i-green"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8.4M8 10.4L5 7.4M8 10.4l3-3M2.6 13.2h10.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span><span class="dd-t">Downloads</span><span class="dd-d">Linux and Windows packages.</span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-item"><a class="nav-link" href="../network/">Integration Network</a></div>
+      <div class="nav-item"><a class="nav-link" href="../pricing/">Pricing</a></div>
+      <div class="nav-item has-dd">
+        <button class="nav-link" aria-expanded="false">Company
+          <svg class="chev" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a class="dd-item" href="../company/" role="menuitem">
+            <span class="dd-ico"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M2.6 13.4V5.2L8 2.2l5.4 3v8.2M6.2 13.4V9.4h3.6v4" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+            <span><span class="dd-t">About Linkiir</span><span class="dd-d">Founders, funding and governance.</span></span>
+          </a>
+          <a class="dd-item" href="../events/" role="menuitem">
+            <span class="dd-ico i-amber"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="2.2" y="3.4" width="11.6" height="10.4" rx="1.6" stroke="currentColor" stroke-width="1.4"/><path d="M2.2 6.6h11.6M5.4 2v2.4M10.6 2v2.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+            <span><span class="dd-t">Events</span><span class="dd-d">HIMSS27, and Linkiir Connect in October.</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="nav-mob-cta">
+        <a class="btn btn-primary" href="../contact/">Book a demo</a>
+        <a class="btn btn-ghost" href="https://help.linkiir.com" target="_blank" rel="noopener">Docs ↗</a>
+      </div>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm" href="https://help.linkiir.com" target="_blank" rel="noopener">Docs</a>
+      <a class="btn btn-primary btn-sm" href="../contact/">Book a demo <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false">
+      <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M1 1h16M1 7h16M1 13h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<div class="nav-spacer"></div>
+<!-- ============================ HERO ============================ -->
+<section class="phero">
+  <div class="blobs"><span class="blob b3" style="left:-60px;top:-140px;width:420px;height:420px"></span><span class="blob b1"></span></div>
+  <div class="wrap">
+    <p class="crumbs"><a href="../">Home</a><span>/</span>Platform<span>/</span>Services</p>
+    <div class="split" style="align-items:end">
+      <div>
+        <span class="kicker k-amber">Platform services</span>
+        <h1>You get the product, and access to <span class="hl">real engineers</span>.</h1>
+      </div>
+      <div>
+        <p class="lead">No tier-1 gatekeeping. No "have you tried restarting the engine." You reach integration engineers who know your interfaces and are allowed to act on the estate, rather than file a ticket about it.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn-primary" href="../contact/">Talk to an engineer <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn btn-ghost" href="../pricing/">What's included</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHAT WE DO ============================ -->
+<section class="section bg-white divider-top">
+  <div class="wrap">
+    <div class="center" style="max-width:700px;margin:0 auto 44px">
+      <span class="kicker k-amber">Scope</span>
+      <h2>Second-line support, and the work that prevents needing it.</h2>
+      <p class="lead">We sit behind your team, not in front of your users. You keep the relationship with the clinicians and the vendors. We take the part that requires knowing what an <span class="mono">MSH-9</span> is.</p>
+    </div>
+    <div class="grid g-4">
+      <div class="card card-hover rv">
+        <span class="card-ico i-coral"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l9.5 17H2.5L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 9.5v4.5M12 16.8v.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <h3>Incidents &amp; break-fix</h3>
+        <p class="small muted mb-0">A production backstop. We diagnose, contain, fix and replay, then tell you in plain language what happened and what changed so it doesn't recur.</p>
+      </div>
+      <div class="card card-hover rv rv-d1">
+        <span class="card-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 18V6M4 6l7 4-7 4M20 6v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 10h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3>New interface builds</h3>
+        <p class="small muted mb-0">Design, build, test and document new integrations, including the vendor chasing, the spec that doesn't match reality, and the test evidence your change board wants.</p>
+      </div>
+      <div class="card card-hover rv rv-d2">
+        <span class="card-ico i-purple"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 3.5h8.5L19 8v12.5H6V3.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12h6M9 15.5h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3>Documentation &amp; inventory</h3>
+        <p class="small muted mb-0">A living inventory of every interface: endpoints, owners, message types, volumes, dependencies. The document you keep meaning to write.</p>
+      </div>
+      <div class="card card-hover rv rv-d3">
+        <span class="card-ico i-green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0113.6-5.7M20 12a8 8 0 01-13.6 5.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M17.6 3.4v3.2h-3.2M6.4 20.6v-3.2h3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Migration guidance</h3>
+        <p class="small muted mb-0">Moving off Rhapsody, Mirth, Cloverleaf, Corepoint, BizTalk or Ensemble, with parity proven by shadowing live traffic, interface by interface.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HOW IT FEELS ============================ -->
+<section class="section bg-soft divider-top">
+  <div class="wrap">
+    <div class="split split-rev">
+      <div class="rv">
+        <div class="chat">
+          <div class="chat-hd">
+            <span class="dot dot-pulse"></span>
+            <span class="ch-t">LNK-4821 · Jira Service Management</span>
+          </div>
+          <div class="chat-body">
+            <div class="msg">
+              <span class="av a-amber">DK</span>
+              <div class="msg-b">
+                <div class="msg-hd"><span class="msg-who">Dana</span><span class="msg-org">Acme Health</span></div>
+                <p class="msg-t">registry-vxu is retrying with <code>ACK^AE</code>, "VXU-3 invalid". Nothing changed on our side.</p>
+              </div>
+            </div>
+            <div class="msg">
+              <span class="av a-green">RS</span>
+              <div class="msg-b">
+                <div class="msg-hd"><span class="msg-who">Ravi</span><span class="msg-org">linkiir</span></div>
+                <p class="msg-t">Looking. Queue is holding, nothing lost. The registry started rejecting <code>CVX 213</code> this morning, so it looks like their validation rather than your mapping. No patient data needed to see that, the reject codes are enough.</p>
+              </div>
+            </div>
+            <div class="msg">
+              <span class="av a-green">RS</span>
+              <div class="msg-b">
+                <div class="msg-hd"><span class="msg-who">Ravi</span><span class="msg-org">linkiir</span></div>
+                <p class="msg-t">Confirmed with them. Mapping added for the new code. Replay now, or wait for your morning?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rv rv-d1">
+        <span class="kicker">What good support looks like</span>
+        <h2>Recognition, then a fix.</h2>
+        <p class="lead">Most of what people want from support is not a response-time number in a contract. It is someone who recognises the problem on sight, and is allowed to do something about it.</p>
+        <ul class="feat-list mt-3">
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.4 2.4L9.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Named engineers, not a rota of strangers.</strong> People who know your interfaces and your quirks.</span></li>
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.4 2.4L9.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Jira Service Management.</strong> One portal, one audit trail, one place to see status. Email and phone for the people who prefer them.</span></li>
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.4 2.4L9.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Authorised to act.</strong> Scoped, audited access, so the fix happens on the call instead of after an approval chain.</span></li>
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.4 2.4L9.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>No patient data required.</strong> Diagnosis runs on structure, headers and error codes. We don't ask for PHI, and we'd rather you didn't send it.</span></li>
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.4 2.4L9.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Proactive watch.</strong> Quiet-endpoint alarms and backlog thresholds mean we often open the ticket before you notice.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WORKS ON YOUR ENGINE ============================ -->
+<section class="section bg-blue divider-top">
+  <div class="wrap">
+    <div class="center" style="max-width:680px;margin:0 auto 36px">
+      <span class="kicker">Engine-agnostic</span>
+      <h2>It works on the engine you already have.</h2>
+      <p class="lead">Plenty of customers come to us with an estate they have no plans to replace. That's fine. We support what you run, and if Grid ever makes sense we'll say so at the point it does, not before.</p>
+    </div>
+    <div class="chipbar" style="justify-content:center">
+      <span class="chip on">Linkiir Grid</span><span class="chip">Rhapsody</span><span class="chip">Mirth Connect / NextGen Connect</span>
+      <span class="chip">Iguana</span><span class="chip">Cloverleaf</span><span class="chip">Corepoint</span>
+      <span class="chip">BizTalk</span><span class="chip">InterSystems Ensemble / HealthShare</span><span class="chip">Home-grown</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ONBOARDING ============================ -->
+<section class="section bg-white divider-top">
+  <div class="wrap wrap-narrow">
+    <div class="center mb-4">
+      <span class="kicker">Onboarding</span>
+      <h2>Two weeks from signature to genuinely useful.</h2>
+    </div>
+    <div class="steps rv">
+      <div class="step"><div><h4>Week 0, estate walkthrough</h4><p>Two sessions with whoever knows the quirks. We build the interface inventory, capture the tribal knowledge, and agree how things get escalated.</p></div></div>
+      <div class="step"><div><h4>Week 1, access and instrumentation</h4><p>Scoped, audited access to your engine and monitoring. We add the alarms that should already exist: quiet endpoints, backlog thresholds, error-rate spikes.</p></div></div>
+      <div class="step"><div><h4>Week 2, shadow then take first response</h4><p>We shadow your team through a live week, then take first response on incoming tickets. Your engineers stay in the loop; the difference is they can go to sleep.</p></div></div>
+      <div class="step"><div><h4>Ongoing, quarterly review</h4><p>What broke, what we fixed, what we'd change. Written, with the boring metrics your leadership will ask for.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section bg-soft divider-top">
+  <div class="wrap wrap-narrow">
+    <div class="center mb-4"><span class="kicker k-dim">Practicalities</span><h2>Service FAQ</h2></div>
+    <div class="faq">
+      <details open>
+        <summary>Is this really included, or is there a plan I have to buy?</summary>
+        <div class="faq-a"><p>Included. You get the product and access to real engineers: incidents, break-fix, new interface builds and documentation. There's no support tier to upgrade to and no separate services contract to sign before someone will answer you.</p></div>
+      </details>
+      <details>
+        <summary>Do you replace our integration team?</summary>
+        <div class="faq-a"><p>No, and we'd be suspicious of anyone who said yes. We're second line. Your team keeps the clinical relationships, the change governance and the institutional knowledge. We take the deep engine work, the awkward incidents and the builds that are eating your roadmap. Teams that treat us as a replacement get worse outcomes than teams that treat us as depth.</p></div>
+      </details>
+      <details>
+        <summary>What if we're not on Grid?</summary>
+        <div class="faq-a"><p>Then we support what you're on. Rhapsody, Mirth, Iguana, Cloverleaf, Corepoint, BizTalk, Ensemble, or something a contractor wrote in 2011. Our engineers came out of this industry and have already run most of these. There's no requirement, and no quiet pressure, to migrate.</p></div>
+      </details>
+      <details>
+        <summary>How much access do you need, and will you see patient data?</summary>
+        <div class="faq-a"><p>As little as will let us actually fix things: read on message metadata and logs, and operate on workflows. We do <strong>not</strong> need to see PHI and we don't ask for it, because diagnosis runs on structure, headers and error codes. If you're tempted to paste a real message into a ticket, don't. De-identify it first, and we'll say so if you don't.</p></div>
+      </details>
+      <details>
+        <summary>How do we raise something?</summary>
+        <div class="faq-a"><p>Jira Service Management, with your own portal and a full audit trail, or email and phone if that suits you better. Urgent issues reach an engineer directly however they arrive.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA ============================ -->
+<section class="section-sm bg-white divider-top">
+  <div class="wrap">
+    <div class="cta-band rv">
+      <div style="max-width:620px">
+        <span class="kicker" style="color:#a5b4fc">Talk to an engineer, not an SDR</span>
+        <h2>Tell us what woke you up last month.</h2>
+        <p class="lead">Thirty minutes. We'll tell you honestly whether this is a support problem, an architecture problem, or a vendor problem, and which of those we can help with.</p>
+        <div class="btn-row mt-4">
+          <a class="btn btn-blue btn-lg" href="../contact/">Get in touch <svg class="arrow" width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn btn-light btn-lg" href="../pricing/">What's included</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand" style="margin-bottom:14px">
+          <svg width="33" height="23" viewBox="0 0 33 23" fill="none" style="color:#fff"><circle cx="11.5" cy="11.5" r="8.6" stroke="currentColor" stroke-width="2.2"/><circle cx="21.5" cy="11.5" r="8.6" stroke="currentColor" stroke-width="2.2"/></svg>
+          <span class="brand-word">linkiir</span>
+        </span>
+        <p style="max-width:32ch;color:#a1a1aa">Integration solutions and services for healthcare and B2B. The engine, and the engineers who run it.</p>
+        <p class="mono" style="font-size:.78rem;line-height:1.7;color:#71717a">
+          18 King St E, Suite 1400<br>Toronto, Ontario M5C 1C4<br>Canada
+        </p>
+        <p><a href="mailto:sales@linkiir.com">sales@linkiir.com</a></p>
+      </div>
+      <div>
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="../platform-overview/">Platform overview</a></li>
+          <li><a href="../platform-security/">Platform security</a></li>
+          <li><a href="../platform-services/">Platform services</a></li>
+          <li><a href="../network/">Integration Network</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Developers</h5>
+        <ul>
+          <li><a href="../developers/">Get Started</a></li>
+          <li><a href="https://help.linkiir.com" target="_blank" rel="noopener">Docs ↗</a></li>
+          <li><a href="http://help.linkiir.com/docs/api/" target="_blank" rel="noopener">API reference ↗</a></li>
+          <li><a href="../downloads/">Downloads</a></li>
+          <li><a href="../network/">Adapter catalogue</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="../company/">About Linkiir</a></li>
+          <li><a href="../events/">Events</a></li>
+          <li><a href="../pricing/">Pricing</a></li>
+          <li><a href="../contact/">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/linkiir" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="../platform-security/">Security posture</a></li>
+          <li><a href="../platform-security/#compliance">Compliance</a></li>
+          <li><a href="../contact/">Privacy</a></li>
+          <li><a href="../contact/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© Linkiir, Inc. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Talk to us | Linkiir</title>
-<meta name="description" content="Tell us about your interfaces. Thirty minutes with an engineer who has seen your exact problem before. No SDR round-trip, no discovery deck.">
-<meta property="og:title" content="Talk to us | Linkiir">
-<meta property="og:description" content="Tell us about your interfaces. Thirty minutes with an engineer who has seen your exact problem before. No SDR round-trip, no discovery deck.">
+<title>Latest release | Linkiir Grid</title>
+<meta name="description" content="Direct upgrade links to the current Linkiir Grid release.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Latest release | Linkiir Grid">
+<meta property="og:description" content="Direct upgrade links to the current Linkiir Grid release.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://linkiir.com/contact">
+<meta property="og:url" content="https://linkiir.com/latest">
 <meta property="og:site_name" content="Linkiir">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
@@ -17,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
 <link rel="stylesheet" href="../assets/gridui.css">
-<link rel="canonical" href="https://linkiir.com/contact">
+<link rel="canonical" href="https://linkiir.com/latest">
 </head>
 <body>
 <!-- ============================ NAV ============================ -->
@@ -111,150 +112,111 @@
   </div>
 </header>
 <div class="nav-spacer"></div>
-<!-- ============================ HERO ============================ -->
-<section class="phero">
-  <div class="blobs"><span class="blob b1"></span><span class="blob b2"></span></div>
+<!-- =========================================================================
+     UNLISTED PAGE: /latest.html
+     Not linked from the site navigation, sitemap or footer. Marked
+     noindex,nofollow. Share this URL with existing customers who need the
+     current build to upgrade without going through the download gate.
+     ========================================================================= -->
+
+<section class="phero" style="padding-bottom:24px">
+  <div class="blobs"><span class="blob b2" style="left:-120px;top:-160px"></span></div>
   <div class="wrap">
-    <p class="crumbs"><a href="../">Home</a><span>/</span>Contact</p>
-    <div class="split" style="align-items:start;gap:48px">
-      <div>
-        <span class="kicker">Tell us about your interfaces</span>
-        <h1>Thirty minutes with an <span class="hl">engineer</span>.</h1>
-        <p class="lead">Not a discovery call to establish whether you're worth a real conversation. Send us the message that's ruining your week and we'll open it with you.</p>
+    <span class="badge b-gray">Unlisted · direct upgrade link</span>
+    <h1 class="mt-2">Grid <span class="hl hl-green" data-version>1.0.0</span></h1>
+    <p class="lead">The current stable release, released <span data-released>…</span>. No gate on this page. It's for customers already running Grid who just need the build.</p>
+    <div class="hero-meta" style="margin-top:1.2rem">
+      <span><span class="dot dot-pulse"></span> Stable channel</span>
+      <span>Verify with <span class="mono">sha256sum -c SHA256SUMS</span></span>
+      <span><a href="#" id="dl-checksums" target="_blank" rel="noopener">SHA256SUMS ↗</a></span>
+    </div>
+  </div>
+</section>
 
-        <div class="grid g-2 mt-4" style="gap:16px">
-          <div class="card">
-            <span class="kicker k-dim" style="margin-bottom:.4rem">Sales &amp; demos</span>
-            <p class="mb-0"><a href="mailto:sales@linkiir.com" class="mono">sales@linkiir.com</a></p>
-          </div>
-          <div class="card">
-            <span class="kicker k-dim" style="margin-bottom:.4rem">Security &amp; disclosure</span>
-            <p class="mb-0"><a href="mailto:security@linkiir.com" class="mono">security@linkiir.com</a></p>
-          </div>
-          <div class="card">
-            <span class="kicker k-dim" style="margin-bottom:.4rem">Existing customers</span>
-            <p class="small muted mb-0">Raise it in Jira Service Management. It's faster than anything on this page, and urgent issues reach an engineer straight away.</p>
-          </div>
-          <div class="card">
-            <span class="kicker k-dim" style="margin-bottom:.4rem">Office</span>
-            <p class="small muted mb-0 mono" style="font-size:.82rem;line-height:1.6">18 King St E, Suite 1400<br>Toronto, Ontario M5C 1C4<br>Canada</p>
-          </div>
+<!-- Broker choice -->
+<section class="section-sm" style="padding-top:10px;padding-bottom:16px">
+  <div class="wrap">
+    <div class="card">
+      <div class="cfg-row">
+        <div>
+          <div class="cfg-t">Broker packaging</div>
+          <p class="cfg-d" id="kafka-desc">Ships with a preconfigured broker. Fastest way to a running system. Start here for evaluations and single-node deployments.</p>
         </div>
+        <div class="seg" id="kafka-seg" role="group" aria-label="Broker packaging">
+          <button data-kafka="bundled" class="on">Bundled Kafka</button>
+          <button data-kafka="external">Bring your own broker</button>
+        </div>
+      </div>
+      <p class="tiny dim mt-2 mb-0">Upgrading in place? Take the same flavour you're already running. Switching between them is a configuration change rather than a reinstall, but do it as a separate step, not during an upgrade.</p>
+    </div>
+  </div>
+</section>
 
-        <div class="card mt-3" style="background:var(--bg-2)" id="migration">
-          <span class="badge b-green">Free · no obligation</span>
-          <h3 class="mt-2">The migration parity assessment</h3>
-          <p class="small muted">Bring us your worst interface: the one with the 400-line script, the vendor who won't answer, and the field that means something different on Tuesdays.</p>
-          <p class="small muted mb-2"><strong>What we need:</strong></p>
-          <ul class="feat-list small">
-            <li><span class="check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.4 2.4L9.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>A sample of real messages, de-identified</li>
-            <li><span class="check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.4 2.4L9.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>The current mapping, however it's written</li>
-            <li><span class="check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.4 2.4L9.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Two hours with whoever knows the quirks</li>
-          </ul>
-          <p class="small muted mb-0"><strong>What you get back:</strong> a working Grid workflow and a written parity report diffing its output against your incumbent, byte for byte.</p>
+<!-- Package matrix -->
+<section class="section-sm" style="padding-top:6px">
+  <div class="wrap">
+    <div class="tbl-wrap">
+      <div class="tbl-scroll">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Package</th>
+              <th class="c">Broker</th>
+              <th class="c">Size</th>
+              <th class="c">Get it</th>
+            </tr>
+          </thead>
+          <tbody id="dl-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upgrade procedure -->
+<section class="section bg-white divider-top">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <span class="kicker">Upgrade procedure</span>
+        <h2>In-place, one node at a time.</h2>
+        <p class="lead">Grid upgrades are rolling on an HA topology. Queues drain, in-flight messages are durable, and a node that comes back on the new version rejoins on its own.</p>
+        <div class="steps mt-4">
+          <div class="step"><div><h4>Read the upgrade notes</h4><p>Check the release notes for anything marked <strong>breaking</strong> or <strong>action required</strong> between your version and this one. Skipping a major means reading each set in order.</p></div></div>
+          <div class="step"><div><h4>Back up config and the archive database</h4><p><span class="mono">grid backup --out ./pre-upgrade</span>. Takes minutes, and it is the difference between a bad afternoon and a bad week.</p></div></div>
+          <div class="step"><div><h4>Upgrade the standby node first</h4><p>Let it rejoin, confirm it is healthy in the console and taking traffic, then move to the primary. On a single-node deployment, expect a short window while the runtime restarts. Queued messages are not lost.</p></div></div>
+          <div class="step"><div><h4>Verify, then replay if you need to</h4><p>Check System Status shows all services online, watch throughput return to normal, and replay anything that dead-lettered during the window.</p></div></div>
         </div>
       </div>
 
-      <!-- ============================ FORM ============================ -->
-      <div class="rv">
-        <div class="card" style="padding:30px">
-          <h3>Send us the details</h3>
-          <p class="small muted">We reply within one business day, from a person, with something useful in it.</p>
-
-          <!-- Posts to Web3Forms. The access key is public by design; it only
-               identifies the destination inbox. assets/forms.js submits it over
-               fetch and shows the result inline, and the plain action= means it
-               still works with JavaScript disabled. -->
-          <form id="contact-form" data-web3form
-                action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="77637dea-cc8e-4bb4-a7b2-0ccde576c40f">
-            <input type="hidden" name="subject" value="New enquiry from linkiir.com">
-            <input type="hidden" name="from_name" value="linkiir.com">
-            <!-- honeypot: bots fill this, people never see it -->
-            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
-
-            <div class="fields">
-              <div class="field">
-                <label for="f-name">Name</label>
-                <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Alex Chen">
-              </div>
-              <div class="field">
-                <label for="f-email">Work email</label>
-                <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="alex@healthsystem.org">
-              </div>
-              <div class="field">
-                <label for="f-org">Organisation</label>
-                <input id="f-org" name="organisation" type="text" autocomplete="organization" placeholder="Regional Health">
-              </div>
-              <div class="field">
-                <label for="f-topic">What's this about?</label>
-                <select id="f-topic" name="topic" class="sel" style="width:100%">
-                  <option>Book a Grid demo</option>
-                  <option>Migration parity assessment</option>
-                  <option>Support and services</option>
-                  <option>Linkiir Cloud early access</option>
-                  <option>Linkiir Agent early access (March 2027)</option>
-                  <option>Pricing &amp; quote</option>
-                  <option>Security review / questionnaire</option>
-                  <option>Evaluation licence</option>
-                  <option>Request an adapter</option>
-                  <option>Something else</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="f-engine">Current engine <span class="dim">(optional)</span></label>
-                <input id="f-engine" name="engine" type="text" placeholder="Rhapsody, Mirth, Cloverleaf, none yet…">
-              </div>
-              <div class="field field-wide">
-                <label for="f-msg">Tell us about the interface</label>
-                <textarea id="f-msg" name="message" rows="5" required placeholder="The one that woke somebody up last month. Message types, endpoints, what goes wrong."></textarea>
-              </div>
-            </div>
-
-            <button class="btn btn-blue btn-lg mt-3" type="submit" style="width:100%;justify-content:center">
-              Send it <svg class="arrow" width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <p class="form-status" data-form-status role="status" aria-live="polite" hidden></p>
-            <p class="tiny dim mt-3 mb-0">
-              We use what you send here to reply to you, and for nothing else. Prefer email? Write to <a href="mailto:sales@linkiir.com">sales@linkiir.com</a> directly.
-            </p>
-          </form>
+      <div class="rv rv-d1">
+        <div class="card">
+          <span class="kicker k-dim" style="margin-bottom:.7rem">What's in this release</span>
+          <ul class="feat-list" id="dl-notes"></ul>
         </div>
-
         <div class="card mt-3">
-          <span class="kicker k-dim" style="margin-bottom:.6rem">What happens next</span>
-          <div class="steps">
-            <div class="step"><div><h4 style="font-size:.98rem">A reply, from an engineer</h4><p>Within one business day. If your question has a short answer, you'll get the short answer instead of a meeting invitation.</p></div></div>
-            <div class="step"><div><h4 style="font-size:.98rem">Thirty minutes, screen shared</h4><p>We open your message in Grid and look at it together. You'll know within that call whether this is going to work.</p></div></div>
-            <div class="step"><div><h4 style="font-size:.98rem">A written next step</h4><p>Parity report, quote, or an honest “we're not the right fit and here's who might be”.</p></div></div>
+          <span class="kicker k-dim" style="margin-bottom:.7rem">Rolling upgrade, in short</span>
+          <div class="code">
+            <div class="code-bar"><span class="code-name" style="margin-left:0">upgrade.sh</span></div>
+            <div class="code-body">
+<pre><span class="ln" data-n="1"><span class="t-com"># standby node</span></span><span class="ln" data-n="2">grid backup --out ./pre-upgrade</span><span class="ln" data-n="3">grid drain --node standby-1 --wait</span><span class="ln" data-n="4">grid upgrade --package linkiir-<span class="t-num">1</span>.<span class="t-num">0</span>.<span class="t-num">0</span>-linux-docker-external-kafka.tar.gz</span><span class="ln" data-n="5">grid rejoin --node standby-1</span><span class="ln" data-n="6"> </span><span class="ln" data-n="7"><span class="t-com"># confirm before touching the primary</span></span><span class="ln" data-n="8">grid status --wait-healthy</span></pre>
+            </div>
           </div>
+        </div>
+        <div class="card mt-3" style="background:var(--bg-2)">
+          <h4>Something looks wrong?</h4>
+          <p class="small muted mb-0">Raise it in Jira Service Management and an engineer will pick it up. Rolling back is <span class="mono">grid upgrade --package &lt;previous&gt;</span> plus the backup you took in step two. Don't push through a failed upgrade at 3&nbsp;a.m.; call us.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================ ELSEWHERE ============================ -->
-<section class="section bg-white divider-top">
-  <div class="wrap">
-    <div class="center" style="max-width:620px;margin:0 auto 40px">
-      <span class="kicker k-dim">Or skip us entirely</span>
-      <h2>Everything you need to evaluate Grid is public.</h2>
-    </div>
-    <div class="grid g-3">
-      <a class="card card-hover rv" href="https://help.linkiir.com" target="_blank" rel="noopener" style="text-decoration:none">
-        <h4>Read the docs ↗</h4>
-        <p class="small muted mb-0">The whole manual, no gate, no email wall. Including the parts that describe limitations.</p>
-      </a>
-      <a class="card card-hover rv rv-d1" href="../pricing/" style="text-decoration:none">
-        <h4>See the price</h4>
-        <p class="small muted mb-0">Real figures on a public page. Size your budget before you talk to anyone.</p>
-      </a>
-      <a class="card card-hover rv rv-d2" href="../network/" style="text-decoration:none">
-        <h4>Browse the adapters</h4>
-        <p class="small muted mb-0">All 197, with what each one is actually tested for. Downloadable as CSV.</p>
-      </a>
-    </div>
+<section class="section-sm bg-soft divider-top">
+  <div class="wrap center">
+    <p class="small muted mb-2">This page is unlisted. It isn't in the navigation, the sitemap or search results.</p>
+    <p class="tiny dim mb-0">New to Grid? Start at the <a href="../downloads/">downloads page</a>. Need help? <a href="../contact/">Talk to us</a>.</p>
   </div>
 </section>
 
@@ -319,6 +281,7 @@
 </footer>
 
 <script src="../assets/site.js"></script>
-<script src="../assets/forms.js"></script>
+<script src="../assets/downloads-data.js"></script>
+<script src="../assets/downloads.js"></script>
 </body>
 </html>

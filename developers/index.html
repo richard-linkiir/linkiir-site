@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Developers, get started | Linkiir</title>
+<meta name="description" content="Four steps from a downloaded package to a live HTTP endpoint you can call with curl. Docs at help.linkiir.com, full API reference, and the Lua scripting API.">
+<meta property="og:title" content="Developers, get started | Linkiir">
+<meta property="og:description" content="Four steps from a downloaded package to a live HTTP endpoint you can call with curl. Docs at help.linkiir.com, full API reference, and the Lua scripting API.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://linkiir.com/developers">
+<meta property="og:site_name" content="Linkiir">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/gridui.css">
+<link rel="canonical" href="https://linkiir.com/developers">
+</head>
+<body>
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../" aria-label="linkiir, home">
+      <svg width="33" height="23" viewBox="0 0 33 23" fill="none" aria-hidden="true" style="color:var(--ink)">
+        <circle cx="11.5" cy="11.5" r="8.6" stroke="currentColor" stroke-width="2.2"/>
+        <circle cx="21.5" cy="11.5" r="8.6" stroke="currentColor" stroke-width="2.2"/>
+      </svg>
+      <span class="brand-word">linkiir</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item has-dd">
+        <button class="nav-link" aria-expanded="false">Platform
+          <svg class="chev" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a class="dd-item" href="../platform-overview/" role="menuitem">
+            <span class="dd-ico"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.6L14.4 5 8 8.4 1.6 5 8 1.6z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M1.6 8.4L8 11.8l6.4-3.4M1.6 11.4L8 14.8l6.4-3.4" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+          <span><span class="dd-t">Platform overview</span><span class="dd-d">Grid: the engine, the runtime, the console.</span></span>
+          </a>
+          <a class="dd-item" href="../platform-security/" role="menuitem">
+            <span class="dd-ico i-green"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.5l5 1.9v4.2c0 3.3-2.1 5.6-5 6.9-2.9-1.3-5-3.6-5-6.9V3.4L8 1.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M5.8 8l1.6 1.6L10.4 6.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span><span class="dd-t">Platform security</span><span class="dd-d">Controls, encryption, audit, SOC&nbsp;2 status.</span></span>
+          </a>
+          <a class="dd-item" href="../platform-services/" role="menuitem">
+            <span class="dd-ico i-amber"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.3" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.4V8l2.6 1.7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+            <span><span class="dd-t">Platform services</span><span class="dd-d">Access to real engineers on your estate.</span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-item has-dd">
+        <button class="nav-link" aria-expanded="false" aria-current="page">Developers
+          <svg class="chev" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a class="dd-item" href="../developers/" role="menuitem">
+            <span class="dd-ico i-coral"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.8v12.4M1.8 8h12.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <span><span class="dd-t">Get Started</span><span class="dd-d">Package to live endpoint in four steps.</span></span>
+          </a>
+          <a class="dd-item" href="https://help.linkiir.com" target="_blank" rel="noopener" role="menuitem">
+            <span class="dd-ico i-purple"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M2.4 3.2h4.2c.8 0 1.4.6 1.4 1.4v9c0-.8-.6-1.4-1.4-1.4H2.4V3.2zM13.6 3.2H9.4c-.8 0-1.4.6-1.4 1.4v9c0-.8.6-1.4 1.4-1.4h4.2V3.2z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+            <span><span class="dd-t">Docs <svg width="10" height="10" viewBox="0 0 12 12" fill="none" style="opacity:.5"><path d="M3.5 8.5l5-5M4.6 3.5h3.9v3.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dd-d">Guides, node reference, Lua API, deployment.</span></span>
+          </a>
+          <a class="dd-item" href="http://help.linkiir.com/docs/api/" target="_blank" rel="noopener" role="menuitem">
+            <span class="dd-ico"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M5.8 3.6L2.2 8l3.6 4.4M10.2 3.6L13.8 8l-3.6 4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span><span class="dd-t">API reference <svg width="10" height="10" viewBox="0 0 12 12" fill="none" style="opacity:.5"><path d="M3.5 8.5l5-5M4.6 3.5h3.9v3.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dd-d">Every endpoint on the Grid control plane.</span></span>
+          </a>
+          <span class="dd-sep"></span>
+          <a class="dd-item" href="../downloads/" role="menuitem">
+            <span class="dd-ico i-green"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8.4M8 10.4L5 7.4M8 10.4l3-3M2.6 13.2h10.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span><span class="dd-t">Downloads</span><span class="dd-d">Linux and Windows packages.</span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-item"><a class="nav-link" href="../network/">Integration Network</a></div>
+      <div class="nav-item"><a class="nav-link" href="../pricing/">Pricing</a></div>
+      <div class="nav-item has-dd">
+        <button class="nav-link" aria-expanded="false">Company
+          <svg class="chev" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a class="dd-item" href="../company/" role="menuitem">
+            <span class="dd-ico"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M2.6 13.4V5.2L8 2.2l5.4 3v8.2M6.2 13.4V9.4h3.6v4" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+            <span><span class="dd-t">About Linkiir</span><span class="dd-d">Founders, funding and governance.</span></span>
+          </a>
+          <a class="dd-item" href="../events/" role="menuitem">
+            <span class="dd-ico i-amber"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="2.2" y="3.4" width="11.6" height="10.4" rx="1.6" stroke="currentColor" stroke-width="1.4"/><path d="M2.2 6.6h11.6M5.4 2v2.4M10.6 2v2.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+            <span><span class="dd-t">Events</span><span class="dd-d">HIMSS27, and Linkiir Connect in October.</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="nav-mob-cta">
+        <a class="btn btn-primary" href="../contact/">Book a demo</a>
+        <a class="btn btn-ghost" href="https://help.linkiir.com" target="_blank" rel="noopener">Docs ↗</a>
+      </div>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm" href="https://help.linkiir.com" target="_blank" rel="noopener">Docs</a>
+      <a class="btn btn-primary btn-sm" href="../contact/">Book a demo <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false">
+      <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M1 1h16M1 7h16M1 13h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<div class="nav-spacer"></div>
+<!-- ============================ HERO ============================ -->
+<section class="phero">
+  <div class="blobs"><span class="blob b1"></span><span class="blob b3" style="left:20%"></span></div>
+  <div class="wrap">
+    <p class="crumbs"><a href="../">Home</a><span>/</span>Developers</p>
+    <div class="split" style="align-items:center">
+      <div>
+        <span class="kicker k-purple">Developers</span>
+        <h1>Package to live endpoint. <span class="hl">Four steps.</span></h1>
+        <p class="lead">Download, install, wire a source to a destination, and <span class="mono">curl</span> it. No sales engineer required, no licence server to phone home to, no three-day environment build.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn-blue btn-lg" href="https://help.linkiir.com" target="_blank" rel="noopener">
+            Read the docs
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 8.5l5-5M4.6 3.5h3.9v3.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="http://help.linkiir.com/docs/api/" target="_blank" rel="noopener">
+            API reference
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 8.5l5-5M4.6 3.5h3.9v3.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="rv">
+        <div class="code" data-tabs data-auto>
+          <div class="code-bar">
+            <div class="code-tabs" role="tablist">
+              <button class="code-tab on" data-name="install.sh" role="tab">install.sh</button>
+              <button class="code-tab" data-name="main.lua" role="tab">main.lua</button>
+              <button class="code-tab" data-name="workflow.json" role="tab">workflow.json</button>
+              <button class="code-tab" data-name="curl" role="tab">curl</button>
+            </div>
+            <span class="code-name">install.sh</span>
+          </div>
+          <div class="code-body">
+            <div class="code-pane on">
+<pre><span class="ln" data-n="1"><span class="t-com"># 1. unpack the release</span></span><span class="ln" data-n="2">tar -xzf linkiir-grid-<span class="t-num">3</span>.<span class="t-num">4</span>.<span class="t-num">1</span>-linux-amd64.tar.gz</span><span class="ln" data-n="3">cd linkiir-grid</span><span class="ln" data-n="4"> </span><span class="ln" data-n="5"><span class="t-com"># 2. bring up the runtime, broker and console</span></span><span class="ln" data-n="6">./grid init --license ./linkiir.lic</span><span class="ln" data-n="7">./grid up</span><span class="ln" data-n="8"> </span><span class="ln" data-n="9"><span class="t-com"># runtime      <span class="t-str">online</span>   :7440</span></span><span class="ln" data-n="10"><span class="t-com"># broker       <span class="t-str">online</span>   :9092</span></span><span class="ln" data-n="11"><span class="t-com"># console      <span class="t-str">online</span>   http://localhost:8080</span></span><span class="ln" data-n="12"><span class="t-com"># archiver-1   <span class="t-str">online</span></span></span><span class="ln" data-n="13"> </span><span class="ln" data-n="14"><span class="t-com"># 3. create the demo project</span></span><span class="ln" data-n="15">./grid project create <span class="t-str">"Getting Started"</span> --template http-echo</span></pre>
+            </div>
+            <div class="code-pane">
+<pre><span class="ln" data-n="1"><span class="t-com">-- Transform node: HL7 v2 ADT in, FHIR Patient out</span></span><span class="ln" data-n="2"><span class="t-key">local</span> fhir = <span class="t-key">require</span> <span class="t-str">"fhir"</span></span><span class="ln" data-n="3"> </span><span class="ln" data-n="4"><span class="t-key">function</span> <span class="t-fn">main</span>(<span class="t-prop">Data</span>)</span><span class="ln" data-n="5">  <span class="t-key">local</span> Msg, MsgType = hl7.<span class="t-fn">parse</span>{ schema=<span class="t-str">'adt.json'</span>, data=Data }</span><span class="ln" data-n="6"> </span><span class="ln" data-n="7">  <span class="t-key">local</span> patient = fhir.<span class="t-fn">Patient</span>{</span><span class="ln" data-n="8">    identifier = {{ system = <span class="t-str">'urn:oid:2.16.840.1.113883.3.42'</span>,</span><span class="ln" data-n="9">                    value  = Msg.PID[<span class="t-num">3</span>][<span class="t-num">1</span>][<span class="t-num">1</span>]:<span class="t-fn">nodeValue</span>() }},</span><span class="ln" data-n="10">    name       = {{ family = Msg.PID[<span class="t-num">5</span>][<span class="t-num">1</span>][<span class="t-num">1</span>]:<span class="t-fn">nodeValue</span>(),</span><span class="ln" data-n="11">                    given  = { Msg.PID[<span class="t-num">5</span>][<span class="t-num">1</span>][<span class="t-num">2</span>]:<span class="t-fn">nodeValue</span>() }}},</span><span class="ln" data-n="12">    birthDate  = date.<span class="t-fn">iso</span>(Msg.PID[<span class="t-num">7</span>][<span class="t-num">1</span>]:<span class="t-fn">nodeValue</span>())</span><span class="ln" data-n="13">  }</span><span class="ln" data-n="14"> </span><span class="ln" data-n="15">  <span class="t-key">if</span> <span class="t-key">not</span> patient.<span class="t-fn">valid</span>() <span class="t-key">then</span></span><span class="ln" data-n="16">    <span class="t-key">return</span> queue.<span class="t-fn">dead</span>{ reason = <span class="t-str">'PID incomplete'</span>, data = Data }</span><span class="ln" data-n="17">  <span class="t-key">end</span></span><span class="ln" data-n="18"> </span><span class="ln" data-n="19">  queue.<span class="t-fn">push</span>{ data = patient:<span class="t-fn">json</span>() }</span><span class="ln" data-n="20"><span class="t-key">end</span></span></pre>
+            </div>
+            <div class="code-pane">
+<pre><span class="ln" data-n="1">{</span><span class="ln" data-n="2">  <span class="t-prop">"name"</span><span class="t-punc">:</span> <span class="t-str">"epic-adt-to-fhir"</span><span class="t-punc">,</span></span><span class="ln" data-n="3">  <span class="t-prop">"nodes"</span><span class="t-punc">:</span> [</span><span class="ln" data-n="4">    {</span><span class="ln" data-n="5">      <span class="t-prop">"type"</span><span class="t-punc">:</span> <span class="t-str">"source.llp"</span><span class="t-punc">,</span></span><span class="ln" data-n="6">      <span class="t-prop">"name"</span><span class="t-punc">:</span> <span class="t-str">"Epic ADT IN"</span><span class="t-punc">,</span></span><span class="ln" data-n="7">      <span class="t-prop">"port"</span><span class="t-punc">:</span> <span class="t-num">5245</span><span class="t-punc">,</span> <span class="t-prop">"ackMode"</span><span class="t-punc">:</span> <span class="t-str">"enhanced"</span></span><span class="ln" data-n="8">    }<span class="t-punc">,</span></span><span class="ln" data-n="9">    {</span><span class="ln" data-n="10">      <span class="t-prop">"type"</span><span class="t-punc">:</span> <span class="t-str">"transform.custom"</span><span class="t-punc">,</span></span><span class="ln" data-n="11">      <span class="t-prop">"script"</span><span class="t-punc">:</span> <span class="t-str">"main.lua"</span><span class="t-punc">,</span></span><span class="ln" data-n="12">      <span class="t-prop">"libraries"</span><span class="t-punc">:</span> [<span class="t-str">"fhir"</span><span class="t-punc">,</span> <span class="t-str">"date"</span>]</span><span class="ln" data-n="13">    }<span class="t-punc">,</span></span><span class="ln" data-n="14">    {</span><span class="ln" data-n="15">      <span class="t-prop">"type"</span><span class="t-punc">:</span> <span class="t-str">"destination.custom"</span><span class="t-punc">,</span></span><span class="ln" data-n="16">      <span class="t-prop">"adapter"</span><span class="t-punc">:</span> <span class="t-str">"azure-fhir"</span><span class="t-punc">,</span></span><span class="ln" data-n="17">      <span class="t-prop">"resource"</span><span class="t-punc">:</span> <span class="t-str">"Patient"</span><span class="t-punc">,</span> <span class="t-prop">"retry"</span><span class="t-punc">:</span> <span class="t-num">5</span></span><span class="ln" data-n="18">    }</span><span class="ln" data-n="19">  ]<span class="t-punc">,</span></span><span class="ln" data-n="20">  <span class="t-prop">"durability"</span><span class="t-punc">:</span> <span class="t-str">"at-least-once"</span><span class="t-punc">,</span> <span class="t-prop">"replay"</span><span class="t-punc">:</span> <span class="t-key">true</span></span><span class="ln" data-n="21">}</span></pre>
+            </div>
+            <div class="code-pane">
+<pre><span class="ln" data-n="1"><span class="t-com"># 4. call it</span></span><span class="ln" data-n="2">curl -X POST http://localhost:<span class="t-num">7440</span>/v1/workflows/epic-adt-to-fhir <span class="t-punc">\</span></span><span class="ln" data-n="3">  -H <span class="t-str">"Authorization: Bearer $GRID_TOKEN"</span> <span class="t-punc">\</span></span><span class="ln" data-n="4">  -H <span class="t-str">"Content-Type: application/hl7-v2"</span> <span class="t-punc">\</span></span><span class="ln" data-n="5">  --data-binary @sample-adt-a08.hl7</span><span class="ln" data-n="6"> </span><span class="ln" data-n="7"><span class="t-punc">{</span></span><span class="ln" data-n="8">  <span class="t-prop">"messageId"</span><span class="t-punc">:</span> <span class="t-str">"01JR8W2XQ4T7N9"</span><span class="t-punc">,</span></span><span class="ln" data-n="9">  <span class="t-prop">"status"</span><span class="t-punc">:</span> <span class="t-str">"accepted"</span><span class="t-punc">,</span></span><span class="ln" data-n="10">  <span class="t-prop">"parsedAs"</span><span class="t-punc">:</span> <span class="t-str">"ADT^A08"</span><span class="t-punc">,</span></span><span class="ln" data-n="11">  <span class="t-prop">"parseMicros"</span><span class="t-punc">:</span> <span class="t-num">380</span><span class="t-punc">,</span></span><span class="ln" data-n="12">  <span class="t-prop">"destinations"</span><span class="t-punc">:</span> [</span><span class="ln" data-n="13">    <span class="t-punc">{</span> <span class="t-prop">"adapter"</span><span class="t-punc">:</span> <span class="t-str">"azure-fhir"</span><span class="t-punc">,</span> <span class="t-prop">"http"</span><span class="t-punc">:</span> <span class="t-num">201</span><span class="t-punc">,</span> <span class="t-prop">"ms"</span><span class="t-punc">:</span> <span class="t-num">11</span> <span class="t-punc">}</span></span><span class="ln" data-n="14">  <span class="t-punc">]</span><span class="t-punc">,</span></span><span class="ln" data-n="15">  <span class="t-prop">"replayable"</span><span class="t-punc">:</span> <span class="t-key">true</span></span><span class="ln" data-n="16"><span class="t-punc">}</span></span></pre>
+            </div>
+          </div>
+        </div>
+        <p class="frame-cap">Tabs advance on their own. Click to take over.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TWO DOORS ============================ -->
+<section class="section bg-white divider-top">
+  <div class="wrap">
+    <div class="grid g-2">
+      <a class="card card-hover card-tint-purple rv" href="https://help.linkiir.com" target="_blank" rel="noopener" style="text-decoration:none">
+        <span class="card-ico i-purple"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M3.5 4.8h6.3c1.2 0 2.2.9 2.2 2.1v13.5c0-1.2-1-2.1-2.2-2.1H3.5V4.8zM20.5 4.8h-6.3c-1.2 0-2.2.9-2.2 2.1v13.5c0-1.2 1-2.1 2.2-2.1h6.3V4.8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+        <h3 style="display:inline-flex;align-items:center;gap:.4rem">Documentation <svg width="14" height="14" viewBox="0 0 12 12" fill="none" style="opacity:.45"><path d="M3.5 8.5l5-5M4.6 3.5h3.9v3.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></h3>
+        <p class="small muted">Getting started, interface development, the node reference, administration, deployment and licensing, troubleshooting and the FAQ.</p>
+        <p class="mono tiny dim mb-0">help.linkiir.com</p>
+      </a>
+      <a class="card card-hover card-tint-blue rv rv-d1" href="http://help.linkiir.com/docs/api/" target="_blank" rel="noopener" style="text-decoration:none">
+        <span class="card-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M8.6 5.2L3.2 12l5.4 6.8M15.4 5.2L20.8 12l-5.4 6.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3 style="display:inline-flex;align-items:center;gap:.4rem">API reference <svg width="14" height="14" viewBox="0 0 12 12" fill="none" style="opacity:.45"><path d="M3.5 8.5l5-5M4.6 3.5h3.9v3.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></h3>
+        <p class="small muted">Every endpoint on the Grid control plane: projects, workflows, nodes, schemas, messages, replay, users and audit, each with request and response examples.</p>
+        <p class="mono tiny dim mb-0">help.linkiir.com/docs/api/</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S IN THE DOCS ============================ -->
+<section class="section bg-soft divider-top">
+  <div class="wrap">
+    <div class="center" style="max-width:660px;margin:0 auto 44px">
+      <span class="kicker k-dim">Documentation map</span>
+      <h2>Written by the people who wrote the engine.</h2>
+      <p class="lead">Which is why it tells you the awkward part instead of skipping it.</p>
+    </div>
+    <div class="grid g-4">
+      <div class="card rv">
+        <span class="badge">01</span>
+        <h4 class="mt-2">Getting started</h4>
+        <p class="small muted mb-0">Four steps from a downloaded package to a live HTTP endpoint you can call with <span class="mono">curl</span>. Receive HL7 v2 over MLLP. Connect your own Kafka or Redpanda.</p>
+        <a class="txtlink small mt-2" href="https://help.linkiir.com" target="_blank" rel="noopener">Open ↗</a>
+      </div>
+      <div class="card rv rv-d1">
+        <span class="badge">02</span>
+        <h4 class="mt-2">Interface development</h4>
+        <p class="small muted mb-0">Source, Transform and Destination nodes: every configuration option, the Lua scripting API, shared libraries, and worked samples per message type.</p>
+        <a class="txtlink small mt-2" href="https://help.linkiir.com" target="_blank" rel="noopener">Open ↗</a>
+      </div>
+      <div class="card rv rv-d2">
+        <span class="badge">03</span>
+        <h4 class="mt-2">Administration</h4>
+        <p class="small muted mb-0">Installation, licensing, deployment topologies, broker and log-archive database choices, security configuration, upgrades and troubleshooting.</p>
+        <a class="txtlink small mt-2" href="https://help.linkiir.com" target="_blank" rel="noopener">Open ↗</a>
+      </div>
+      <div class="card rv rv-d3">
+        <span class="badge">04</span>
+        <h4 class="mt-2">FAQ</h4>
+        <p class="small muted mb-0">Database choices, licensing limits, operating practices, and the questions people actually email us at 11&nbsp;p.m.</p>
+        <a class="txtlink small mt-2" href="https://help.linkiir.com" target="_blank" rel="noopener">Open ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LUA API ============================ -->
+<section class="section bg-white divider-top">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <span class="kicker k-purple">Lua scripting API</span>
+        <h2>Small surface. Nothing hidden.</h2>
+        <p class="lead">Transforms run sandboxed Lua 5.4: no host filesystem, no shell. What you get instead is a message API that makes the common thing one line and the awkward thing possible.</p>
+        <div class="card mt-3" style="padding:0;overflow:hidden">
+          <table class="cmp">
+            <tbody>
+              <tr class="grp"><td colspan="2">Parsing &amp; building</td></tr>
+              <tr><td class="mono small" style="width:44%">hl7.parse{}</td><td class="small muted">Parse to a typed tree; returns message and type</td></tr>
+              <tr><td class="mono small">hl7.message{}</td><td class="small muted">Build an outgoing message from a schema</td></tr>
+              <tr><td class="mono small">fhir.Resource{}</td><td class="small muted">Construct and validate any R4/R5 resource</td></tr>
+              <tr><td class="mono small">x12.parse{}</td><td class="small muted">Parse a 5010 transaction set into loops and segments</td></tr>
+              <tr><td class="mono small">json / xml / csv</td><td class="small muted">Encode and decode with schema awareness</td></tr>
+              <tr class="grp"><td colspan="2">Mapping</td></tr>
+              <tr><td class="mono small">Msg:mapTree()</td><td class="small muted">Copy the whole structure, then override what differs</td></tr>
+              <tr><td class="mono small">node:nodeValue()</td><td class="small muted">Read a leaf without guessing at delimiters</td></tr>
+              <tr><td class="mono small">Msg:S()</td><td class="small muted">Serialise back to wire format</td></tr>
+              <tr class="grp"><td colspan="2">Flow control</td></tr>
+              <tr><td class="mono small">queue.push{}</td><td class="small muted">Send downstream, durably</td></tr>
+              <tr><td class="mono small">queue.dead{}</td><td class="small muted">Dead-letter with a reason you'll thank yourself for</td></tr>
+              <tr><td class="mono small">store / lookup</td><td class="small muted">Cross-message state and cross-reference tables</td></tr>
+              <tr><td class="mono small">alert{} / log{}</td><td class="small muted">Structured logging and notification-engine triggers</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tiny dim mt-3">Full signatures, arguments and worked examples in the <a href="http://help.linkiir.com/docs/api/" target="_blank" rel="noopener">API reference ↗</a>.</p>
+      </div>
+
+      <div class="rv rv-d1">
+        <div class="card">
+          <span class="kicker" style="margin-bottom:.7rem">Control plane, over HTTP</span>
+          <p class="small muted">Everything the console does, the API does. Deploy interfaces from CI, gate promotion on a passing run-test, replay a window from a script.</p>
+          <div class="code mt-3">
+            <div class="code-bar"><span class="code-name" style="margin-left:0">POST /v1/projects/:id/deploy</span></div>
+            <div class="code-body">
+<pre><span class="ln" data-n="1"><span class="t-com"># promote a reviewed branch into production</span></span><span class="ln" data-n="2">curl -X POST <span class="t-punc">\</span></span><span class="ln" data-n="3">  https://grid.example.org/v1/projects/regional/deploy <span class="t-punc">\</span></span><span class="ln" data-n="4">  -H <span class="t-str">"Authorization: Bearer $GRID_TOKEN"</span> <span class="t-punc">\</span></span><span class="ln" data-n="5">  -d <span class="t-str">'{"ref":"release/2026.08","runTests":true}'</span></span><span class="ln" data-n="6"> </span><span class="ln" data-n="7"><span class="t-punc">{</span> <span class="t-prop">"deployment"</span><span class="t-punc">:</span> <span class="t-str">"dpl_01JR8W"</span><span class="t-punc">,</span> <span class="t-prop">"tests"</span><span class="t-punc">:</span> <span class="t-str">"42 passed"</span><span class="t-punc">,</span></span><span class="ln" data-n="8">  <span class="t-prop">"workflows"</span><span class="t-punc">:</span> <span class="t-num">18</span><span class="t-punc">,</span> <span class="t-prop">"rollbackTo"</span><span class="t-punc">:</span> <span class="t-str">"dpl_01JR3K"</span> <span class="t-punc">}</span></span></pre>
+            </div>
+          </div>
+        </div>
+        <div class="grid g-2 mt-3" style="gap:16px">
+          <div class="card"><h4 class="mono" style="font-size:.88rem">Auth</h4><p class="small muted mb-0">Bearer tokens scoped per project and action, or mTLS client certs. Tokens are revocable and audited.</p></div>
+          <div class="card"><h4 class="mono" style="font-size:.88rem">Webhooks</h4><p class="small muted mb-0">Subscribe to deploys, dead-letters, threshold breaches and replay completions.</p></div>
+          <div class="card"><h4 class="mono" style="font-size:.88rem">OpenAPI</h4><p class="small muted mb-0">A published spec, so your client is generated rather than hand-written.</p></div>
+          <div class="card"><h4 class="mono" style="font-size:.88rem">Versioning</h4><p class="small muted mb-0"><span class="mono">/v1</span> is stable. Breaking changes get a new path and twelve months of overlap.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ QUICKSTART STEPS ============================ -->
+<section class="section bg-blue divider-top">
+  <div class="wrap wrap-narrow">
+    <div class="center mb-4">
+      <span class="kicker">Get started</span>
+      <h2>The first hour, in order.</h2>
+    </div>
+    <div class="steps rv">
+      <div class="step"><div><h4>Get the package</h4><p>A single tarball or container image, plus a licence file. Works offline, with nothing calling home. <a href="../contact/">Ask for an evaluation licence</a> and you'll have it the same day.</p></div></div>
+      <div class="step"><div><h4>Bring up the runtime</h4><p><span class="mono">grid init</span> then <span class="mono">grid up</span>. Runtime, broker, notification engine, archiver and console. The bundled broker is fine to start with; point it at your own Kafka or Redpanda when you're ready.</p></div></div>
+      <div class="step"><div><h4>Wire the first workflow</h4><p>Start from the <span class="mono">http-echo</span> or <span class="mono">llp-passthrough</span> template, then swap the destination for a real one. The node parameter docs are in the panel beside each field.</p></div></div>
+      <div class="step"><div><h4>Send a message</h4><p><span class="mono">curl</span> it, or point your test MLLP sender at port 5245. Watch it land in the Monitor, open the parsed tree, then break it on purpose and replay it.</p></div></div>
+    </div>
+    <div class="center mt-4">
+      <a class="btn btn-primary btn-lg" href="https://help.linkiir.com" target="_blank" rel="noopener">Follow the full guide ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SUPPORT FOR DEVS ============================ -->
+<section class="section bg-white divider-top">
+  <div class="wrap">
+    <div class="split split-rev">
+      <div class="rv">
+        <div class="chat">
+          <div class="chat-hd"><span class="dot dot-pulse"></span><span class="ch-t">LNK-5107 · Jira Service Management</span><span class="msg-time" style="margin-left:auto">avg. first reply 7 min</span></div>
+          <div class="chat-body">
+            <div class="msg">
+              <span class="av a-purple">JT</span>
+              <div class="msg-b">
+                <div class="msg-hd"><span class="msg-who">Jordan</span><span class="msg-org">Platform eng</span><span class="msg-time">14:02</span></div>
+                <p class="msg-t">Is there a way to make <code>mapTree</code> skip a segment? I want everything except <code>ZPD</code>.</p>
+              </div>
+            </div>
+            <div class="msg">
+              <span class="av a-green">AL</span>
+              <div class="msg-b">
+                <div class="msg-hd"><span class="msg-who">Alix</span><span class="msg-org">linkiir</span><span class="msg-time">14:06</span></div>
+                <p class="msg-t">Yes. <code>MsgOut:mapTree(MsgIn, {skip={'ZPD'}})</code>. It takes a table of segment names or a predicate. I'll add the example to the docs page today, it's under-documented.</p>
+              </div>
+            </div>
+            <div class="msg">
+              <span class="av a-purple">JT</span>
+              <div class="msg-b">
+                <div class="msg-hd"><span class="msg-who">Jordan</span><span class="msg-org">Platform eng</span><span class="msg-time">14:07</span></div>
+                <p class="msg-t">Perfect, thanks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rv rv-d1">
+        <span class="kicker k-amber">Help</span>
+        <h2>Ask an engineer, get an engineer.</h2>
+        <p class="lead">Raise it in Jira Service Management and it reaches the people who build Grid, not a bot, not a triage script, and not a case number that sits until someone reassigns it. Median first reply last quarter was seven minutes.</p>
+        <div class="grid g-2 mt-4">
+          <div class="card"><div class="stat-n" style="font-size:1.7rem">7<span class="dim" style="font-size:.55em"> min</span></div><div class="stat-l">Median first reply</div></div>
+          <div class="card"><div class="stat-n" style="font-size:1.7rem">24<span style="opacity:.35">×</span>7</div><div class="stat-l">Included with the licence</div></div>
+        </div>
+        <div class="btn-row mt-4">
+          <a class="btn btn-primary" href="../contact/">Get an evaluation licence <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn btn-ghost" href="../platform-services/">How support works</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand" style="margin-bottom:14px">
+          <svg width="33" height="23" viewBox="0 0 33 23" fill="none" style="color:#fff"><circle cx="11.5" cy="11.5" r="8.6" stroke="currentColor" stroke-width="2.2"/><circle cx="21.5" cy="11.5" r="8.6" stroke="currentColor" stroke-width="2.2"/></svg>
+          <span class="brand-word">linkiir</span>
+        </span>
+        <p style="max-width:32ch;color:#a1a1aa">Integration solutions and services for healthcare and B2B. The engine, and the engineers who run it.</p>
+        <p class="mono" style="font-size:.78rem;line-height:1.7;color:#71717a">
+          18 King St E, Suite 1400<br>Toronto, Ontario M5C 1C4<br>Canada
+        </p>
+        <p><a href="mailto:sales@linkiir.com">sales@linkiir.com</a></p>
+      </div>
+      <div>
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="../platform-overview/">Platform overview</a></li>
+          <li><a href="../platform-security/">Platform security</a></li>
+          <li><a href="../platform-services/">Platform services</a></li>
+          <li><a href="../network/">Integration Network</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Developers</h5>
+        <ul>
+          <li><a href="../developers/">Get Started</a></li>
+          <li><a href="https://help.linkiir.com" target="_blank" rel="noopener">Docs ↗</a></li>
+          <li><a href="http://help.linkiir.com/docs/api/" target="_blank" rel="noopener">API reference ↗</a></li>
+          <li><a href="../downloads/">Downloads</a></li>
+          <li><a href="../network/">Adapter catalogue</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="../company/">About Linkiir</a></li>
+          <li><a href="../events/">Events</a></li>
+          <li><a href="../pricing/">Pricing</a></li>
+          <li><a href="../contact/">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/linkiir" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="../platform-security/">Security posture</a></li>
+          <li><a href="../platform-security/#compliance">Compliance</a></li>
+          <li><a href="../contact/">Privacy</a></li>
+          <li><a href="../contact/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© Linkiir, Inc. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>

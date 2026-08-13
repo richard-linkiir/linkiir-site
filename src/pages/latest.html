@@ -1,0 +1,109 @@
+<!--{"title":"Latest release | Linkiir Grid","desc":"Direct upgrade links to the current Linkiir Grid release.","active":"","noindex":true,"script":["downloads-data.js","downloads.js"]}-->
+
+<!-- =========================================================================
+     UNLISTED PAGE: /latest.html
+     Not linked from the site navigation, sitemap or footer. Marked
+     noindex,nofollow. Share this URL with existing customers who need the
+     current build to upgrade without going through the download gate.
+     ========================================================================= -->
+
+<section class="phero" style="padding-bottom:24px">
+  <div class="blobs"><span class="blob b2" style="left:-120px;top:-160px"></span></div>
+  <div class="wrap">
+    <span class="badge b-gray">Unlisted · direct upgrade link</span>
+    <h1 class="mt-2">Grid <span class="hl hl-green" data-version>1.0.0</span></h1>
+    <p class="lead">The current stable release, released <span data-released>…</span>. No gate on this page. It's for customers already running Grid who just need the build.</p>
+    <div class="hero-meta" style="margin-top:1.2rem">
+      <span><span class="dot dot-pulse"></span> Stable channel</span>
+      <span>Verify with <span class="mono">sha256sum -c SHA256SUMS</span></span>
+      <span><a href="#" id="dl-checksums" target="_blank" rel="noopener">SHA256SUMS ↗</a></span>
+    </div>
+  </div>
+</section>
+
+<!-- Broker choice -->
+<section class="section-sm" style="padding-top:10px;padding-bottom:16px">
+  <div class="wrap">
+    <div class="card">
+      <div class="cfg-row">
+        <div>
+          <div class="cfg-t">Broker packaging</div>
+          <p class="cfg-d" id="kafka-desc">Ships with a preconfigured broker. Fastest way to a running system. Start here for evaluations and single-node deployments.</p>
+        </div>
+        <div class="seg" id="kafka-seg" role="group" aria-label="Broker packaging">
+          <button data-kafka="bundled" class="on">Bundled Kafka</button>
+          <button data-kafka="external">Bring your own broker</button>
+        </div>
+      </div>
+      <p class="tiny dim mt-2 mb-0">Upgrading in place? Take the same flavour you're already running. Switching between them is a configuration change rather than a reinstall, but do it as a separate step, not during an upgrade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Package matrix -->
+<section class="section-sm" style="padding-top:6px">
+  <div class="wrap">
+    <div class="tbl-wrap">
+      <div class="tbl-scroll">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Package</th>
+              <th class="c">Broker</th>
+              <th class="c">Size</th>
+              <th class="c">Get it</th>
+            </tr>
+          </thead>
+          <tbody id="dl-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upgrade procedure -->
+<section class="section bg-white divider-top">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <span class="kicker">Upgrade procedure</span>
+        <h2>In-place, one node at a time.</h2>
+        <p class="lead">Grid upgrades are rolling on an HA topology. Queues drain, in-flight messages are durable, and a node that comes back on the new version rejoins on its own.</p>
+        <div class="steps mt-4">
+          <div class="step"><div><h4>Read the upgrade notes</h4><p>Check the release notes for anything marked <strong>breaking</strong> or <strong>action required</strong> between your version and this one. Skipping a major means reading each set in order.</p></div></div>
+          <div class="step"><div><h4>Back up config and the archive database</h4><p><span class="mono">grid backup --out ./pre-upgrade</span>. Takes minutes, and it is the difference between a bad afternoon and a bad week.</p></div></div>
+          <div class="step"><div><h4>Upgrade the standby node first</h4><p>Let it rejoin, confirm it is healthy in the console and taking traffic, then move to the primary. On a single-node deployment, expect a short window while the runtime restarts. Queued messages are not lost.</p></div></div>
+          <div class="step"><div><h4>Verify, then replay if you need to</h4><p>Check System Status shows all services online, watch throughput return to normal, and replay anything that dead-lettered during the window.</p></div></div>
+        </div>
+      </div>
+
+      <div class="rv rv-d1">
+        <div class="card">
+          <span class="kicker k-dim" style="margin-bottom:.7rem">What's in this release</span>
+          <ul class="feat-list" id="dl-notes"></ul>
+        </div>
+        <div class="card mt-3">
+          <span class="kicker k-dim" style="margin-bottom:.7rem">Rolling upgrade, in short</span>
+          <div class="code">
+            <div class="code-bar"><span class="code-name" style="margin-left:0">upgrade.sh</span></div>
+            <div class="code-body">
+<pre><span class="ln" data-n="1"><span class="t-com"># standby node</span></span><span class="ln" data-n="2">grid backup --out ./pre-upgrade</span><span class="ln" data-n="3">grid drain --node standby-1 --wait</span><span class="ln" data-n="4">grid upgrade --package linkiir-<span class="t-num">1</span>.<span class="t-num">0</span>.<span class="t-num">0</span>-linux-docker-external-kafka.tar.gz</span><span class="ln" data-n="5">grid rejoin --node standby-1</span><span class="ln" data-n="6"> </span><span class="ln" data-n="7"><span class="t-com"># confirm before touching the primary</span></span><span class="ln" data-n="8">grid status --wait-healthy</span></pre>
+            </div>
+          </div>
+        </div>
+        <div class="card mt-3" style="background:var(--bg-2)">
+          <h4>Something looks wrong?</h4>
+          <p class="small muted mb-0">Raise it in Jira Service Management and an engineer will pick it up. Rolling back is <span class="mono">grid upgrade --package &lt;previous&gt;</span> plus the backup you took in step two. Don't push through a failed upgrade at 3&nbsp;a.m.; call us.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm bg-soft divider-top">
+  <div class="wrap center">
+    <p class="small muted mb-2">This page is unlisted. It isn't in the navigation, the sitemap or search results.</p>
+    <p class="tiny dim mb-0">New to Grid? Start at the <a href="downloads.html">downloads page</a>. Need help? <a href="contact.html">Talk to us</a>.</p>
+  </div>
+</section>

@@ -1,0 +1,265 @@
+/* =========================================================================
+   linkiir.com — Integration Network adapter registry
+   Every adapter Grid ships with a tested project template for.
+
+   n  name          v  vendor / adapter id
+   c  category key  s  status: GA | Beta | Preview
+   i  inbound (source)      o  outbound (destination)
+   h  HL7 v2        f  FHIR       x  X12 / EDI
+   d  bulk & file   a  real-time API      k  streaming / broker
+   ========================================================================= */
+window.LK_CATEGORIES = {
+  ehr:  { label: 'Acute EHR',                   colour: '#4f46e5' },
+  amb:  { label: 'Ambulatory & specialty',      colour: '#0ea5e9' },
+  pac:  { label: 'Post-acute & behavioural',    colour: '#0ea5e9' },
+  lab:  { label: 'Labs & diagnostics',          colour: '#059669' },
+  img:  { label: 'Imaging & PACS',              colour: '#14b8a6' },
+  rx:   { label: 'Pharmacy & e-prescribing',    colour: '#7c3aed' },
+  clm:  { label: 'Clearinghouse & payer',       colour: '#a855f7' },
+  data: { label: 'Data platforms & warehouses', colour: '#f59e0b' },
+  strm: { label: 'Streaming & messaging',       colour: '#ea580c' },
+  hie:  { label: 'HIE & interoperability',      colour: '#0891b2' },
+  ph:   { label: 'Public health & registries',  colour: '#65a30d' },
+  dev:  { label: 'Devices & monitoring',        colour: '#dc2626' },
+  ops:  { label: 'Scheduling & operations',     colour: '#db2777' },
+  biz:  { label: 'Business systems & ERP',      colour: '#7c3aed' },
+  idp:  { label: 'Identity & directory',        colour: '#475569' },
+  msg:  { label: 'Notification & comms',        colour: '#e11d48' },
+  eng:  { label: 'Legacy engines (migration)',  colour: '#71717a' },
+  file: { label: 'Storage & transport',         colour: '#0d9488' }
+};
+
+window.LK_ADAPTERS = [
+  /* ---------------- Acute EHR ---------------- */
+  { n: 'Epic',                          v: 'epic',              c: 'ehr',  s: 'GA',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Epic on FHIR',                  v: 'epic-fhir',         c: 'ehr',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'Epic Bridges',                  v: 'epic-bridges',      c: 'ehr',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Epic Clarity / Caboodle',       v: 'epic-clarity',      c: 'ehr',  s: 'Beta',      i: 1, o: 0, h: 0, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Oracle Health · Cerner Millennium', v: 'cerner',        c: 'ehr',  s: 'GA',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Oracle Health Ignite APIs',     v: 'oracle-ignite',     c: 'ehr',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'MEDITECH Expanse',              v: 'meditech',          c: 'ehr',  s: 'GA',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'MEDITECH Magic / C-S',          v: 'meditech-magic',    c: 'ehr',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'InterSystems TrakCare',         v: 'trakcare',          c: 'ehr',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Altera Sunrise',                v: 'altera-sunrise',    c: 'ehr',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Altera Paragon',                v: 'altera-paragon',    c: 'ehr',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'TruBridge · CPSI Thrive',       v: 'trubridge',         c: 'ehr',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Medhost',                       v: 'medhost',           c: 'ehr',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'WellSky Acute',                 v: 'wellsky-acute',     c: 'ehr',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Dedalus ORBIS',                 v: 'orbis',             c: 'ehr',  s: 'Beta',    i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'System C Medway',               v: 'medway',            c: 'ehr',  s: 'Beta',    i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+
+  /* ---------------- Ambulatory & specialty ---------------- */
+  { n: 'athenahealth · athenaOne',      v: 'athena',            c: 'amb',  s: 'GA',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'eClinicalWorks',                v: 'ecw',               c: 'amb',  s: 'GA',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Veradigm · Allscripts Pro',     v: 'veradigm',          c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'NextGen Enterprise',            v: 'nextgen',           c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Greenway Intergy / Prime Suite', v: 'greenway',         c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'Tebra · Kareo',                 v: 'tebra',             c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'ModMed · EMA',                  v: 'modmed',            c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'DrChrono',                      v: 'drchrono',          c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Elation Health',                v: 'elation',           c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Canvas Medical',                v: 'canvas',            c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'Healthie',                      v: 'healthie',          c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'AdvancedMD',                    v: 'advancedmd',        c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Practice Fusion',               v: 'practice-fusion',   c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'CareCloud',                     v: 'carecloud',         c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'SimplePractice',                v: 'simplepractice',    c: 'amb',  s: 'Beta',    i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Medplum',                       v: 'medplum',           c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 1 },
+  { n: 'TELUS Health · PS Suite',       v: 'telus-ps',          c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'QHR Accuro EMR',                v: 'accuro',            c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'OSCAR EMR',                     v: 'oscar',             c: 'amb',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'EMIS Web',                      v: 'emis',              c: 'amb',  s: 'Beta',    i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'TPP SystmOne',                  v: 'systmone',          c: 'amb',  s: 'Beta',    i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+
+  /* ---------------- Post-acute, LTC & behavioural ---------------- */
+  { n: 'PointClickCare',                v: 'pointclickcare',    c: 'pac',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'MatrixCare',                    v: 'matrixcare',        c: 'pac',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'WellSky Home Health',           v: 'wellsky-hh',        c: 'pac',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Netsmart myUnity',              v: 'netsmart',          c: 'pac',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'Qualifacts CareLogic',          v: 'qualifacts',        c: 'pac',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'Streamline SmartCare',          v: 'smartcare',         c: 'pac',  s: 'Beta',    i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Alayacare',                     v: 'alayacare',         c: 'pac',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+
+  /* ---------------- Labs & diagnostics ---------------- */
+  { n: 'LabCorp',                       v: 'labcorp',           c: 'lab',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Quest Diagnostics',             v: 'quest',             c: 'lab',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'BioReference',                  v: 'bioreference',      c: 'lab',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'ARUP Laboratories',             v: 'arup',              c: 'lab',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Mayo Clinic Laboratories',      v: 'mayo-labs',         c: 'lab',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Sunquest LIS',                  v: 'sunquest',          c: 'lab',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Orchard Software LIS',          v: 'orchard',           c: 'lab',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Beckman Coulter Remisol',       v: 'remisol',           c: 'lab',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Roche cobas infinity',          v: 'cobas',             c: 'lab',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Siemens Atellica',              v: 'atellica',          c: 'lab',  s: 'Beta',    i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Invitae · genomics reporting',  v: 'invitae',           c: 'lab',  s: 'Beta',    i: 1, o: 0, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Natera',                        v: 'natera',            c: 'lab',  s: 'Beta',    i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+
+  /* ---------------- Imaging & PACS ---------------- */
+  { n: 'DICOM C-STORE / C-FIND',        v: 'dicom',             c: 'img',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'DICOMweb · WADO-RS / STOW-RS',  v: 'dicomweb',          c: 'img',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Sectra PACS',                   v: 'sectra',            c: 'img',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'GE HealthCare Centricity',      v: 'ge-centricity',     c: 'img',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Philips Vue PACS',              v: 'philips-vue',       c: 'img',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Fujifilm Synapse',              v: 'synapse',           c: 'img',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Agfa Enterprise Imaging',       v: 'agfa',              c: 'img',  s: 'Beta',    i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Intelerad',                     v: 'intelerad',         c: 'img',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Ambra Health',                  v: 'ambra',             c: 'img',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Nuance PowerScribe',            v: 'powerscribe',       c: 'img',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Aidoc · AI triage results',     v: 'aidoc',             c: 'img',  s: 'Beta',    i: 1, o: 1, h: 1, f: 1, x: 0, d: 0, a: 1, k: 0 },
+
+  /* ---------------- Pharmacy & e-prescribing ---------------- */
+  { n: 'Surescripts',                   v: 'surescripts',       c: 'rx',   s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'NCPDP SCRIPT 2017071',          v: 'ncpdp-script',      c: 'rx',   s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'NCPDP Telecom D.0',             v: 'ncpdp-telecom',     c: 'rx',   s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Epic Willow',                   v: 'epic-willow',       c: 'rx',   s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Omnicell',                      v: 'omnicell',          c: 'rx',   s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'BD Pyxis',                      v: 'pyxis',             c: 'rx',   s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'McKesson Enterprise Rx',        v: 'mckesson-rx',       c: 'rx',   s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'DoseSpot',                      v: 'dosespot',          c: 'rx',   s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 1, d: 0, a: 1, k: 0 },
+  { n: 'Kroger / Walgreens retail Rx',  v: 'retail-rx',         c: 'rx',   s: 'Beta',    i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Cardinal Health',               v: 'cardinal',          c: 'rx',   s: 'Beta',    i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+
+  /* ---------------- Clearinghouse & payer ---------------- */
+  { n: 'Availity',                      v: 'availity',          c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Optum · Change Healthcare',     v: 'optum-change',      c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Waystar',                       v: 'waystar',           c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Stedi',                         v: 'stedi',             c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Office Ally',                   v: 'office-ally',       c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'TriZetto Provider Solutions',   v: 'trizetto',          c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Inovalon',                      v: 'inovalon',          c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Zelis',                         v: 'zelis',             c: 'clm',  s: 'Beta',    i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'X12 5010 · 837P / 837I / 837D', v: 'x12-837',           c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'X12 5010 · 835 ERA',            v: 'x12-835',           c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'X12 5010 · 270 / 271',          v: 'x12-270',           c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'X12 5010 · 276 / 277 & 277CA',  v: 'x12-276',           c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'X12 5010 · 278 prior auth',     v: 'x12-278',           c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'X12 5010 · 834 enrolment',      v: 'x12-834',           c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'X12 5010 · 820 premium',        v: 'x12-820',           c: 'clm',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'CMS Blue Button 2.0',           v: 'blue-button',       c: 'clm',  s: 'Beta',      i: 1, o: 0, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'HL7 Da Vinci CDex / PDex',      v: 'da-vinci',          c: 'clm',  s: 'Beta',    i: 1, o: 1, h: 0, f: 1, x: 0, d: 0, a: 1, k: 0 },
+
+  /* ---------------- Data platforms & warehouses ---------------- */
+  { n: 'Palantir Foundry',              v: 'foundry',           c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 1 },
+  { n: 'Snowflake',                     v: 'snowflake',         c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 1 },
+  { n: 'Databricks',                    v: 'databricks',        c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 1 },
+  { n: 'Microsoft Fabric · OneLake',    v: 'fabric',            c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 1 },
+  { n: 'Azure Health Data Services FHIR', v: 'azure-fhir',      c: 'data', s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'AWS HealthLake',                v: 'healthlake',        c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Google Cloud Healthcare API',   v: 'gcp-healthcare',    c: 'data', s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 1 },
+  { n: 'Google BigQuery',               v: 'bigquery',          c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 1 },
+  { n: 'Amazon Redshift',               v: 'redshift',          c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Azure Synapse',                 v: 'synapse-az',        c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'PostgreSQL',                    v: 'postgres',          c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Microsoft SQL Server',          v: 'mssql',             c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Oracle Database',               v: 'oracle-db',         c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'MySQL / MariaDB',               v: 'mysql',             c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'MongoDB',                       v: 'mongodb',           c: 'data', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Elasticsearch / OpenSearch',    v: 'elastic',           c: 'data', s: 'Beta',      i: 0, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Tableau Hyper extract',         v: 'tableau',           c: 'data', s: 'Beta',    i: 0, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Power BI dataset push',         v: 'powerbi',           c: 'data', s: 'Beta',      i: 0, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 0 },
+
+  /* ---------------- Streaming & messaging ---------------- */
+  { n: 'Apache Kafka',                  v: 'kafka',             c: 'strm', s: 'GA',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 0, k: 1 },
+  { n: 'Redpanda',                      v: 'redpanda',          c: 'strm', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 0, k: 1 },
+  { n: 'Confluent Cloud',               v: 'confluent',         c: 'strm', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 1 },
+  { n: 'RabbitMQ',                      v: 'rabbitmq',          c: 'strm', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 0, k: 1 },
+  { n: 'IBM MQ',                        v: 'ibm-mq',            c: 'strm', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 0, k: 1 },
+  { n: 'Azure Service Bus / Event Hubs', v: 'azure-bus',        c: 'strm', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 1 },
+  { n: 'Amazon SQS / SNS',              v: 'aws-sqs',           c: 'strm', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 1 },
+  { n: 'Google Pub/Sub',                v: 'pubsub',            c: 'strm', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 1 },
+  { n: 'NATS',                          v: 'nats',              c: 'strm', s: 'Beta',    i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 0, k: 1 },
+  { n: 'MLLP · HL7 v2 over TCP',        v: 'mllp',              c: 'strm', s: 'GA',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 0, a: 0, k: 0 },
+
+  /* ---------------- HIE & interoperability networks ---------------- */
+  { n: 'Carequality',                   v: 'carequality',       c: 'hie',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'CommonWell Health Alliance',    v: 'commonwell',        c: 'hie',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'eHealth Exchange',              v: 'ehex',              c: 'hie',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'TEFCA QHIN gateway',            v: 'tefca',             c: 'hie',  s: 'Beta',    i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'IHE XDS.b / XCA',               v: 'ihe-xds',           c: 'hie',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'IHE PIX / PDQ',                 v: 'ihe-pix',           c: 'hie',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'Direct Secure Messaging',        v: 'direct',           c: 'hie',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'C-CDA document exchange',        v: 'ccda',             c: 'hie',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Ontario Health · HRM & OLIS',   v: 'ontario-health',    c: 'hie',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'NHS Spine · PDS & MESH',        v: 'nhs-spine',         c: 'hie',  s: 'Beta',    i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+
+  /* ---------------- Public health & registries ---------------- */
+  { n: 'Immunization registries (IIS)', v: 'iis',               c: 'ph',   s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'CDC NHSN',                      v: 'nhsn',              c: 'ph',   s: 'Beta',      i: 0, o: 1, h: 1, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'ELR · electronic lab reporting', v: 'elr',              c: 'ph',   s: 'Beta',      i: 0, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'eCR · electronic case reporting', v: 'ecr',             c: 'ph',   s: 'Beta',      i: 0, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Syndromic surveillance (ADT)',  v: 'syndromic',         c: 'ph',   s: 'Beta',      i: 0, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Cancer registry · NAACCR',      v: 'naaccr',            c: 'ph',   s: 'Beta',      i: 0, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Vital records · birth & death',  v: 'vital-records',    c: 'ph',   s: 'Beta',    i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'PDMP · prescription monitoring', v: 'pdmp',             c: 'ph',   s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'CIHI reporting (Canada)',       v: 'cihi',              c: 'ph',   s: 'Beta',    i: 0, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+
+  /* ---------------- Devices & monitoring ---------------- */
+  { n: 'Philips IntelliVue',            v: 'intellivue',        c: 'dev',  s: 'Beta',      i: 1, o: 0, h: 1, f: 0, x: 0, d: 0, a: 0, k: 1 },
+  { n: 'GE CARESCAPE',                  v: 'carescape',         c: 'dev',  s: 'Beta',      i: 1, o: 0, h: 1, f: 0, x: 0, d: 0, a: 0, k: 1 },
+  { n: 'Capsule Medical Device Info',   v: 'capsule',           c: 'dev',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 1 },
+  { n: 'Masimo Patient SafetyNet',      v: 'masimo',            c: 'dev',  s: 'Beta',      i: 1, o: 0, h: 1, f: 0, x: 0, d: 0, a: 1, k: 1 },
+  { n: 'Baxter · Hillrom smart beds',   v: 'hillrom',           c: 'dev',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Dräger infinity',               v: 'drager',            c: 'dev',  s: 'Beta',    i: 1, o: 0, h: 1, f: 0, x: 0, d: 0, a: 0, k: 1 },
+  { n: 'Ventilator & anaesthesia feeds', v: 'vent-anes',        c: 'dev',  s: 'Beta',      i: 1, o: 0, h: 1, f: 0, x: 0, d: 0, a: 0, k: 1 },
+  { n: 'Remote patient monitoring (generic)', v: 'rpm',         c: 'dev',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 1 },
+
+  /* ---------------- Scheduling & operations ---------------- */
+  { n: 'TeleTracking',                  v: 'teletracking',      c: 'ops',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Epic Cadence',                  v: 'cadence',           c: 'ops',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'QGenda',                        v: 'qgenda',            c: 'ops',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'symplr Workforce',              v: 'symplr',            c: 'ops',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Vocera · Stryker',              v: 'vocera',            c: 'ops',  s: 'Beta',      i: 0, o: 1, h: 1, f: 0, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'Hyland · OnBase documents',     v: 'onbase',            c: 'ops',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Phreesia patient intake',       v: 'phreesia',          c: 'ops',  s: 'Beta',    i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Luma Health',                   v: 'luma',              c: 'ops',  s: 'Beta',    i: 1, o: 1, h: 1, f: 1, x: 0, d: 1, a: 1, k: 0 },
+
+  /* ---------------- Business systems & ERP ---------------- */
+  { n: 'Workday',                       v: 'workday',           c: 'biz',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'SAP S/4HANA',                   v: 'sap',               c: 'biz',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Oracle ERP Cloud',              v: 'oracle-erp',        c: 'biz',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'NetSuite',                      v: 'netsuite',          c: 'biz',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Salesforce Health Cloud',       v: 'salesforce',        c: 'biz',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 1 },
+  { n: 'Microsoft Dynamics 365',        v: 'dynamics',          c: 'biz',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'HubSpot',                       v: 'hubspot',           c: 'biz',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'ServiceNow',                    v: 'servicenow',        c: 'biz',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 1, k: 0 },
+  { n: 'Jira & Jira Service Management', v: 'jira',             c: 'biz',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'X12 810 / 850 / 856 (B2B EDI)', v: 'x12-b2b',           c: 'biz',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'EDIFACT',                       v: 'edifact',           c: 'biz',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 0, k: 0 },
+
+  /* ---------------- Identity & directory ---------------- */
+  { n: 'Okta',                          v: 'okta',              c: 'idp',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'Microsoft Entra ID',            v: 'entra',             c: 'idp',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'LDAP / Active Directory',       v: 'ldap',              c: 'idp',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'SAML 2.0 SSO',                  v: 'saml',              c: 'idp',  s: 'Beta',      i: 1, o: 0, h: 0, f: 0, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'SCIM 2.0 provisioning',         v: 'scim',              c: 'idp',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'Provider directory · NPPES',    v: 'nppes',             c: 'idp',  s: 'Beta',      i: 1, o: 0, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
+
+  /* ---------------- Notification & comms ---------------- */
+  { n: 'Twilio · SMS & voice',          v: 'twilio',            c: 'msg',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'SendGrid',                       v: 'sendgrid',         c: 'msg',  s: 'Beta',      i: 0, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'Slack',                         v: 'slack',             c: 'msg',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'Microsoft Teams',               v: 'teams',             c: 'msg',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'PagerDuty',                     v: 'pagerduty',         c: 'msg',  s: 'Beta',      i: 0, o: 1, h: 0, f: 0, x: 0, d: 0, a: 1, k: 0 },
+  { n: 'SMTP / IMAP mail',              v: 'smtp',              c: 'msg',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 0, k: 0 },
+  { n: 'Generic webhook',               v: 'webhook',           c: 'msg',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 0, a: 1, k: 0 },
+
+  /* ---------------- Legacy engines (migration) ---------------- */
+  { n: 'Rhapsody',                      v: 'rhapsody',          c: 'eng',  s: 'GA',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Mirth Connect · NextGen Connect', v: 'mirth',           c: 'eng',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Iguana',                        v: 'iguana',            c: 'eng',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Cloverleaf',                    v: 'cloverleaf',        c: 'eng',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'Corepoint',                     v: 'corepoint',         c: 'eng',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Microsoft BizTalk',             v: 'biztalk',           c: 'eng',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'InterSystems Ensemble / HealthShare', v: 'ensemble',    c: 'eng',  s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 1 },
+  { n: 'Summit Exchange',               v: 'summit',            c: 'eng',  s: 'Beta',    i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
+
+  /* ---------------- Storage & transport ---------------- */
+  { n: 'SFTP',                          v: 'sftp',              c: 'file', s: 'GA',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'FTPS',                          v: 'ftps',              c: 'file', s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'File watcher · local & network', v: 'file-watch',       c: 'file', s: 'GA',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'Amazon S3',                     v: 's3',                c: 'file', s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Azure Blob Storage / ADLS',     v: 'azure-blob',        c: 'file', s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'Google Cloud Storage',          v: 'gcs',               c: 'file', s: 'Beta',      i: 1, o: 1, h: 1, f: 1, x: 1, d: 1, a: 1, k: 0 },
+  { n: 'PGP / GPG envelope',            v: 'pgp',               c: 'file', s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 0, k: 0 },
+  { n: 'AS2',                           v: 'as2',               c: 'file', s: 'Beta',    i: 1, o: 1, h: 0, f: 0, x: 1, d: 1, a: 0, k: 0 }
+];

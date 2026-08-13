@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 24" width="150" height="24" role="img" aria-label="linkiir">
+  <g fill="none" stroke="#09090b" stroke-width="2.2">
+    <circle cx="12" cy="12" r="8.6"/>
+    <circle cx="23" cy="12" r="8.6"/>
+  </g>
+  <text x="40" y="18.4" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="19" font-weight="800" letter-spacing="-0.7" fill="#09090b">linkiir</text>
+</svg>

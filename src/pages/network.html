@@ -1,0 +1,153 @@
+<!--{"title":"Integration Network, 197 adapters | Linkiir","desc":"Every system Linkiir Grid has an adapter for. Epic, Oracle Health, MEDITECH, athenahealth, eClinicalWorks and the core transports are available today; the rest of the catalogue is in beta. Filter by format, direction and category.","active":"network","script":["network-data.js","network.js"]}-->
+
+<!-- ============================ HERO ============================ -->
+<section class="phero" style="padding-bottom:26px">
+  <div class="blobs"><span class="blob b1"></span><span class="blob b2"></span></div>
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>/</span>Integration Network</p>
+    <div class="split" style="align-items:end;gap:40px">
+      <div>
+        <span class="kicker k-green">Integration Network</span>
+        <h1>Every adapter, and <span class="hl hl-green">where it stands</span>.</h1>
+      </div>
+      <div>
+        <p class="lead">197 adapters, each with a sample project, a message schema, a documented parameter set and an engineer who owns it. The ones most people need first are available today. The rest of the catalogue is in beta, and we say so on every row rather than letting you find out later.</p>
+        <div class="btn-row mt-3">
+          <a class="btn btn-green" href="contact.html">Ask about an adapter <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn btn-ghost" href="https://help.linkiir.com" target="_blank" rel="noopener">Adapter docs ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ COUNTS ============================ -->
+<section class="section-sm" style="padding-top:0;padding-bottom:20px">
+  <div class="wrap">
+    <div class="count-row" id="net-counts"></div>
+  </div>
+</section>
+
+<!-- ============================ TOOLBAR ============================ -->
+<div class="net-toolbar">
+  <div class="wrap">
+    <div class="filters">
+      <div class="search-box">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="6.6" cy="6.6" r="4.6" stroke="currentColor" stroke-width="1.6"/><path d="M10.2 10.2l3.6 3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input type="search" id="net-search" placeholder="Search Epic, athena, Foundry, 837…" aria-label="Search adapters" autocomplete="off">
+      </div>
+      <select class="sel" id="net-cat" aria-label="Category"><option value="">All categories</option></select>
+      <select class="sel" id="net-dir" aria-label="Direction">
+        <option value="">Any direction</option>
+        <option value="in">Inbound (source)</option>
+        <option value="out">Outbound (destination)</option>
+      </select>
+      <select class="sel" id="net-status" aria-label="Status">
+        <option value="">Any status</option>
+        <option value="GA">Available today</option>
+        <option value="Beta">Beta</option>
+      </select>
+      <div class="filters-right">
+        <button class="btn btn-ghost btn-sm" id="net-reset" type="button">Reset</button>
+        <a class="btn btn-primary btn-sm" href="#" id="net-csv">
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1.6v7.6M7 9.2L4.2 6.4M7 9.2l2.8-2.8M2 11.6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download CSV
+        </a>
+      </div>
+    </div>
+    <div class="filters mt-2" style="gap:8px">
+      <span class="mono tiny dim" style="letter-spacing:.08em">SUPPORTS</span>
+      <div class="chipbar" id="net-chips"></div>
+      <span class="mono tiny dim" id="net-shown" style="margin-left:auto"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ TABLE ============================ -->
+<section class="section-sm" style="padding-top:22px">
+  <div class="wrap">
+    <div class="tbl-wrap">
+      <div class="tbl-scroll">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Adapter</th>
+              <th>Category</th>
+              <th class="c">In</th>
+              <th class="c">Out</th>
+              <th class="c">HL7 v2</th>
+              <th class="c">FHIR</th>
+              <th class="c">X12 / EDI</th>
+              <th class="c">Bulk &amp; file</th>
+              <th class="c">Real-time API</th>
+              <th class="c">Streaming</th>
+              <th class="c">Status</th>
+            </tr>
+          </thead>
+          <tbody id="net-body"></tbody>
+        </table>
+      </div>
+      <div class="net-empty" id="net-empty">
+        <p><strong>No adapter matches those filters.</strong></p>
+        <p class="small">That doesn't mean we can't connect it. Grid's Custom nodes speak anything you can describe, and building a new adapter is normal work rather than a special project.</p>
+        <a class="btn btn-primary btn-sm" href="contact.html">Ask us about it</a>
+      </div>
+    </div>
+    <p class="tiny dim mt-3">Columns describe what the adapter is tested for, not what the vendor theoretically supports. “Bulk &amp; file” covers batch, SFTP and flat-file exchange. <strong>Available today</strong> means the template is hardened and running across multiple customers. <strong>Beta</strong> means it works and runs somewhere, but the template is still being finished, so expect one of our engineers alongside you on the first deployment. Around 95% of the catalogue is beta today, and that share falls every month.</p>
+  </div>
+</section>
+
+<!-- ============================ NOT LISTED ============================ -->
+<section class="section bg-white divider-top">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <span class="kicker">Not on the list?</span>
+        <h2>Then it's a Tuesday.</h2>
+        <p class="lead">The catalogue is what we've already tested and templated, not the boundary of what Grid can talk to. A Custom node plus a schema handles anything with a documented format, and most “bespoke” endpoints turn out to be a familiar shape wearing a different hat.</p>
+        <ul class="feat-list mt-3">
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.4 2.4L9.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>New adapters are included.</strong> When we build one, every customer gets it. We don't charge the person who asked first.</span></li>
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.4 2.4L9.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Typical turnaround is two weeks</strong> for a documented endpoint, from spec to a tested template in your project.</span></li>
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.4 2.4L9.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Undocumented endpoints too.</strong> Send us a packet capture and a sample. We've reverse-engineered worse.</span></li>
+        </ul>
+        <div class="btn-row mt-4">
+          <a class="btn btn-primary" href="contact.html">Request an adapter <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="rv rv-d1">
+        <div class="card">
+          <span class="kicker k-dim" style="margin-bottom:.7rem">What ships with every adapter</span>
+          <div class="grid g-2" style="gap:16px">
+            <div><h4 class="mono" style="font-size:.88rem">Sample project</h4><p class="small muted mb-0">A working source → transform → destination you can start and watch.</p></div>
+            <div><h4 class="mono" style="font-size:.88rem">Message schema</h4><p class="small muted mb-0">The grammar as that vendor actually sends it, quirks included.</p></div>
+            <div><h4 class="mono" style="font-size:.88rem">Parameter docs</h4><p class="small muted mb-0">Every field explained in the console, next to the field.</p></div>
+            <div><h4 class="mono" style="font-size:.88rem">Test samples</h4><p class="small muted mb-0">De-identified messages to run the transform against before go-live.</p></div>
+            <div><h4 class="mono" style="font-size:.88rem">Known-issues note</h4><p class="small muted mb-0">The thing that will bite you, written down before it does.</p></div>
+            <div><h4 class="mono" style="font-size:.88rem">A named owner</h4><p class="small muted mb-0">An engineer here who maintains it and answers for it.</p></div>
+          </div>
+        </div>
+        <div class="card mt-3" style="background:var(--bg-2)">
+          <h4>Migrating from another engine?</h4>
+          <p class="small muted mb-0">Adapters for Rhapsody, Mirth, Iguana, Cloverleaf, Corepoint, BizTalk and Ensemble let Grid run <em>alongside</em> your incumbent while we prove parity on live traffic, so cutover is a routing change rather than a weekend. <a href="platform-overview.html">How that works →</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA ============================ -->
+<section class="section-sm bg-soft divider-top">
+  <div class="wrap">
+    <div class="cta-band rv">
+      <div style="max-width:620px">
+        <span class="kicker" style="color:#a5b4fc">One of these is your hard one</span>
+        <h2>Tell us which and we'll open it.</h2>
+        <p class="lead">Thirty minutes with an engineer who has almost certainly integrated it before, and will tell you honestly if they haven't.</p>
+        <div class="btn-row mt-4">
+          <a class="btn btn-blue btn-lg" href="contact.html">Book a demo <svg class="arrow" width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn btn-light btn-lg" href="mailto:sales@linkiir.com">sales@linkiir.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
