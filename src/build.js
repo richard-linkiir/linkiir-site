@@ -39,7 +39,7 @@ const side   = fs.readFileSync(path.join(SRC, 'partials-side.html'), 'utf8');
    only, or you will count every page view twice.
    ------------------------------------------------------------------------- */
 const ANALYTICS = {
-  ga4:        '',
+  ga4:        'AW-18360438570',
   gtm:        '',
   siteVerify: ''
 };
