@@ -1,2 +1,0 @@
-Shared head + nav + footer to copy into each page.
-Stored here as reference; pages embed them inline.
