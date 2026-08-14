@@ -98,7 +98,6 @@ window.LK_ADAPTERS = [
   { n: 'DICOM C-STORE / C-FIND',        v: 'dicom',             c: 'img',  s: 'Beta',      i: 1, o: 1, h: 0, f: 0, x: 0, d: 1, a: 0, k: 0 },
   { n: 'DICOMweb · WADO-RS / STOW-RS',  v: 'dicomweb',          c: 'img',  s: 'Beta',      i: 1, o: 1, h: 0, f: 1, x: 0, d: 1, a: 1, k: 0 },
   { n: 'Sectra PACS',                   v: 'sectra',            c: 'img',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
-  { n: 'GE HealthCare Centricity',      v: 'ge-centricity',     c: 'img',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
   { n: 'Philips Vue PACS',              v: 'philips-vue',       c: 'img',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
   { n: 'Fujifilm Synapse',              v: 'synapse',           c: 'img',  s: 'Beta',      i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },
   { n: 'Agfa Enterprise Imaging',       v: 'agfa',              c: 'img',  s: 'Beta',    i: 1, o: 1, h: 1, f: 0, x: 0, d: 1, a: 0, k: 0 },

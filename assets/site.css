@@ -393,52 +393,6 @@ code, kbd, pre { font-family: var(--mono); }
 .stat-n { font-size: clamp(1.9rem, 3.2vw, 2.6rem); font-weight: 800; color: var(--ink); letter-spacing: -.035em; line-height: 1; font-variant-numeric: tabular-nums; }
 .stat-l { font-family: var(--mono); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-4); margin-top: 10px; }
 
-/* ---------- customer logo strip ----------------------------------------
-   Each .logo is a mark plus a wordmark, drawn in CSS so the row stays
-   crisp, monochrome and consistent regardless of what a brand's own file
-   looks like.
-
-   TO DROP IN A REAL LOGO FILE: put the SVG or PNG in assets/logos/ and
-   replace the contents of the <a class="logo"> with
-     <img src="assets/logos/name.svg" alt="Name" class="logo-img">
-   The greyscale, sizing and hover treatment are already handled below.
-   ----------------------------------------------------------------------- */
-.logo-strip {
-  display: flex; align-items: center; justify-content: center;
-  flex-wrap: wrap; gap: 20px 68px;
-}
-.logo {
-  display: inline-flex; align-items: center; gap: .6rem;
-  color: var(--ink-3); text-decoration: none;
-  filter: grayscale(1); opacity: .78;
-  transition: opacity .2s ease, filter .2s ease, color .2s ease;
-}
-.logo:hover, .logo:focus-visible { opacity: 1; filter: grayscale(0); color: var(--ink); }
-.logo-img { height: 34px; width: auto; display: block; }
-.logo-word {
-  font-size: 1.34rem; font-weight: 700; letter-spacing: -.018em; line-height: 1;
-  white-space: nowrap;
-}
-.logo-word .lw-2 { font-weight: 400; }
-/* GE-style monogram ring */
-.logo-ring {
-  width: 34px; height: 34px; border-radius: 50%; flex: none;
-  border: 2px solid currentColor;
-  display: inline-flex; align-items: center; justify-content: center;
-  font-size: .72rem; font-weight: 800; letter-spacing: .01em;
-}
-/* Pfizer-style lozenge */
-.logo-lozenge {
-  width: 39px; height: 25px; border-radius: 999px; flex: none;
-  border: 2px solid currentColor;
-  display: inline-flex; align-items: center; justify-content: center;
-  font-size: .66rem; font-weight: 800;
-}
-@media (max-width: 620px) {
-  .logo-strip { gap: 18px 32px; }
-  .logo-word { font-size: 1.02rem; }
-}
-
 /* ---------- marquee ---------- */
 .marquee { overflow: hidden; position: relative; padding: 6px 0;
   mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent);
