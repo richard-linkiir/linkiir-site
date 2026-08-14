@@ -9,11 +9,11 @@ window.LK_RELEASE = {
   released:  '2026-08-05',
   channel:   'stable',
 
-  // Where the artifacts actually live. Change this to your CDN / S3 bucket.
-  baseUrl:   'https://downloads.linkiir.com/',
+  // Where the artifacts actually live (GitHub Releases).
+  baseUrl:   'https://github.com/Linkiir/linkiir-releases/releases/download/v1.0.0/',
 
   // Checksums file published alongside every release.
-  checksums: 'https://downloads.linkiir.com/1.0.0/SHA256SUMS',
+  checksums: 'https://github.com/Linkiir/linkiir-releases/releases/download/v1.0.0/SHA256SUMS',
 
   // Where download-gate submissions are sent. Same Web3Forms inbox as the
   // contact form. Set gateEndpoint to null to stop recording them; the gate
@@ -36,12 +36,12 @@ window.LK_RELEASE = {
 window.LK_KAFKA = {
   bundled:  {
     label: 'Bundled Kafka',
-    slug:  'bundled-kafka',
+    slug:  'kafka',
     desc:  'Ships with a preconfigured broker. Fastest way to a running system — start here for evaluations and single-node deployments.'
   },
   external: {
     label: 'Bring your own broker',
-    slug:  'external-kafka',
+    slug:  'external',
     desc:  'No broker included. Point Grid at your existing Kafka or Redpanda cluster. Use this for production and anything HA.'
   }
 };
@@ -52,25 +52,25 @@ window.LK_KAFKA = {
 window.LK_PACKAGES = [
   {
     os: 'Linux server', variant: 'Docker, Intel/AMD', arch: 'amd64', form: 'Docker',
-    dir: '{v}-amd64', file: 'linkiir-{v}-linux-docker-{k}.tar.gz',
+    dir: '', file: 'linkiir-{v}-linux-docker-{k}-amd64.tar.gz',
     kafka: 'both', size: '396 MB', recommended: true,
     note: 'Docker Engine 24+ or Podman 5+. The usual production choice.'
   },
   {
     os: 'Linux server', variant: 'Docker, Graviton/arm64', arch: 'arm64', form: 'Docker',
-    dir: '{v}-arm64', file: 'linkiir-{v}-linux-docker-{k}.tar.gz',
+    dir: '', file: 'linkiir-{v}-linux-docker-{k}-arm64.tar.gz',
     kafka: 'both', size: '389 MB',
     note: 'AWS Graviton, Ampere and other arm64 hosts.'
   },
   {
     os: 'Linux server', variant: 'native systemd, Intel/AMD', arch: 'x64', form: 'Native',
-    dir: '{v}-linux-native', file: 'linkiir-{v}-linux-x64-{k}.tar.gz',
+    dir: '', file: 'linkiir-{v}-linux-x64-{k}.tar.gz',
     kafka: 'both', size: '244 MB',
     note: 'RHEL 8+, Rocky, Ubuntu 22.04+, SLES 15+. For estates where containers are not permitted.'
   },
   {
     os: 'Windows', variant: 'Intel/AMD', arch: 'x64', form: 'Installer',
-    dir: '{v}-windows-installer', file: 'LinkiirSetup-{v}-x64.exe',
+    dir: '', file: 'LinkiirSetup-{v}-x64.exe',
     kafka: 'bundled', size: '286 MB',
     note: 'Windows Server 2019+. Signed installer; the broker is bundled.'
   }

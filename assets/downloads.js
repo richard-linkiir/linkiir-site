@@ -61,7 +61,7 @@
       var thisKafka = p.kafka === 'bundled' ? KAFKA.bundled : k;
       var dir  = fill(p.dir, thisKafka.slug);
       var file = fill(p.file, thisKafka.slug);
-      var href = (R.baseUrl || '') + dir + '/' + file;
+      var href = dir ? ((R.baseUrl || '') + dir + '/' + file) : ((R.baseUrl || '') + file);
 
       var kafkaCell = p.kafka === 'bundled'
         ? '<span class="badge b-gray">Bundled Kafka</span><br><span class="tiny dim">broker is in the installer</span>'
