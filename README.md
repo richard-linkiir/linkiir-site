@@ -196,7 +196,6 @@ Both forms on the site post to **Web3Forms**, into the inbox behind access key
 - **`/contact`** — the enquiry form. It carries a real
   `action="https://api.web3forms.com/submit"`, so it works with JavaScript disabled; with JS,
   `assets/forms.js` submits it over fetch and shows the result inline instead of navigating away.
-  A hidden `botcheck` honeypot filters the obvious spam.
 - **`/downloads`** — the gate. It posts the same details as a JSON payload so you know who took a
   build. A failed post never blocks the download.
 

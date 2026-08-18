@@ -57,11 +57,6 @@
           <form id="contact-form" data-web3form
                 action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="77637dea-cc8e-4bb4-a7b2-0ccde576c40f">
-            <input type="hidden" name="subject" value="New enquiry from linkiir.com">
-            <input type="hidden" name="from_name" value="linkiir.com">
-            <!-- honeypot: bots fill this, people never see it -->
-            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
-
             <div class="fields">
               <div class="field">
                 <label for="f-name">Name</label>
@@ -71,37 +66,14 @@
                 <label for="f-email">Work email</label>
                 <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="alex@healthsystem.org">
               </div>
-              <div class="field">
-                <label for="f-org">Organisation</label>
-                <input id="f-org" name="organisation" type="text" autocomplete="organization" placeholder="Regional Health">
-              </div>
-              <div class="field">
-                <label for="f-topic">What's this about?</label>
-                <select id="f-topic" name="topic" class="sel" style="width:100%">
-                  <option>Book a Grid demo</option>
-                  <option>Migration parity assessment</option>
-                  <option>Support and services</option>
-                  <option>Linkiir Cloud early access</option>
-                  <option>Linkiir Agent early access (March 2027)</option>
-                  <option>Pricing &amp; quote</option>
-                  <option>Security review / questionnaire</option>
-                  <option>Evaluation licence</option>
-                  <option>Request an adapter</option>
-                  <option>Something else</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="f-engine">Current engine <span class="dim">(optional)</span></label>
-                <input id="f-engine" name="engine" type="text" placeholder="Rhapsody, Mirth, Cloverleaf, none yet…">
-              </div>
               <div class="field field-wide">
-                <label for="f-msg">Tell us about the interface</label>
+                <label for="f-msg">Message</label>
                 <textarea id="f-msg" name="message" rows="5" required placeholder="The one that woke somebody up last month. Message types, endpoints, what goes wrong."></textarea>
               </div>
             </div>
 
             <button class="btn btn-blue btn-lg mt-3" type="submit" style="width:100%;justify-content:center">
-              Send it <svg class="arrow" width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Submit Form <svg class="arrow" width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <p class="form-status" data-form-status role="status" aria-live="polite" hidden></p>
             <p class="tiny dim mt-3 mb-0">
