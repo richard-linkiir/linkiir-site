@@ -48,6 +48,13 @@
           if (res.ok && res.j.success !== false) {
             form.reset();
             say('ok', '<strong>Thank you, that reached us.</strong> You will get a reply from a person, usually within one business day.');
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'conversion', {
+                send_to: 'AW-18360438570/2asFCJit--McEKqe-LJE',
+                value: 1.0,
+                currency: 'CAD'
+              });
+            }
           } else {
             say('err', 'That did not send. Please email <a href="mailto:sales@linkiir.com">sales@linkiir.com</a> and we will pick it up from there.');
           }
